@@ -12,8 +12,8 @@ namespace ProjectD.ScriptableObjects
         [SerializeField] private GameObject abilityFX;
 
         public AbilityTypes GetAbilityType() => type;
-        public string GetName()              => name;
-        public float GetValue()              => value;
-        public GameObject GetFX()            => abilityFX;
+        public string GetName() => name;
+        public float GetValue() => value;
+        public GameObject GetFX() => abilityFX;
     }
 }
