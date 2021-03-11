@@ -15,7 +15,7 @@ namespace ProjectD.Abilitys
         {
             target = newTarget;
         }
-        
+
         public void Execute()
         {
             Ability();

@@ -11,9 +11,9 @@ namespace ProjectD.ScriptableObjects
         [SerializeField] private string enemyName;
         [SerializeField] private AbilityBase[] abilitys = new AbilityBase[0];
 
-        public string GetName()                  => enemyName;
-        public Sprite GetSprite()                => enemySprite;
-        public AbilityBase[] GetAllAbilitys()    => abilitys;
+        public string GetName() => enemyName;
+        public Sprite GetSprite() => enemySprite;
+        public AbilityBase[] GetAllAbilitys() => abilitys;
         public AbilityBase GetAbility(int index) => abilitys[index];
 
         public float GetHealth() => health;
