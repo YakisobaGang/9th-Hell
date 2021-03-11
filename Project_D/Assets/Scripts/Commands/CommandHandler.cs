@@ -11,7 +11,7 @@ namespace ProjectD.Commands
     {
         [SerializeField] private readonly List<ICommand> commandsList = new List<ICommand>();
 
-        private WaitForSeconds waitForSeconds;            
+        private WaitForSeconds waitForSeconds;
 
         private void Awake()
         {
@@ -30,7 +30,7 @@ namespace ProjectD.Commands
 
         private IEnumerator DoCommandsOverTime()
         {
-            foreach (var command in commandsList) 
+            foreach (var command in commandsList)
             {
                 command.Execute();
 
