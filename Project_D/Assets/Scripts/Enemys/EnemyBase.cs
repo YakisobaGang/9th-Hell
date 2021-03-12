@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace ProjectD.Enemys
 {
-    public abstract class EnemyBase : MonoBehaviour,IDamageable
+    public abstract class EnemyBase : MonoBehaviour, IDamageable
     {
         [SerializeField] protected Fighter enemyData;
         public CommandHandler commandHandler = new CommandHandler();
