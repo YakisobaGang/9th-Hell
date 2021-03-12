@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using ProjectD.Manegers;
+using ProjectD.Combat;
 
 namespace ProjectD.StateMachine
 {

@@ -6,7 +6,7 @@ namespace ProjectD.Abilitys
 {
     public abstract class AbilityBase : MonoBehaviour, ICommand
     {
-        [SerializeField] protected AbilityDataSo abilityDataData;
+        [SerializeField] protected AbilityData abilityDataData;
         protected Transform target;
 
         protected virtual void Ability() { }

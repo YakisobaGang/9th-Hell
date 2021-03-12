@@ -4,7 +4,7 @@ using UnityEngine;
 namespace ProjectD.ScriptableObjects
 {
     [CreateAssetMenu(fileName = "New Ability", menuName = "Create New Ability", order = 0)]
-    public class AbilityDataSo : ScriptableObject
+    public class AbilityData : ScriptableObject
     {
         [SerializeField] private AbilityTypes type;
         [SerializeField] private string abilityName;
