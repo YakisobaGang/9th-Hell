@@ -21,7 +21,7 @@ namespace ProjectD.StateMachine.States.Combat_States
             }
             else
             {
-                BattleSystem.SetState(new PlayerTurn(BattleSystem));   
+                BattleSystem.SetState(new PlayerTurn(BattleSystem));
             }
         }
     }

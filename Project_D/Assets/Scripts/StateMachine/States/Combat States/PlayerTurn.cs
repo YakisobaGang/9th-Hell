@@ -35,7 +35,7 @@ namespace ProjectD.StateMachine.States.Combat_States
             BattleSystem.Player.Heal(5);
 
             yield return new WaitForSeconds(1f);
-            
+
             BattleSystem.SetState(new EnemyTurn(BattleSystem));
         }
     }
