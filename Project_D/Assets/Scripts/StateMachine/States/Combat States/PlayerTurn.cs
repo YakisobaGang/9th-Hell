@@ -17,17 +17,17 @@ namespace ProjectD.StateMachine.States.Combat_States
         {
             Debug.Log("Player turn ");
             var enemyIsDead = BattleSystem.Player.UsingAbility(0, BattleSystem.Enemy(0));
-            
+
             yield return new WaitForSeconds(1f);
-            
+
             if (enemyIsDead)
             {
                 BattleSystem.DeadEnemys++;
             }
-            
+
             if (BattleSystem.PlayerTurnCount >= 3)
             {
-                BattleSystem.SetState(new PlayerTurn(BattleSystem));   
+                BattleSystem.SetState(new PlayerTurn(BattleSystem));
             }
         }
 

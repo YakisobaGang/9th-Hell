@@ -18,7 +18,7 @@ namespace ProjectD.Combat
         public int DeadEnemys { get; set; }
         public int CurrentEnemyIndex { get; private set; }
         public Fighter Player => player;
-        public Fighter Enemy (int index) => enemys[index];
+        public Fighter Enemy(int index) => enemys[index];
         public bool IsTheLastEnemyTurn => CurrentEnemyIndex == enemys.Length - 1;
         public int PlayerTurnCount
         {
@@ -54,11 +54,11 @@ namespace ProjectD.Combat
         {
             SetState(new Begin(this));
         }
-        
+
         [ContextMenu("attack")]
         public void OnAttackButton()
-        { 
-           var temp = new CommandSander(SetStateToPlayerAttack, commandHandler);
+        {
+            var temp = new CommandSander(SetStateToPlayerAttack, commandHandler);
             playerTurnCount--;
         }
 
@@ -68,7 +68,7 @@ namespace ProjectD.Combat
             var temp = new CommandSander(SetStateToPlayerHeal, commandHandler);
             playerTurnCount--;
         }
-        
+
         private void CheckPlayerHasAnyActionsLeft()
         {
             if (playerTurnCount <= 0)

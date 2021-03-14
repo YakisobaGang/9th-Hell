@@ -40,7 +40,7 @@ namespace ProjectD.ScriptableObjects
         {
             return abilitys[index].CastAbility(target, damage);
         }
-        
+
         public bool Damage(int amount)
         {
             currentHealth = Math.Max(0, currentHealth - amount);

@@ -16,13 +16,13 @@ namespace ProjectD.ScriptableObjects
         public string GetName() => name;
         public GameObject GetOnHitFX => onHitAbilityFX;
         public GameObject GetCastFX => castAbilityFx;
-        
+
         /// <summary>
         /// se o valor de dano for negativo, a função vai usar o valor de dentro da classe.
         /// </summary>
         /// <param name="target"></param>
         /// <param name="_damage"></param>
         /// <returns></returns>
-        public bool CastAbility(Fighter target, int _damage = -1 ) => target.Damage(_damage <= -1 ? this.damage : _damage);
+        public bool CastAbility(Fighter target, int _damage = -1) => target.Damage(_damage <= -1 ? this.damage : _damage);
     }
 }

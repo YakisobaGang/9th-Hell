@@ -14,7 +14,7 @@ namespace ProjectD.StateMachine.States.Combat_States
             BattleSystem.Player.Damage(BattleSystem.Enemy(BattleSystem.CurrentEnemyIndex).Attack);
 
             yield return new WaitForSeconds(1f);
-            
+
             if (BattleSystem.IsTheLastEnemyTurn)
             {
                 BattleSystem.SetState(new PlayerTurn(BattleSystem));
