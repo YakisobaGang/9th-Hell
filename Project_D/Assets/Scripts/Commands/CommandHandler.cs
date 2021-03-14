@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using ProjectD.Interfaces;
 using UnityEngine;
@@ -9,18 +8,18 @@ namespace ProjectD.Commands
     [ExecuteInEditMode]
     public class CommandHandler : MonoBehaviour
     {
-        [SerializeField] private readonly List<ICommand> commandsList = new List<ICommand>();
-
+        [SerializeField] private Queue<ICommand> commandsList;
         private WaitForSeconds waitForSeconds;
 
         private void Awake()
         {
             waitForSeconds = new WaitForSeconds(0.5f);
+            commandsList = new Queue<ICommand>();
         }
 
         public void AddCommand(ICommand command)
         {
-            commandsList.Add(command);
+            commandsList.Enqueue(command);
         }
 
         public void DoCommands()
@@ -30,11 +29,11 @@ namespace ProjectD.Commands
 
         private IEnumerator DoCommandsOverTime()
         {
-            foreach (var command in commandsList)
+            foreach (var command in commandsList.ToArray())
             {
-                command.Execute();
-
+                var temp = commandsList.Dequeue();
                 yield return waitForSeconds;
+                temp.Execute();
             }
         }
     }

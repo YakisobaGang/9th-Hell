@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using ProjectD.Combat;
-using ProjectD.StateMachine.States.Combat_States.End_States;
 using UnityEngine;
 
 namespace ProjectD.StateMachine.States.Combat_States
@@ -11,17 +10,19 @@ namespace ProjectD.StateMachine.States.Combat_States
 
         public override IEnumerator Start()
         {
-            var isDead = BattleSystem.Player.Damage(BattleSystem.Enemy.Attack);
+            Debug.Log("Current enemy playing " + BattleSystem.CurrentEnemyIndex);
+            BattleSystem.Player.Damage(BattleSystem.Enemy(BattleSystem.CurrentEnemyIndex).Attack);
 
             yield return new WaitForSeconds(1f);
-
-            if (isDead)
+            
+            if (BattleSystem.IsTheLastEnemyTurn)
             {
-                BattleSystem.SetState(new Loss(BattleSystem));
+                BattleSystem.SetState(new PlayerTurn(BattleSystem));
             }
             else
             {
-                BattleSystem.SetState(new PlayerTurn(BattleSystem));
+                BattleSystem.PassToNextEnemy();
+                BattleSystem.SetState(new EnemyTurn(BattleSystem));
             }
         }
     }

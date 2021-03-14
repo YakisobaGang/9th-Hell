@@ -8,12 +8,21 @@ namespace ProjectD.ScriptableObjects
     {
         [SerializeField] private AbilityTypes type;
         [SerializeField] private string abilityName;
-        [SerializeField, Tooltip("Quantidade de dano ou de curra da abilidade")] private float value;
-        [SerializeField] private GameObject abilityFX;
+        [SerializeField] private GameObject onHitAbilityFX;
+        [SerializeField] private GameObject castAbilityFx;
+        [SerializeField] private int damage;
 
         public AbilityTypes GetAbilityType() => type;
         public string GetName() => name;
-        public float GetValue() => value;
-        public GameObject GetFX() => abilityFX;
+        public GameObject GetOnHitFX => onHitAbilityFX;
+        public GameObject GetCastFX => castAbilityFx;
+        
+        /// <summary>
+        /// se o valor de dano for negativo, a função vai usar o valor de dentro da classe.
+        /// </summary>
+        /// <param name="target"></param>
+        /// <param name="_damage"></param>
+        /// <returns></returns>
+        public bool CastAbility(Fighter target, int _damage = -1 ) => target.Damage(_damage <= -1 ? this.damage : _damage);
     }
 }

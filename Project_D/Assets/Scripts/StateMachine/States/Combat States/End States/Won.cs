@@ -9,8 +9,7 @@ namespace ProjectD.StateMachine.States.Combat_States.End_States
 
         public override IEnumerator Start()
         {
-            // TODO: lot do final da batalha
-
+            BattleSystem.onPlayerWin.Raise();
             yield break;
         }
     }
