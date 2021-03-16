@@ -15,8 +15,7 @@ namespace ProjectD.StateMachine.States.Combat_States
 
         public override IEnumerator Attack()
         {
-            Debug.Log("Player turn ");
-            var enemyIsDead = BattleSystem.Player.UsingAbility(0, BattleSystem.Enemy(0));
+            var enemyIsDead = BattleSystem.Player.UsingAbility(BattleSystem.playerAbilityIndex, BattleSystem.Enemy(0));
 
             yield return new WaitForSeconds(1f);
 
@@ -33,7 +32,8 @@ namespace ProjectD.StateMachine.States.Combat_States
 
         public override IEnumerator Heal()
         {
-            BattleSystem.Player.Heal(5);
+            var temp = BattleSystem.Player.GetAbility(BattleSystem.playerAbilityIndex);
+            BattleSystem.Player.Heal(temp.GetDamageValue);
 
             yield return new WaitForSeconds(1f);
 

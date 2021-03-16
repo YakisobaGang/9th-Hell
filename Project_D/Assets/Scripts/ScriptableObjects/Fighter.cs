@@ -21,6 +21,8 @@ namespace ProjectD.ScriptableObjects
         public int Attack => attack;
         public int Healing => healing;
 
+        public AbilityData GetAbility(int index) => abilitys[index];
+
         private void Awake()
         {
             currentHealth = totalHealth;
@@ -38,7 +40,7 @@ namespace ProjectD.ScriptableObjects
         /// <returns></returns>
         public bool UsingAbility(int index, Fighter target, int damage = -1)
         {
-            return abilitys[index].CastAbility(target, damage);
+            return abilitys[index].CastAbility(target, abilitys[index].GetDamageValue);
         }
 
         public bool Damage(int amount)

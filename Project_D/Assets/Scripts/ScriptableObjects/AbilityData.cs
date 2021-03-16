@@ -16,6 +16,7 @@ namespace ProjectD.ScriptableObjects
         public string GetName() => name;
         public GameObject GetOnHitFX => onHitAbilityFX;
         public GameObject GetCastFX => castAbilityFx;
+        public int GetDamageValue => damage;
 
         /// <summary>
         /// se o valor de dano for negativo, a função vai usar o valor de dentro da classe.

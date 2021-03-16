@@ -15,6 +15,8 @@ namespace ProjectD.Combat
         [SerializeField] public GameEvent onPlayerWin;
         [SerializeField] private int playerTurnCount = 3;
 
+        [HideInInspector] public int playerAbilityIndex = 0;
+
         public int DeadEnemys { get; set; }
         public int CurrentEnemyIndex { get; private set; }
         public Fighter Player => player;
@@ -55,16 +57,16 @@ namespace ProjectD.Combat
             SetState(new Begin(this));
         }
 
-        [ContextMenu("attack")]
-        public void OnAttackButton()
+        public void OnAttackButton(int index)
         {
+            playerAbilityIndex = index;
             var temp = new CommandSander(SetStateToPlayerAttack, commandHandler);
             playerTurnCount--;
         }
 
-        [ContextMenu("heal")]
-        public void OnHealButton()
+        public void OnHealButton(int index)
         {
+            playerAbilityIndex = index;
             var temp = new CommandSander(SetStateToPlayerHeal, commandHandler);
             playerTurnCount--;
         }
@@ -89,7 +91,7 @@ namespace ProjectD.Combat
 
         private void CheckIsPlayerAlive()
         {
-            if (player.Healing <= 0)
+            if (player.CurrentHealth <= 0)
             {
                 SetState(new Loss(this));
             }

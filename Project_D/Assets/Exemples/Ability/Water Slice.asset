@@ -9,13 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6262870ad774b0a8db08f397477fc36, type: 3}
-  m_Name: Player
+  m_Script: {fileID: 11500000, guid: d684084150304249a805471fc620b85d, type: 3}
+  m_Name: Water Slice
   m_EditorClassIdentifier: 
-  fighterName: Player
-  currentHealth: 100000
-  totalHealth: 100000
-  attack: 10
-  healing: 50
-  abilitys:
-  - {fileID: 11400000, guid: 67edeba4af616bd46ac0d956b862fbe0, type: 2}
+  type: 0
+  abilityName: Water Slice
+  onHitAbilityFX: {fileID: 0}
+  castAbilityFx: {fileID: 0}
+  damage: 40
