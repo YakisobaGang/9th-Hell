@@ -17,7 +17,7 @@ namespace ProjectD.UI
 
         public void UpdateHealthDisplay()
         {
-            healthBar.fillAmount = (float) characterData.CurrentHealth / characterData.TotalHealth;
+            healthBar.fillAmount = (float)characterData.CurrentHealth / characterData.TotalHealth;
         }
     }
 }
