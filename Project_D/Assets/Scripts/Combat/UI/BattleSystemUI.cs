@@ -25,9 +25,9 @@ namespace ProjectD.Combat.UI
                         chooseEnemyButtons[i].gameObject.SetActive(true);
                         chooseEnemyButtons[i].gameObject.GetComponentInChildren<TMP_Text>().text =
                             battleSystem.enemysInstance[i].unit.GetUnitName;
-                        
+
                         var obj = battleSystem.enemysInstance[i].gameObj;
-                        
+
                         chooseEnemyButtons[i].onClick.AddListener(() =>
                         {
                             battleSystem.OnSelectedTargetButton(obj);
