@@ -11,7 +11,7 @@ namespace ProjectD.StateMachine.States.Combat_States
         public override IEnumerator Start()
         {
             // Debug.Log("Current enemy playing " + BattleSystem.CurrentEnemyIndex);
-            BattleSystem.Player.Damage(BattleSystem.Enemy(BattleSystem.CurrentEnemyIndex).Attack);
+            BattleSystem.Player.Damage(BattleSystem.Enemy(BattleSystem.CurrentEnemyIndex).EnemyData.Attack);
 
             yield return new WaitForSeconds(1f);
 

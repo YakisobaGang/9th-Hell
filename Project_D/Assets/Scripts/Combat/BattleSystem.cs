@@ -1,4 +1,6 @@
-﻿using ProjectD.Commands;
+﻿using System;
+using ProjectD.Commands;
+using ProjectD.Enemys;
 using ProjectD.ScriptableObjects;
 using ProjectD.StateMachine.States.Combat_States;
 using ProjectD.StateMachine.States.Combat_States.End_States;
@@ -10,22 +12,23 @@ namespace ProjectD.Combat
     {
         [SerializeField] private CommandHandler commandHandler;
         [SerializeField] private Fighter player;
-        [SerializeField] private Fighter[] enemys;
+        [SerializeField] private DumbEnemy[] enemys;
         [SerializeField] public GameEvent onPlayerLoss;
         [SerializeField] public GameEvent onPlayerWin;
         [SerializeField] private int playerTurnCount = 3;
 
         [HideInInspector] public int playerAbilityIndex = 0;
+        public int target { get; private set; }
 
         public int DeadEnemys { get; set; }
         public int CurrentEnemyIndex { get; private set; }
         public Fighter Player => player;
-        public Fighter Enemy(int index) => enemys[index];
+        public DumbEnemy Enemy(int index) => enemys[index];
         public bool IsTheLastEnemyTurn => CurrentEnemyIndex == enemys.Length - 1;
         public int PlayerTurnCount
         {
             get => playerTurnCount;
-            set => playerTurnCount = value;
+            private set => playerTurnCount = value;
         }
         public void PassToNextEnemy()
         {
@@ -43,13 +46,43 @@ namespace ProjectD.Combat
         {
             SetState(new EnemyTurn(this));
         }
+
         private void LateUpdate()
         {
+            print(State.ToString());
+            
             CheckIsPlayerAlive();
 
             CheckIfHasAnyEnemyLeft();
 
             CheckPlayerHasAnyActionsLeft();
+            
+            
+            void CheckPlayerHasAnyActionsLeft()
+            {
+                if (playerTurnCount <= 0)
+                {
+                    commandHandler.DoCommands();
+                    playerTurnCount = 3;
+                    Invoke(nameof(ChangeToEnemyTurn), 1.5f);
+                }
+            }
+
+            void CheckIfHasAnyEnemyLeft()
+            {
+                if (enemys.Length.Equals(DeadEnemys))
+                {
+                    SetState(new Won(this));
+                }
+            }
+
+            void CheckIsPlayerAlive()
+            {
+                if (player.CurrentHealth <= 0)
+                {
+                    SetState(new Loss(this));
+                }
+            }
         }
 
         private void Start()
@@ -71,31 +104,11 @@ namespace ProjectD.Combat
             playerTurnCount--;
         }
 
-        private void CheckPlayerHasAnyActionsLeft()
+        public void OnSelectTarget(int index)
         {
-            if (playerTurnCount <= 0)
-            {
-                commandHandler.DoCommands();
-                playerTurnCount = 3;
-                Invoke(nameof(ChangeToEnemyTurn), 1.5f);
-            }
+            target = index;
         }
 
-        private void CheckIfHasAnyEnemyLeft()
-        {
-            if (enemys.Length.Equals(DeadEnemys))
-            {
-                SetState(new Won(this));
-            }
-        }
-
-        private void CheckIsPlayerAlive()
-        {
-            if (player.CurrentHealth <= 0)
-            {
-                SetState(new Loss(this));
-            }
-        }
 
         private void SetStateToPlayerAttack()
         {

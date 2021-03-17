@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using ProjectD.Combat;
+using ProjectD.ScriptableObjects;
 using UnityEngine;
 
 namespace ProjectD.StateMachine.States.Combat_States
 {
     public class PlayerTurn : State
     {
+        private bool enemyIsDead;
+        Fighter PlayerData => BattleSystem.Player;
+        int AbilityIndex => BattleSystem.playerAbilityIndex;
         public PlayerTurn(BattleSystem battleSystem) : base(battleSystem) { }
 
         public override IEnumerator Start()
@@ -15,14 +19,11 @@ namespace ProjectD.StateMachine.States.Combat_States
 
         public override IEnumerator Attack()
         {
-            var enemyIsDead = BattleSystem.Player.UsingAbility(BattleSystem.playerAbilityIndex, BattleSystem.Enemy(0));
-
+            Debug.Log(BattleSystem.target.ToString());
+            CastAbility(BattleSystem.target);
+            
             yield return new WaitForSeconds(1f);
 
-            if (enemyIsDead)
-            {
-                BattleSystem.DeadEnemys++;
-            }
 
             if (BattleSystem.PlayerTurnCount >= 3)
             {
@@ -30,9 +31,19 @@ namespace ProjectD.StateMachine.States.Combat_States
             }
         }
 
+        private void CastAbility(int targetIndex)
+        {
+            enemyIsDead = PlayerData.UsingAbility(AbilityIndex, BattleSystem.Enemy(targetIndex).EnemyData);
+            
+            if (enemyIsDead)
+            {
+                BattleSystem.DeadEnemys++;
+            }
+        }
+
         public override IEnumerator Heal()
         {
-            var temp = BattleSystem.Player.GetAbility(BattleSystem.playerAbilityIndex);
+            var temp = BattleSystem.Player.GetAbility(AbilityIndex);
             BattleSystem.Player.Heal(temp.GetDamageValue);
 
             yield return new WaitForSeconds(1f);
