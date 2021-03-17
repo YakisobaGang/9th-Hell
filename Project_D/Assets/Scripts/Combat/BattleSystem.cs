@@ -9,18 +9,19 @@ namespace ProjectD.Combat
     public class BattleSystem : MonoBehaviour
     {
         [SerializeField] private CommandHandler commandHandler;
-        [Header("Steup Battle")] [SerializeField]
+        [Header("Steup Battle")]
+        [SerializeField]
         private GameObject playerPrefab;
 
         [SerializeField] private GameObject[] enemysPrefab;
         [SerializeField] private Transform playerSpawnPoint;
         [SerializeField] private Transform[] enemysSpawnPoint;
-        
+
         private int playerTurnCount = 3;
         private Unit playerInstance;
-        
+
         public CombatState combatState { get; private set; }
-        public List<(GameObject gameObj ,Unit unit)> enemysInstance { get; private set; }
+        public List<(GameObject gameObj, Unit unit)> enemysInstance { get; private set; }
 
         private void Awake()
         {
@@ -49,9 +50,9 @@ namespace ProjectD.Combat
                 var enemyGO = Instantiate(enemysPrefab[i], enemysSpawnPoint[i]);
                 enemysInstance.Add((enemyGO, enemyGO.GetComponent<Unit>()));
             }
-            
+
             yield return new WaitForSeconds(0.5f);
-            
+
             SetState(CombatState.PlayerTurn);
             PlayerTurn();
         }
@@ -102,7 +103,7 @@ namespace ProjectD.Combat
 
             SetState(CombatState.SelectingAbility);
         }
-        
+
         public void OnAbilityButton(int index)
         {
             if (combatState != CombatState.SelectingAbility)
