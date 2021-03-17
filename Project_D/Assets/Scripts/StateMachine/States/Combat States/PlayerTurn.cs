@@ -21,7 +21,7 @@ namespace ProjectD.StateMachine.States.Combat_States
         {
             Debug.Log(BattleSystem.target.ToString());
             CastAbility(BattleSystem.target);
-            
+
             yield return new WaitForSeconds(1f);
 
 
@@ -34,7 +34,7 @@ namespace ProjectD.StateMachine.States.Combat_States
         private void CastAbility(int targetIndex)
         {
             enemyIsDead = PlayerData.UsingAbility(AbilityIndex, BattleSystem.Enemy(targetIndex).EnemyData);
-            
+
             if (enemyIsDead)
             {
                 BattleSystem.DeadEnemys++;

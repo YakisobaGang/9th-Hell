@@ -50,14 +50,14 @@ namespace ProjectD.Combat
         private void LateUpdate()
         {
             print(State.ToString());
-            
+
             CheckIsPlayerAlive();
 
             CheckIfHasAnyEnemyLeft();
 
             CheckPlayerHasAnyActionsLeft();
-            
-            
+
+
             void CheckPlayerHasAnyActionsLeft()
             {
                 if (playerTurnCount <= 0)

@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 
 namespace ProjectD.Enemys
 {
-    public class DumbEnemy : EnemyBase 
+    public class DumbEnemy : EnemyBase
     {
         public Fighter EnemyData => enemyData;
     }
