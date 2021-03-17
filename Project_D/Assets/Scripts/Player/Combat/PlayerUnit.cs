@@ -7,6 +7,6 @@ namespace ProjectD.Player.Combat
 {
     public class PlayerTurnBaseCombat : MonoBehaviour
     {
-        
+
     }
 }
