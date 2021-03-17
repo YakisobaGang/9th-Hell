@@ -2,6 +2,6 @@
 {
     public interface IDamageable
     {
-        void TakeDamage(int damage = 1);
+        bool TakeDamage(int damage = 1);
     }
 }

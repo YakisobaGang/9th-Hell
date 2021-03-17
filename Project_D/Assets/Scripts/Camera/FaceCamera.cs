@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Cameras
+namespace ProjectD.Camera
 {
     public class FaceCamera : MonoBehaviour
     {
@@ -8,7 +8,7 @@ namespace Cameras
 
         private void Start()
         {
-            mainCameraTransform = Camera.main.transform;
+            mainCameraTransform = UnityEngine.Camera.main.transform;
         }
 
         private void LateUpdate()

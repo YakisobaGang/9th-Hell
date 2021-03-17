@@ -1,123 +1,118 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using ProjectD.Commands;
-using ProjectD.Enemys;
-using ProjectD.ScriptableObjects;
-using ProjectD.StateMachine.States.Combat_States;
-using ProjectD.StateMachine.States.Combat_States.End_States;
 using UnityEngine;
 
 namespace ProjectD.Combat
 {
-    public class BattleSystem : StateMachine.StateMachine
+    public class BattleSystem : MonoBehaviour
     {
         [SerializeField] private CommandHandler commandHandler;
-        [SerializeField] private Fighter player;
-        [SerializeField] private DumbEnemy[] enemys;
-        [SerializeField] public GameEvent onPlayerLoss;
-        [SerializeField] public GameEvent onPlayerWin;
-        [SerializeField] private int playerTurnCount = 3;
+        [Header("Steup Battle")] [SerializeField]
+        private GameObject playerPrefab;
 
-        [HideInInspector] public int playerAbilityIndex = 0;
-        public int target { get; private set; }
+        [SerializeField] private GameObject[] enemysPrefab;
+        [SerializeField] private Transform playerSpawnPoint;
+        [SerializeField] private Transform[] enemysSpawnPoint;
+        
+        private int playerTurnCount = 3;
+        private Unit playerInstance;
+        
+        public CombatState combatState { get; private set; }
+        public List<(GameObject gameObj ,Unit unit)> enemysInstance { get; private set; }
 
-        public int DeadEnemys { get; set; }
-        public int CurrentEnemyIndex { get; private set; }
-        public Fighter Player => player;
-        public DumbEnemy Enemy(int index) => enemys[index];
-        public bool IsTheLastEnemyTurn => CurrentEnemyIndex == enemys.Length - 1;
-        public int PlayerTurnCount
+        private void Awake()
         {
-            get => playerTurnCount;
-            private set => playerTurnCount = value;
-        }
-        public void PassToNextEnemy()
-        {
-            if (CurrentEnemyIndex.Equals(enemys.Length - 1))
-            {
-                CurrentEnemyIndex = 0;
-            }
-            else
-            {
-                CurrentEnemyIndex++;
-            }
-        }
-
-        private void ChangeToEnemyTurn()
-        {
-            SetState(new EnemyTurn(this));
-        }
-
-        private void LateUpdate()
-        {
-            print(State.ToString());
-
-            CheckIsPlayerAlive();
-
-            CheckIfHasAnyEnemyLeft();
-
-            CheckPlayerHasAnyActionsLeft();
-
-
-            void CheckPlayerHasAnyActionsLeft()
-            {
-                if (playerTurnCount <= 0)
-                {
-                    commandHandler.DoCommands();
-                    playerTurnCount = 3;
-                    Invoke(nameof(ChangeToEnemyTurn), 1.5f);
-                }
-            }
-
-            void CheckIfHasAnyEnemyLeft()
-            {
-                if (enemys.Length.Equals(DeadEnemys))
-                {
-                    SetState(new Won(this));
-                }
-            }
-
-            void CheckIsPlayerAlive()
-            {
-                if (player.CurrentHealth <= 0)
-                {
-                    SetState(new Loss(this));
-                }
-            }
+            enemysInstance = new List<(GameObject, Unit)>();
         }
 
         private void Start()
         {
-            SetState(new Begin(this));
+            StartCoroutine(SetupBattle());
         }
 
-        public void OnAttackButton(int index)
+        private CombatState SetState(CombatState state)
         {
-            playerAbilityIndex = index;
-            var temp = new CommandSander(SetStateToPlayerAttack, commandHandler);
+            return combatState = state;
+        }
+
+        private IEnumerator SetupBattle()
+        {
+            SetState(CombatState.Processing);
+
+            var playerGO = Instantiate(playerPrefab, playerSpawnPoint);
+            playerInstance = playerGO.GetComponent<Unit>();
+
+            for (var i = 0; i < enemysPrefab.Length; i++)
+            {
+                var enemyGO = Instantiate(enemysPrefab[i], enemysSpawnPoint[i]);
+                enemysInstance.Add((enemyGO, enemyGO.GetComponent<Unit>()));
+            }
+            
+            yield return new WaitForSeconds(0.5f);
+            
+            SetState(CombatState.PlayerTurn);
+            PlayerTurn();
+        }
+
+        private IEnumerator PlayerAction()
+        {
+            PlayerQueueActions();
+            yield return new WaitForSeconds(1f);
+        }
+
+        private void PlayerQueueActions()
+        {
+            new CommandSander(() => playerInstance.UsingAbility(), commandHandler);
             playerTurnCount--;
+
+            if (playerTurnCount == 0)
+            {
+                commandHandler.DoCommands();
+                SetState(CombatState.EnemyTurn);
+                EnemyTurn();
+                return;
+            }
+
+            SetState(CombatState.PlayerTurn);
+            PlayerTurn();
         }
 
-        public void OnHealButton(int index)
+        private void EnemyTurn()
         {
-            playerAbilityIndex = index;
-            var temp = new CommandSander(SetStateToPlayerHeal, commandHandler);
-            playerTurnCount--;
+            throw new NotImplementedException();
         }
 
-        public void OnSelectTarget(int index)
+        private void PlayerTurn()
         {
-            target = index;
+            if (combatState != CombatState.PlayerTurn)
+                return;
+            SetState(CombatState.SelectingTarget);
         }
 
+        #region UI fuctions
 
-        private void SetStateToPlayerAttack()
+        public void OnSelectedTargetButton(GameObject target)
         {
-            StartCoroutine(State.Attack());
+            if (combatState != CombatState.SelectingTarget)
+                return;
+
+            playerInstance.SetTarget(target);
+
+            SetState(CombatState.SelectingAbility);
+        }
+        
+        public void OnAbilityButton(int index)
+        {
+            if (combatState != CombatState.SelectingAbility)
+                return;
+
+            playerInstance.SetChooseAbility(index);
+
+            StartCoroutine(PlayerAction());
         }
 
-        private void SetStateToPlayerHeal()
-        {
-            StartCoroutine(State.Heal());
-        }
+        #endregion
     }
 }

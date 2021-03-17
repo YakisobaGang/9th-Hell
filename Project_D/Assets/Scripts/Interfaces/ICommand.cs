@@ -1,4 +1,3 @@
-
 namespace ProjectD.Interfaces
 {
     public interface ICommand
