@@ -1,7 +1,7 @@
-﻿using ProjectD.Abilitys;
+﻿using ProjectD.Combat;
 using UnityEngine;
 
-namespace ProjectD.ScriptableObjects
+namespace ProjectD.Abilitys
 {
     [CreateAssetMenu(fileName = "New Ability", menuName = "Create New Ability", order = 0)]
     public class AbilityData : ScriptableObject
@@ -11,19 +11,22 @@ namespace ProjectD.ScriptableObjects
         [SerializeField] private GameObject onHitAbilityFX;
         [SerializeField] private GameObject castAbilityFx;
         [SerializeField] private int damage;
-
-        public AbilityTypes GetAbilityType() => type;
-        public string GetName() => name;
         public GameObject GetOnHitFX => onHitAbilityFX;
         public GameObject GetCastFX => castAbilityFx;
-        public int GetDamageValue => damage;
 
-        /// <summary>
-        /// se o valor de dano for negativo, a função vai usar o valor de dentro da classe.
-        /// </summary>
-        /// <param name="target"></param>
-        /// <param name="_damage"></param>
-        /// <returns></returns>
-        public bool CastAbility(Fighter target, int _damage = -1) => target.Damage(_damage <= -1 ? this.damage : _damage);
+        public AbilityTypes GetAbilityType()
+        {
+            return type;
+        }
+
+        public string GetName()
+        {
+            return name;
+        }
+
+        public bool CastAbility(GameObject target, float damageMultiplayer = 1)
+        {
+            return target.GetComponent<Unit>().TakeDamage((int) (damage * damageMultiplayer));
+        }
     }
 }
