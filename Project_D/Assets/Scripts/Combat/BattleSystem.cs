@@ -19,6 +19,7 @@ namespace ProjectD.Combat
 
         private int playerTurnCount = 3;
         private Unit playerInstance;
+        private int currentEnemyIndex = 0;
 
         public CombatState combatState { get; private set; }
         public List<(GameObject gameObj, Unit unit)> enemysInstance { get; private set; }
@@ -57,6 +58,8 @@ namespace ProjectD.Combat
             PlayerTurn();
         }
 
+        #region Player 
+
         private IEnumerator PlayerAction()
         {
             PlayerQueueActions();
@@ -80,17 +83,45 @@ namespace ProjectD.Combat
             PlayerTurn();
         }
 
-        private void EnemyTurn()
-        {
-            throw new NotImplementedException();
-        }
-
         private void PlayerTurn()
         {
             if (combatState != CombatState.PlayerTurn)
                 return;
             SetState(CombatState.SelectingTarget);
         }
+        
+        #endregion
+
+        private void EnemyTurn()
+        {
+            bool isDead = playerInstance.TakeDamage(enemysInstance[currentEnemyIndex].unit.BaseDamage);
+            if (isDead)
+            {
+                SetState(CombatState.Loss);
+                return;
+            }
+
+            if (currentEnemyIndex == enemysInstance.Count - 1)
+            {
+                SetState(CombatState.PlayerTurn);
+                return;
+            }
+            
+            PassToNextEnemy();
+            SetState(CombatState.EnemyTurn);
+        }
+
+        private void PassToNextEnemy()
+        {
+            if (currentEnemyIndex == enemysInstance.Count - 1)
+            {
+                currentEnemyIndex = 0;
+                return;
+            }
+
+            currentEnemyIndex++;
+        }
+
 
         #region UI fuctions
 
