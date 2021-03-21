@@ -89,7 +89,7 @@ namespace ProjectD.Combat
                 return;
             SetState(CombatState.SelectingTarget);
         }
-        
+
         #endregion
 
         private void EnemyTurn()
@@ -106,7 +106,7 @@ namespace ProjectD.Combat
                 SetState(CombatState.PlayerTurn);
                 return;
             }
-            
+
             PassToNextEnemy();
             SetState(CombatState.EnemyTurn);
         }

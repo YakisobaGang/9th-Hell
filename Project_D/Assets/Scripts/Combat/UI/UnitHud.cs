@@ -9,18 +9,18 @@ namespace ProjectD.Combat.UI
         [SerializeField] private Image healBar;
         private Unit unit;
 
-        private void Awake() => 
+        private void Awake() =>
             unit = GetComponent<Unit>();
 
-        private void OnEnable() => 
+        private void OnEnable() =>
             unit.OnHealthChange += UpdateHealBar;
 
-        private void OnDisable() => 
+        private void OnDisable() =>
             unit.OnHealthChange -= UpdateHealBar;
 
         private void UpdateHealBar(int newHealValue)
         {
-            healBar.fillAmount = (float) newHealValue / healBar.fillAmount;
+            healBar.fillAmount = (float)newHealValue / healBar.fillAmount;
         }
     }
 }

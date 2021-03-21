@@ -27,7 +27,7 @@ namespace ProjectD.Combat
         public bool TakeDamage(int damage = 1)
         {
             health -= damage;
-            
+
             OnHealthChange?.Invoke(health);
 
             return health == 0 ? true : false;
