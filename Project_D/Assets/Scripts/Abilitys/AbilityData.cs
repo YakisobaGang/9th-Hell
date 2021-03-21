@@ -26,7 +26,7 @@ namespace ProjectD.Abilitys
 
         public bool CastAbility(GameObject target, float damageMultiplayer = 1)
         {
-            return target.GetComponent<Unit>().TakeDamage((int) (damage * damageMultiplayer));
+            return target.GetComponent<Unit>().TakeDamage((int)(damage * damageMultiplayer));
         }
     }
 }
