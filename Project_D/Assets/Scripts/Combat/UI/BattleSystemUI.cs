@@ -43,9 +43,9 @@ namespace ProjectD.Combat.UI
 
                     for (int i = 0; i < playerAbilitys.Length; i++)
                     {
-                       chooseAbilityButtons[i].gameObject.SetActive(true);
-                       chooseAbilityButtons[i].gameObject.GetComponentInChildren<TMP_Text>().text =
-                           playerAbilitys[i].abilityName;
+                        chooseAbilityButtons[i].gameObject.SetActive(true);
+                        chooseAbilityButtons[i].gameObject.GetComponentInChildren<TMP_Text>().text =
+                            playerAbilitys[i].abilityName;
                     }
                     break;
                 default:

@@ -100,7 +100,7 @@ namespace ProjectD.Combat
         {
             yield return new WaitForSeconds(0.7f);
             playerTurnCount = 3;
-            
+
             bool isDead = playerInstance.TakeDamage(enemysInstance[currentEnemyIndex].unit.BaseDamage);
             if (isDead)
             {
@@ -117,7 +117,7 @@ namespace ProjectD.Combat
                 yield break;
             }
 
-            StartCoroutine( PassToNextEnemy());
+            StartCoroutine(PassToNextEnemy());
             SetState(CombatState.EnemyTurn);
             yield return EnemyTurn();
         }

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace ProjectD.Abilitys
 {
-    public abstract class AbilityBase : MonoBehaviour ,ICastAbility
+    public abstract class AbilityBase : MonoBehaviour, ICastAbility
     {
         [SerializeField] private AbilityData abilityData;
         [SerializeField] private Transform casterTransform = null;
@@ -13,7 +13,7 @@ namespace ProjectD.Abilitys
         public void SetTarget(Unit newTarget) => target = newTarget;
         public AbilityTypes abilityType => abilityData.GetAbilityType();
         public string abilityName => abilityData.GetName();
-        
+
         public virtual bool CastAbility()
         {
             return false;
@@ -25,11 +25,11 @@ namespace ProjectD.Abilitys
             {
                 yield break;
             }
-            
+
             var fx = Instantiate(abilityData.GetCastFX, casterTransform);
-            
+
             yield return new WaitUntil(() => fx.gameObject.GetComponent<ParticleSystem>().isEmitting == false);
-            
+
             Destroy(fx, 0.3f);
         }
     }
