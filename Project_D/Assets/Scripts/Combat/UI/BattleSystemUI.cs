@@ -10,6 +10,7 @@ namespace ProjectD.Combat.UI
         [SerializeField] private BattleSystem battleSystem;
         [SerializeField] private GameObject chooseEnemyPanel;
         [SerializeField] private Button[] chooseEnemyButtons;
+        [SerializeField] private Button[] chooseAbilityButtons;
         [SerializeField] private GameObject chooseAbilityPanel;
 
         private void Update()
@@ -37,6 +38,15 @@ namespace ProjectD.Combat.UI
                 case CombatState.SelectingAbility:
                     chooseAbilityPanel.SetActive(true);
                     chooseEnemyPanel.SetActive(false);
+
+                    var playerAbilitys = battleSystem.playerInstance.GetAllAbilitys;
+
+                    for (int i = 0; i < playerAbilitys.Length; i++)
+                    {
+                       chooseAbilityButtons[i].gameObject.SetActive(true);
+                       chooseAbilityButtons[i].gameObject.GetComponentInChildren<TMP_Text>().text =
+                           playerAbilitys[i].abilityName;
+                    }
                     break;
                 default:
                     chooseAbilityPanel.SetActive(false);

@@ -1,5 +1,4 @@
-﻿using ProjectD.Combat;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace ProjectD.Abilitys
 {
@@ -8,25 +7,13 @@ namespace ProjectD.Abilitys
     {
         [SerializeField] private AbilityTypes type;
         [SerializeField] private string abilityName;
-        [SerializeField] private GameObject onHitAbilityFX;
-        [SerializeField] private GameObject castAbilityFx;
-        [SerializeField] private int damage;
+        [SerializeField] private GameObject onHitAbilityFX = null;
+        [SerializeField] private GameObject castAbilityFx = null;
+        [SerializeField, Range(0.5f, 4f)] private float castTime = 1f;
         public GameObject GetOnHitFX => onHitAbilityFX;
         public GameObject GetCastFX => castAbilityFx;
-
-        public AbilityTypes GetAbilityType()
-        {
-            return type;
-        }
-
-        public string GetName()
-        {
-            return name;
-        }
-
-        public bool CastAbility(GameObject target, float damageMultiplayer = 1)
-        {
-            return target.GetComponent<Unit>().TakeDamage((int)(damage * damageMultiplayer));
-        }
+        public float CastTime => castTime;
+        public AbilityTypes GetAbilityType() => type;
+        public string GetName() => abilityName;
     }
 }

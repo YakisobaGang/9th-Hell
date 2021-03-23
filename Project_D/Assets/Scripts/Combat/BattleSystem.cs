@@ -18,11 +18,15 @@ namespace ProjectD.Combat
         [SerializeField] private Transform[] enemysSpawnPoint;
 
         private int playerTurnCount = 3;
-        private Unit playerInstance;
+        public Unit playerInstance { get; private set; }
         private int currentEnemyIndex = 0;
-
         public CombatState combatState { get; private set; }
         public List<(GameObject gameObj, Unit unit)> enemysInstance { get; private set; }
+
+        private void Update()
+        {
+            print(combatState.ToString());
+        }
 
         private void Awake()
         {
@@ -75,7 +79,7 @@ namespace ProjectD.Combat
             {
                 commandHandler.DoCommands();
                 SetState(CombatState.EnemyTurn);
-                EnemyTurn();
+                StartCoroutine(EnemyTurn());
                 return;
             }
 
@@ -92,32 +96,35 @@ namespace ProjectD.Combat
 
         #endregion
 
-        private void EnemyTurn()
+        private IEnumerator EnemyTurn()
         {
+            yield return new WaitForSeconds(0.7f);
+            playerTurnCount = 3;
+            
             bool isDead = playerInstance.TakeDamage(enemysInstance[currentEnemyIndex].unit.BaseDamage);
             if (isDead)
             {
                 SetState(CombatState.Loss);
-                return;
+                StopAllCoroutines();
+                yield break;
             }
 
             if (currentEnemyIndex == enemysInstance.Count - 1)
             {
                 SetState(CombatState.PlayerTurn);
-                return;
+                currentEnemyIndex = 0;
+                PlayerTurn();
+                yield break;
             }
 
-            PassToNextEnemy();
+            StartCoroutine( PassToNextEnemy());
             SetState(CombatState.EnemyTurn);
+            yield return EnemyTurn();
         }
 
-        private void PassToNextEnemy()
+        private IEnumerator PassToNextEnemy()
         {
-            if (currentEnemyIndex == enemysInstance.Count - 1)
-            {
-                currentEnemyIndex = 0;
-                return;
-            }
+            yield return new WaitForSeconds(0.5f);
 
             currentEnemyIndex++;
         }
@@ -130,7 +137,7 @@ namespace ProjectD.Combat
             if (combatState != CombatState.SelectingTarget)
                 return;
 
-            playerInstance.SetTarget(target);
+            playerInstance.AddTarget(target);
 
             SetState(CombatState.SelectingAbility);
         }
@@ -139,7 +146,6 @@ namespace ProjectD.Combat
         {
             if (combatState != CombatState.SelectingAbility)
                 return;
-
             playerInstance.SetChooseAbility(index);
 
             StartCoroutine(PlayerAction());

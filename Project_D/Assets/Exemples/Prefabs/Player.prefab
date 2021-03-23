@@ -82,6 +82,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7775097763091562548}
   - component: {fileID: 2487266270499625269}
+  - component: {fileID: 2115340714616862080}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -117,12 +118,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3452bb013b44dfdbe596be8e1abfba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1000
+  unitName: Player
+  maxHealth: 1000
+  currentHealth: 1000
   abilitys:
-  - {fileID: 11400000, guid: 67edeba4af616bd46ac0d956b862fbe0, type: 2}
-  - {fileID: 11400000, guid: bb54720973739cd4383ae54c410a4e5a, type: 2}
-  - {fileID: 11400000, guid: e7d33335c97b07e43953df2edf57ec55, type: 2}
-  target: {fileID: 0}
+  - {fileID: 3111055583897698305, guid: a871c5ba25dd41a48ac98b7110ed2925, type: 3}
+  - {fileID: 3111055583897698305, guid: 4cd842aec7b4958468f809b418bb5990, type: 3}
+  - {fileID: -3033868941429933885, guid: 114c4941e5033d049ae100139e7e9327, type: 3}
+  baseDamage: 10
+--- !u!114 &2115340714616862080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7775097763091562549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dddf5cca1ac54e9eb7be73109709b830, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healBar: {fileID: 7775097763265725411}
+  unitDisplayText: {fileID: 0}
+  unit: {fileID: 2487266270499625269}
 --- !u!1 &7775097763265725409
 GameObject:
   m_ObjectHideFlags: 0

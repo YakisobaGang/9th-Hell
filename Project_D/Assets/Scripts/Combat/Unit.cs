@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using ProjectD.Abilitys;
 using ProjectD.Interfaces;
 using UnityEngine;
@@ -7,35 +8,42 @@ namespace ProjectD.Combat
 {
     public class Unit : MonoBehaviour, IDamageable, ICanHeal
     {
-        public event Action<int> OnHealthChange;
+        public event Action<float> OnHealthChange;
         [SerializeField] private string unitName;
-        [SerializeField] private int health = 1000;
-        [SerializeField] private AbilityData[] abilitys;
+        [SerializeField] private int maxHealth;
+        [SerializeField] private int currentHealth;
+        [SerializeField] private AbilityBase[] abilitys;
         [SerializeField] private int baseDamage = 10;
         private int? abilityIndex;
-        private GameObject target;
+        private Queue<GameObject> targets = new Queue<GameObject>();
 
+        public AbilityBase[] GetAllAbilitys => abilitys;
         public string GetUnitName => unitName;
         public int BaseDamage => baseDamage;
 
+        private void OnValidate()
+        {
+            currentHealth = maxHealth;
+        }
+
         public void Heal(int healAmount = 1)
         {
-            health += healAmount;
-            OnHealthChange?.Invoke(health);
+            currentHealth += healAmount;
+            OnHealthChange?.Invoke((float) currentHealth / maxHealth);
         }
 
         public bool TakeDamage(int damage = 1)
         {
-            health -= damage;
+            currentHealth -= damage;
 
-            OnHealthChange?.Invoke(health);
+            OnHealthChange?.Invoke((float) currentHealth / maxHealth);
 
-            return health == 0 ? true : false;
+            return currentHealth == 0 ? true : false;
         }
 
-        public void SetTarget(GameObject newTarget)
+        public void AddTarget(GameObject newTarget)
         {
-            target = newTarget;
+            targets.Enqueue(newTarget);
         }
 
         public void SetChooseAbility(int index)
@@ -45,10 +53,18 @@ namespace ProjectD.Combat
 
         public bool UsingAbility()
         {
-            if (target is null || abilityIndex is null)
+            if (targets is null || abilityIndex is null)
                 return false;
 
-            return abilitys[abilityIndex.Value].CastAbility(target);
+            if (abilitys[abilityIndex.Value].abilityType == AbilityTypes.Heal)
+            {
+                abilitys[abilityIndex.Value].SetTarget(gameObject.GetComponent<Unit>());
+                targets.Dequeue();
+                return abilitys[abilityIndex.Value].CastAbility();
+            }
+            
+            abilitys[abilityIndex.Value].SetTarget(targets.Dequeue().GetComponent<Unit>());
+            return abilitys[abilityIndex.Value].CastAbility();
         }
     }
 }

@@ -504,7 +504,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &832099375
 RectTransform:
   m_ObjectHideFlags: 0
@@ -576,7 +576,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -739,6 +739,10 @@ MonoBehaviour:
   - {fileID: 6943928571214195727}
   - {fileID: 5796140008533380}
   - {fileID: 5861792193368274732}
+  chooseAbilityButtons:
+  - {fileID: 832099376}
+  - {fileID: 1776497374}
+  - {fileID: 1945581851}
   chooseAbilityPanel: {fileID: 455131617}
 --- !u!1 &1265362260
 GameObject:
@@ -1300,6 +1304,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1661222085}
   m_CullTransparentMesh: 1
+--- !u!1 &1732613989
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1732613990}
+  m_Layer: 0
+  m_Name: EnemySpawnPoint 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1732613990
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732613989}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.95, y: 0.25, z: 1.02}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1751378692}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1737602855
 GameObject:
   m_ObjectHideFlags: 0
@@ -1363,9 +1397,11 @@ MonoBehaviour:
   playerPrefab: {fileID: 7775097763091562549, guid: fd07f8ab0fdc64942b6bfcbb2943ee0d, type: 3}
   enemysPrefab:
   - {fileID: 7375001351923443220, guid: 0df6aa7b74ebeb74094d26d386de6462, type: 3}
+  - {fileID: 7375001351923443220, guid: 5d75c5420927b3741b0660d8a9d300a2, type: 3}
   playerSpawnPoint: {fileID: 2010910754}
   enemysSpawnPoint:
   - {fileID: 2083179025}
+  - {fileID: 1732613990}
 --- !u!4 &1751378692
 Transform:
   m_ObjectHideFlags: 0
@@ -1379,6 +1415,7 @@ Transform:
   m_Children:
   - {fileID: 2010910754}
   - {fileID: 2083179025}
+  - {fileID: 1732613990}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1430,7 +1467,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1776497373
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1502,7 +1539,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1734,7 +1771,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1945581850
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1806,7 +1843,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

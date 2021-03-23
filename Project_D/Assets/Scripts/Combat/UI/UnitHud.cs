@@ -1,4 +1,5 @@
 ﻿using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,10 +8,20 @@ namespace ProjectD.Combat.UI
     public class UnitHud : MonoBehaviour
     {
         [SerializeField] private Image healBar;
-        private Unit unit;
+        [SerializeField] private TMP_Text unitDisplayText = null;
+        [SerializeField] private Unit unit;
 
         private void Awake() =>
             unit = GetComponent<Unit>();
+
+        private void Start()
+        {
+            if (unitDisplayText is null)
+            {
+                return;
+            }
+            unitDisplayText.SetText(unit.GetUnitName);
+        }
 
         private void OnEnable() =>
             unit.OnHealthChange += UpdateHealBar;
@@ -18,9 +29,9 @@ namespace ProjectD.Combat.UI
         private void OnDisable() =>
             unit.OnHealthChange -= UpdateHealBar;
 
-        private void UpdateHealBar(int newHealValue)
+        private void UpdateHealBar(float newHealValue)
         {
-            healBar.fillAmount = (float)newHealValue / healBar.fillAmount;
+            healBar.fillAmount = newHealValue;
         }
     }
 }

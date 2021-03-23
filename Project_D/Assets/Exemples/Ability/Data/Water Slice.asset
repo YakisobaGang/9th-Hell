@@ -16,4 +16,4 @@ MonoBehaviour:
   abilityName: Water Slice
   onHitAbilityFX: {fileID: 0}
   castAbilityFx: {fileID: 0}
-  damage: 40
+  castTime: 0.5
