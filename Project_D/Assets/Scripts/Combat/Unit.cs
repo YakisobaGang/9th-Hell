@@ -8,14 +8,13 @@ namespace ProjectD.Combat
 {
     public class Unit : MonoBehaviour, IDamageable, ICanHeal
     {
-        public event Action<float> OnHealthChange;
         [SerializeField] private string unitName;
         [SerializeField] private int maxHealth;
         [SerializeField] private int currentHealth;
         [SerializeField] private AbilityBase[] abilitys;
         [SerializeField] private int baseDamage = 10;
+        private readonly Queue<GameObject> targets = new Queue<GameObject>();
         private int? abilityIndex;
-        private Queue<GameObject> targets = new Queue<GameObject>();
 
         public AbilityBase[] GetAllAbilitys => abilitys;
         public string GetUnitName => unitName;
@@ -29,17 +28,19 @@ namespace ProjectD.Combat
         public void Heal(int healAmount = 1)
         {
             currentHealth += healAmount;
-            OnHealthChange?.Invoke((float)currentHealth / maxHealth);
+            OnHealthChange?.Invoke((float) currentHealth / maxHealth);
         }
 
         public bool TakeDamage(int damage = 1)
         {
             currentHealth -= damage;
 
-            OnHealthChange?.Invoke((float)currentHealth / maxHealth);
+            OnHealthChange?.Invoke((float) currentHealth / maxHealth);
 
             return currentHealth == 0 ? true : false;
         }
+
+        public event Action<float> OnHealthChange;
 
         public void AddTarget(GameObject newTarget)
         {

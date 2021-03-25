@@ -1,5 +1,4 @@
-﻿using System;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,7 +20,7 @@ namespace ProjectD.Combat.UI
                     chooseEnemyPanel.SetActive(true);
                     chooseAbilityPanel.SetActive(false);
 
-                    for (int i = 0; i < battleSystem.enemysInstance.Count; i++)
+                    for (var i = 0; i < battleSystem.enemysInstance.Count; i++)
                     {
                         chooseEnemyButtons[i].gameObject.SetActive(true);
                         chooseEnemyButtons[i].gameObject.GetComponentInChildren<TMP_Text>().text =
@@ -29,11 +28,9 @@ namespace ProjectD.Combat.UI
 
                         var obj = battleSystem.enemysInstance[i].gameObj;
 
-                        chooseEnemyButtons[i].onClick.AddListener(() =>
-                        {
-                            battleSystem.OnSelectedTargetButton(obj);
-                        });
+                        chooseEnemyButtons[i].onClick.AddListener(() => { battleSystem.OnSelectedTargetButton(obj); });
                     }
+
                     break;
                 case CombatState.SelectingAbility:
                     chooseAbilityPanel.SetActive(true);
@@ -41,12 +38,13 @@ namespace ProjectD.Combat.UI
 
                     var playerAbilitys = battleSystem.playerInstance.GetAllAbilitys;
 
-                    for (int i = 0; i < playerAbilitys.Length; i++)
+                    for (var i = 0; i < playerAbilitys.Length; i++)
                     {
                         chooseAbilityButtons[i].gameObject.SetActive(true);
                         chooseAbilityButtons[i].gameObject.GetComponentInChildren<TMP_Text>().text =
                             playerAbilitys[i].abilityName;
                     }
+
                     break;
                 default:
                     chooseAbilityPanel.SetActive(false);

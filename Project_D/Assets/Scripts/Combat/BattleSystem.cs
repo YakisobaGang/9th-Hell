@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using ProjectD.Commands;
 using UnityEngine;
@@ -9,24 +8,19 @@ namespace ProjectD.Combat
     public class BattleSystem : MonoBehaviour
     {
         [SerializeField] private CommandHandler commandHandler;
-        [Header("Steup Battle")]
-        [SerializeField]
+
+        [Header("Steup Battle")] [SerializeField]
         private GameObject playerPrefab;
 
         [SerializeField] private GameObject[] enemysPrefab;
         [SerializeField] private Transform playerSpawnPoint;
         [SerializeField] private Transform[] enemysSpawnPoint;
+        private int currentEnemyIndex;
 
         private int playerTurnCount = 3;
         public Unit playerInstance { get; private set; }
-        private int currentEnemyIndex = 0;
         public CombatState combatState { get; private set; }
         public List<(GameObject gameObj, Unit unit)> enemysInstance { get; private set; }
-
-        private void Update()
-        {
-            print(combatState.ToString());
-        }
 
         private void Awake()
         {
@@ -36,6 +30,11 @@ namespace ProjectD.Combat
         private void Start()
         {
             StartCoroutine(SetupBattle());
+        }
+
+        private void Update()
+        {
+            print(combatState.ToString());
         }
 
         private CombatState SetState(CombatState state)
@@ -62,7 +61,40 @@ namespace ProjectD.Combat
             PlayerTurn();
         }
 
-        #region Player 
+        private IEnumerator EnemyTurn()
+        {
+            yield return new WaitForSeconds(0.7f);
+            playerTurnCount = 3;
+
+            var isDead = playerInstance.TakeDamage(enemysInstance[currentEnemyIndex].unit.BaseDamage);
+            if (isDead)
+            {
+                SetState(CombatState.Loss);
+                StopAllCoroutines();
+                yield break;
+            }
+
+            if (currentEnemyIndex == enemysInstance.Count - 1)
+            {
+                SetState(CombatState.PlayerTurn);
+                currentEnemyIndex = 0;
+                PlayerTurn();
+                yield break;
+            }
+
+            StartCoroutine(PassToNextEnemy());
+            SetState(CombatState.EnemyTurn);
+            yield return EnemyTurn();
+        }
+
+        private IEnumerator PassToNextEnemy()
+        {
+            yield return new WaitForSeconds(0.5f);
+
+            currentEnemyIndex++;
+        }
+
+        #region Player
 
         private IEnumerator PlayerAction()
         {
@@ -95,39 +127,6 @@ namespace ProjectD.Combat
         }
 
         #endregion
-
-        private IEnumerator EnemyTurn()
-        {
-            yield return new WaitForSeconds(0.7f);
-            playerTurnCount = 3;
-
-            bool isDead = playerInstance.TakeDamage(enemysInstance[currentEnemyIndex].unit.BaseDamage);
-            if (isDead)
-            {
-                SetState(CombatState.Loss);
-                StopAllCoroutines();
-                yield break;
-            }
-
-            if (currentEnemyIndex == enemysInstance.Count - 1)
-            {
-                SetState(CombatState.PlayerTurn);
-                currentEnemyIndex = 0;
-                PlayerTurn();
-                yield break;
-            }
-
-            StartCoroutine(PassToNextEnemy());
-            SetState(CombatState.EnemyTurn);
-            yield return EnemyTurn();
-        }
-
-        private IEnumerator PassToNextEnemy()
-        {
-            yield return new WaitForSeconds(0.5f);
-
-            currentEnemyIndex++;
-        }
 
 
         #region UI fuctions

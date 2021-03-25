@@ -4,7 +4,7 @@ namespace ProjectD.Abilitys
 {
     public class DamageAbility : AbilityBase
     {
-        [SerializeField, Range(1, 9999)] private int damageAmount;
+        [SerializeField] [Range(1, 9999)] private int damageAmount;
 
         public override bool CastAbility()
         {

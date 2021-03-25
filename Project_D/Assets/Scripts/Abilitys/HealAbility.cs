@@ -4,7 +4,7 @@ namespace ProjectD.Abilitys
 {
     public class HealAbility : AbilityBase
     {
-        [SerializeField, Range(1, 9999)] private int healAmount;
+        [SerializeField] [Range(1, 9999)] private int healAmount;
 
         public override bool CastAbility()
         {
