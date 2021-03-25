@@ -1,3 +1,5 @@
+using ProjectD.Dialogue;
+using ProjectD.Player.Input;
 using UnityEngine;
 
 namespace ProjectD.Player
@@ -16,6 +18,12 @@ namespace ProjectD.Player
             rb = GetComponent<Rigidbody>();
         }
 
+        private void Start()
+        {
+            DialogueManager.OnDialogueStart += HandleStartDialogue;
+            DialogueManager.OnDialogueEnd += HandleStartDialogue;
+        }
+
         private void FixedUpdate()
         {
             Movement();
@@ -29,6 +37,17 @@ namespace ProjectD.Player
         private void OnDisable()
         {
             inputActions.Disable();
+        }
+
+        private void OnDestroy()
+        {
+            DialogueManager.OnDialogueStart -= HandleStartDialogue;
+            DialogueManager.OnDialogueEnd -= HandleStartDialogue;
+        }
+
+        private void HandleStartDialogue()
+        {
+            enabled = !enabled;
         }
 
         private void Movement()

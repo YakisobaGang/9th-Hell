@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 using Object = UnityEngine.Object;
 
-namespace ProjectD.Player
+namespace ProjectD.Player.Input
 {
     public class PlayerInputActions : IInputActionCollection, IDisposable
     {
@@ -28,26 +28,26 @@ namespace ProjectD.Player
             ""actions"": [
                 {
                     ""name"": ""Movement"",
-                    ""type"": ""Button"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""cf65d426-0034-49a4-a7b4-9b728cc95e0a"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
                 },
                 {
                     ""name"": ""Interact"",
-                    ""type"": ""Button"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""b14613ab-52f8-475c-b403-07b4eca6f153"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": ""Press""
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": ""2D Vector"",
                     ""id"": ""4f2c6403-c77c-49ed-8c2f-0bfd0bc47a57"",
-                    ""path"": ""2DVector"",
+                    ""path"": ""2DVector(mode=2)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

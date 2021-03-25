@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/DevScenes/Stuff/OpenArea.unity
+    guid: 9b1e079baa0334540bac7b6b893b4ab1
+  - enabled: 1
+    path: Assets/Scenes/DevScenes/Dev_Fabricio.unity
+    guid: df263cd8b0392594a8080cc546075445
   m_configObjects: {}
