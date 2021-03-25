@@ -28,14 +28,14 @@ namespace ProjectD.Combat
         public void Heal(int healAmount = 1)
         {
             currentHealth += healAmount;
-            OnHealthChange?.Invoke((float) currentHealth / maxHealth);
+            OnHealthChange?.Invoke((float)currentHealth / maxHealth);
         }
 
         public bool TakeDamage(int damage = 1)
         {
             currentHealth -= damage;
 
-            OnHealthChange?.Invoke((float) currentHealth / maxHealth);
+            OnHealthChange?.Invoke((float)currentHealth / maxHealth);
 
             return currentHealth == 0 ? true : false;
         }

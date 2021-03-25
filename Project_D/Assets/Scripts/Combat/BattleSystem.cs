@@ -9,7 +9,8 @@ namespace ProjectD.Combat
     {
         [SerializeField] private CommandHandler commandHandler;
 
-        [Header("Steup Battle")] [SerializeField]
+        [Header("Steup Battle")]
+        [SerializeField]
         private GameObject playerPrefab;
 
         [SerializeField] private GameObject[] enemysPrefab;
