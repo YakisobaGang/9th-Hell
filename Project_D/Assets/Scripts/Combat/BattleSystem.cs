@@ -124,7 +124,7 @@ namespace ProjectD.Combat
         {
             if (combatState != CombatState.PlayerTurn)
                 return;
-            SetState(CombatState.SelectingTarget);
+            SetState(CombatState.SelectingAbility);
         }
 
         #endregion
@@ -140,6 +140,7 @@ namespace ProjectD.Combat
             playerInstance.AddTarget(target);
 
             SetState(CombatState.SelectingAbility);
+            StartCoroutine(PlayerAction());
         }
 
         public void OnAbilityButton(int index)
@@ -147,8 +148,8 @@ namespace ProjectD.Combat
             if (combatState != CombatState.SelectingAbility)
                 return;
             playerInstance.SetChooseAbility(index);
-
-            StartCoroutine(PlayerAction());
+            
+            SetState(CombatState.SelectingTarget);
         }
 
         #endregion
