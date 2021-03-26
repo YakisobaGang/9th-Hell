@@ -9,6 +9,7 @@ namespace ProjectD.Dialogue
     {
         [SerializeField] private DialoguePanel dialoguePanel;
         private Queue<string> sentences;
+        private bool hasStarted = false;
 
         private void Awake()
         {
@@ -20,8 +21,16 @@ namespace ProjectD.Dialogue
 
         public void StartDialogue(Dialogue dialogue)
         {
+            if (hasStarted)
+            {
+                DisplayNexSentences();
+                return;
+            }
+
             OnDialogueStart?.Invoke();
 
+            hasStarted = true;
+            
             dialoguePanel.gameObject.SetActive(true);
             dialoguePanel.npcNameText.SetText(dialogue.NameNPC());
 
@@ -36,6 +45,7 @@ namespace ProjectD.Dialogue
         {
             if (sentences.Count == 0)
             {
+                hasStarted = false;
                 EndDialogue();
                 return;
             }
