@@ -148,7 +148,7 @@ namespace ProjectD.Combat
             if (combatState != CombatState.SelectingAbility)
                 return;
             playerInstance.SetChooseAbility(index);
-            
+
             SetState(CombatState.SelectingTarget);
         }
 

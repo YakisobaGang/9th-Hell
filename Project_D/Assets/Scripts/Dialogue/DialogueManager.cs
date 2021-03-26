@@ -30,7 +30,7 @@ namespace ProjectD.Dialogue
             OnDialogueStart?.Invoke();
 
             hasStarted = true;
-            
+
             dialoguePanel.gameObject.SetActive(true);
             dialoguePanel.npcNameText.SetText(dialogue.NameNPC());
 
