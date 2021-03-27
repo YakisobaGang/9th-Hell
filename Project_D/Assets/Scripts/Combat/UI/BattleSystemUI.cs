@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,6 +12,22 @@ namespace ProjectD.Combat.UI
         [SerializeField] private Button[] chooseEnemyButtons;
         [SerializeField] private Button[] chooseAbilityButtons;
         [SerializeField] private GameObject chooseAbilityPanel;
+        [SerializeField] private TMP_Text remainingActionsText;
+
+        private void OnEnable()
+        {
+            battleSystem.OnPlayerTurnCountChange += HandleRemainingActionsChange;
+        }
+
+        private void OnDisable()
+        {
+            battleSystem.OnPlayerTurnCountChange -= HandleRemainingActionsChange;
+        }
+
+        private void HandleRemainingActionsChange(int actions)
+        {
+            remainingActionsText.SetText($"Remaining Actions: {actions.ToString()}/3");
+        }
 
         private void Update()
         {

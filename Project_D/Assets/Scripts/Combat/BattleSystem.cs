@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using ProjectD.Commands;
 using UnityEngine;
@@ -19,6 +20,7 @@ namespace ProjectD.Combat
         private int currentEnemyIndex;
 
         private int playerTurnCount = 3;
+        public event Action<int> OnPlayerTurnCountChange;
         public Unit playerInstance { get; private set; }
         public CombatState combatState { get; private set; }
         public List<(GameObject gameObj, Unit unit)> enemysInstance { get; private set; }
@@ -38,14 +40,15 @@ namespace ProjectD.Combat
             print(combatState.ToString());
         }
 
-        private CombatState SetState(CombatState state)
+        private void SetState(CombatState state)
         {
-            return combatState = state;
+            combatState = state;
         }
 
         private IEnumerator SetupBattle()
         {
             SetState(CombatState.Processing);
+            OnPlayerTurnCountChange?.Invoke(playerTurnCount);
 
             var playerGO = Instantiate(playerPrefab, playerSpawnPoint);
             playerInstance = playerGO.GetComponent<Unit>();
@@ -66,6 +69,7 @@ namespace ProjectD.Combat
         {
             yield return new WaitForSeconds(0.7f);
             playerTurnCount = 3;
+            OnPlayerTurnCountChange?.Invoke(playerTurnCount);
 
             var isDead = playerInstance.TakeDamage(enemysInstance[currentEnemyIndex].unit.BaseDamage);
             if (isDead)
@@ -107,6 +111,7 @@ namespace ProjectD.Combat
         {
             new CommandSander(() => playerInstance.UsingAbility(), commandHandler);
             playerTurnCount--;
+            OnPlayerTurnCountChange?.Invoke(playerTurnCount);
 
             if (playerTurnCount == 0)
             {
@@ -128,7 +133,6 @@ namespace ProjectD.Combat
         }
 
         #endregion
-
 
         #region UI fuctions
 
