@@ -10,7 +10,8 @@ namespace ProjectD.Combat
     {
         [SerializeField] private CommandHandler commandHandler;
 
-        [Header("Steup Battle")] [SerializeField]
+        [Header("Steup Battle")]
+        [SerializeField]
         private GameObject playerPrefab;
 
         [SerializeField] private GameObject[] enemysPrefab;
@@ -156,7 +157,7 @@ namespace ProjectD.Combat
             if (index == 2)
             {
                 SetState(CombatState.SelectingAbility);
-                StartCoroutine(PlayerAction()); 
+                StartCoroutine(PlayerAction());
                 return;
             }
             SetState(CombatState.SelectingTarget);

@@ -33,15 +33,15 @@ namespace ProjectD.Combat
             {
                 currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
             }
-            
-            OnHealthChange?.Invoke((float) currentHealth / maxHealth);
+
+            OnHealthChange?.Invoke((float)currentHealth / maxHealth);
         }
 
         public bool TakeDamage(int damage = 1)
         {
             currentHealth -= damage;
 
-            OnHealthChange?.Invoke((float) currentHealth / maxHealth);
+            OnHealthChange?.Invoke((float)currentHealth / maxHealth);
 
             return currentHealth == 0 ? true : false;
         }
@@ -65,7 +65,7 @@ namespace ProjectD.Combat
             if (abilityIndex.Count == 0 || targets.Count == 0) return;
 
             var index = abilityIndex.Dequeue();
-            
+
             if (abilitys[index].abilityType == AbilityTypes.Heal)
             {
                 abilitys[index].SetTarget(gameObject.GetComponent<Unit>());
