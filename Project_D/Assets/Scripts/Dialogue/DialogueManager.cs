@@ -8,8 +8,8 @@ namespace ProjectD.Dialogue
     public class DialogueManager : MonoBehaviour
     {
         [SerializeField] private DialoguePanel dialoguePanel;
+        private bool hasStarted;
         private Queue<string> sentences;
-        private bool hasStarted = false;
 
         private void Awake()
         {

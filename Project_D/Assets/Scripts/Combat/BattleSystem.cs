@@ -10,8 +10,7 @@ namespace ProjectD.Combat
     {
         [SerializeField] private CommandHandler commandHandler;
 
-        [Header("Steup Battle")]
-        [SerializeField]
+        [Header("Steup Battle")] [SerializeField]
         private GameObject playerPrefab;
 
         [SerializeField] private GameObject[] enemysPrefab;
@@ -20,7 +19,6 @@ namespace ProjectD.Combat
         private int currentEnemyIndex;
 
         private int playerTurnCount = 3;
-        public event Action<int> OnPlayerTurnCountChange;
         public Unit playerInstance { get; private set; }
         public CombatState combatState { get; private set; }
         public List<(GameObject gameObj, Unit unit)> enemysInstance { get; private set; }
@@ -39,6 +37,8 @@ namespace ProjectD.Combat
         {
             print(combatState.ToString());
         }
+
+        public event Action<int> OnPlayerTurnCountChange;
 
         private void SetState(CombatState state)
         {
@@ -153,6 +153,12 @@ namespace ProjectD.Combat
                 return;
             playerInstance.SetChooseAbility(index);
 
+            if (index == 2)
+            {
+                SetState(CombatState.SelectingAbility);
+                StartCoroutine(PlayerAction()); 
+                return;
+            }
             SetState(CombatState.SelectingTarget);
         }
 
