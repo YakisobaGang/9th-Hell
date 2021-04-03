@@ -42,7 +42,7 @@ namespace ProjectD.Combat
 
         public float CurrentHealthPercentage()
         {
-            return (float) health / maxHealth;
+            return (float)health / maxHealth;
         }
     }
 }

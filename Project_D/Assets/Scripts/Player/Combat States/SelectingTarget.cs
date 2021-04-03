@@ -25,7 +25,7 @@ namespace ProjectD.Player.Combat_States
         public override IEnumerator Start()
         {
             yield return new WaitUntil(() => !(target is null));
-            
+
             player.AddTarget(target);
             player.stateMachine.SetState(new QueueActions(BattleManager));
 
