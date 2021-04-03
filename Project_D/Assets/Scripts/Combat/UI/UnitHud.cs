@@ -23,12 +23,12 @@ namespace ProjectD.Combat.UI
 
         private void OnEnable()
         {
-            unit.OnHealthChange += UpdateHealBar;
+            unit.health.OnHealthChange += UpdateHealBar;
         }
 
         private void OnDisable()
         {
-            unit.OnHealthChange -= UpdateHealBar;
+            unit.health.OnHealthChange -= UpdateHealBar;
         }
 
         private void UpdateHealBar(float newHealValue)

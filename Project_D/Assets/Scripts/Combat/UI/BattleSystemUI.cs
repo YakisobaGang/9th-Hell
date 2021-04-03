@@ -1,4 +1,7 @@
-﻿using TMPro;
+﻿using ProjectD.Player;
+using ProjectD.Player.Combat_States;
+using ProjectD.StateMachine;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,46 +9,66 @@ namespace ProjectD.Combat.UI
 {
     public class BattleSystemUI : MonoBehaviour
     {
-        [SerializeField] private BattleSystem battleSystem;
+        [SerializeField] private BattleManager battleManager;
         [SerializeField] private GameObject chooseEnemyPanel;
         [SerializeField] private Button[] chooseEnemyButtons;
         [SerializeField] private Button[] chooseAbilityButtons;
         [SerializeField] private GameObject chooseAbilityPanel;
         [SerializeField] private TMP_Text remainingActionsText;
 
-        private void Update()
+        private void OnEnable()
         {
-            switch (battleSystem.combatState)
+            battleManager.OnPlayerTurnCountChange += HandleRemainingActionsChange;
+            PlayerStateMachine.OnChangeState += HandleChangeState;
+        }
+
+        private void OnDisable()
+        {
+            battleManager.OnPlayerTurnCountChange -= HandleRemainingActionsChange;
+            PlayerStateMachine.OnChangeState -= HandleChangeState;
+        }
+
+        private void SelectingAbility()
+        {
+            chooseAbilityPanel.SetActive(true);
+            chooseEnemyPanel.SetActive(false);
+
+            var playerAbilitys = battleManager.playerInstance.GetAllAbilitys;
+
+            for (var i = 0; i < playerAbilitys.Length; i++)
             {
-                case CombatState.SelectingTarget:
-                    chooseEnemyPanel.SetActive(true);
-                    chooseAbilityPanel.SetActive(false);
+                chooseAbilityButtons[i].gameObject.SetActive(true);
+                chooseAbilityButtons[i].gameObject.GetComponentInChildren<TMP_Text>().text =
+                    playerAbilitys[i].abilityName;
+            }
+        }
 
-                    for (var i = 0; i < battleSystem.enemysInstance.Count; i++)
-                    {
-                        chooseEnemyButtons[i].gameObject.SetActive(true);
-                        chooseEnemyButtons[i].gameObject.GetComponentInChildren<TMP_Text>().text =
-                            battleSystem.enemysInstance[i].unit.GetUnitName;
+        private void SelectingTarget()
+        {
+            chooseEnemyPanel.SetActive(true);
+            chooseAbilityPanel.SetActive(false);
 
-                        var obj = battleSystem.enemysInstance[i].gameObj;
+            for (var i = 0; i < battleManager.enemysInstance.Count; i++)
+            {
+                chooseEnemyButtons[i].gameObject.SetActive(true);
+                chooseEnemyButtons[i].gameObject.GetComponentInChildren<TMP_Text>().text =
+                    battleManager.enemysInstance[i].unit.GetUnitName;
 
-                        chooseEnemyButtons[i].onClick.AddListener(() => { battleSystem.OnSelectedTargetButton(obj); });
-                    }
+                var obj = battleManager.enemysInstance[i].gameObj;
 
+                chooseEnemyButtons[i].onClick.AddListener(() => { battleManager.OnSelectedTargetButton(obj); });
+            }
+        }
+
+        private void HandleChangeState(State state)
+        {
+            switch (state)
+            {
+                case SelectingAbility _:
+                    SelectingAbility();
                     break;
-                case CombatState.SelectingAbility:
-                    chooseAbilityPanel.SetActive(true);
-                    chooseEnemyPanel.SetActive(false);
-
-                    var playerAbilitys = battleSystem.playerInstance.GetAllAbilitys;
-
-                    for (var i = 0; i < playerAbilitys.Length; i++)
-                    {
-                        chooseAbilityButtons[i].gameObject.SetActive(true);
-                        chooseAbilityButtons[i].gameObject.GetComponentInChildren<TMP_Text>().text =
-                            playerAbilitys[i].abilityName;
-                    }
-
+                case SelectingTarget _:
+                    SelectingTarget();
                     break;
                 default:
                     chooseAbilityPanel.SetActive(false);
@@ -54,19 +77,10 @@ namespace ProjectD.Combat.UI
             }
         }
 
-        private void OnEnable()
-        {
-            battleSystem.OnPlayerTurnCountChange += HandleRemainingActionsChange;
-        }
-
-        private void OnDisable()
-        {
-            battleSystem.OnPlayerTurnCountChange -= HandleRemainingActionsChange;
-        }
-
         private void HandleRemainingActionsChange(int actions)
         {
-            remainingActionsText.SetText($"Remaining Actions: {actions.ToString()}/3");
+            var temp = actions + 1;
+            remainingActionsText.SetText($"Remaining Actions: {temp.ToString()}/3");
         }
     }
 }

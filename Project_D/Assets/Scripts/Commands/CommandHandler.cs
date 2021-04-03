@@ -8,11 +8,17 @@ namespace ProjectD.Commands
     [ExecuteInEditMode]
     public class CommandHandler : MonoBehaviour
     {
-        [SerializeField] private Queue<ICommand> commandsList;
+        private Queue<ICommand> commandsList;
         private WaitForSeconds waitForSeconds;
+        public static CommandHandler Instance { get; private set; }
 
         private void Awake()
         {
+            if (!(Instance is null) && Instance != this)
+                Destroy(gameObject);
+            else
+                Instance = this;
+
             waitForSeconds = new WaitForSeconds(0.5f);
             commandsList = new Queue<ICommand>();
         }

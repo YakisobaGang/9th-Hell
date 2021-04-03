@@ -944,7 +944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 814595def39f43ae93dd6c9cdee963e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  battleSystem: {fileID: 1751378691}
+  battleManager: {fileID: 1751378691}
   chooseEnemyPanel: {fileID: 1933791384}
   chooseEnemyButtons:
   - {fileID: 6943928571214195727}

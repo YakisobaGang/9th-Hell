@@ -13,7 +13,7 @@ namespace ProjectD.Abilitys
 
         private bool DoDamage()
         {
-            return target.TakeDamage(damageAmount);
+            return target.health.TakeDamage(damageAmount);
         }
     }
 }

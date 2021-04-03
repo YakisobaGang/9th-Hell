@@ -178,8 +178,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7375001351923443434}
-  - component: {fileID: 8371681554524328488}
   - component: {fileID: 3938278710922658461}
+  - component: {fileID: 7714370599565533988}
+  - component: {fileID: 5088109645618088690}
   m_Layer: 0
   m_Name: Demon 2
   m_TagString: Untagged
@@ -203,23 +204,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8371681554524328488
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7375001351923443220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3452bb013b44dfdbe596be8e1abfba4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unitName: Demon 2
-  maxHealth: 1000
-  currentHealth: 1000
-  abilitys: []
-  baseDamage: 80
 --- !u!114 &3938278710922658461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,7 +218,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healBar: {fileID: 7375001352808493342}
   unitDisplayText: {fileID: 7375001352684389183}
-  unit: {fileID: 8371681554524328488}
+  unit: {fileID: 5088109645618088690}
+--- !u!114 &7714370599565533988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7375001351923443220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2213faa5a4904f2ab27905f5c64b15e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1000
+  maxHealth: 1000
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &5088109645618088690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7375001351923443220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d07b0da64f44d9beba7c4f152050f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitName: Demon 2
+  abilitys: []
+  baseDamage: 10
+  health: {fileID: 7714370599565533988}
 --- !u!1 &7375001352684389177
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ namespace ProjectD.Abilitys
 
         private bool Heal()
         {
-            target.Heal(healAmount);
+            target.health.Heal(healAmount);
 
             return false;
         }
