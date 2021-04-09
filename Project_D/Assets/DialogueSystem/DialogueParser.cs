@@ -9,14 +9,16 @@ namespace FabriciohodDev.DialogueSystem
 {
     public class DialogueParser : MonoBehaviour
     {
-        [SerializeField] private DialogueContainer dialogue;
         [SerializeField] private TMP_Text dialogueText;
         [SerializeField] private Button choicePrefab;
         [SerializeField] private Transform buttonContainer;
-        private NodeLinkData choice1;
+        [SerializeField] private UnityEvent onDialogueStart;
+        [SerializeField] private UnityEvent onDialogueEnd;
+        private DialogueContainer dialogue;
 
         public void DialogueTrigger(DialogueContainer _dialogue)
         {
+            onDialogueStart?.Invoke();
             dialogue = _dialogue;
             var narrativeData = dialogue.nodeLinks[0]; //Entrypoint node
             ProceedToNarrative(narrativeData.targetNodeGuid);
@@ -26,8 +28,14 @@ namespace FabriciohodDev.DialogueSystem
         {
             var text = dialogue.dialogueNodeData.Find(x => x.guid == narrativeDataGuid).dialogueText;
             var choices = dialogue.nodeLinks.Where(x => x.baseNodeGuid == narrativeDataGuid);
-            
+            bool HasEnded() => choices.ToArray().Length == 0;
             dialogueText.SetText(ProcessProperties(text));
+            
+            if (HasEnded())
+            {
+                onDialogueEnd?.Invoke();
+            }
+            
             var buttons = buttonContainer.GetComponentsInChildren<Button>();
             for (int i = 0; i < buttons.Length; i++)
             {

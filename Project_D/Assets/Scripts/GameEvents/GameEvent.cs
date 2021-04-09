@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
+using ProjectD.ScriptableObjects;
 using UnityEngine;
 
-namespace ProjectD.ScriptableObjects
+namespace ProjectD.GameEvents
 {
     [CreateAssetMenu]
     public class GameEvent : ScriptableObject

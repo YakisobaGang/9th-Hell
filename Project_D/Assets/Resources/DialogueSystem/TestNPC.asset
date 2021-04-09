@@ -19,6 +19,12 @@ MonoBehaviour:
   - baseNodeGuid: 04dc9af3-fcde-4375-a6db-c327d6e05319
     portName: Continuar
     targetNodeGuid: 38f9d70c-febd-4892-bc4a-8dc620e30f47
+  - baseNodeGuid: 38f9d70c-febd-4892-bc4a-8dc620e30f47
+    portName: Choice 1
+    targetNodeGuid: 4cd8b6a5-bbe8-4901-a3d5-910f514f0d9c
+  - baseNodeGuid: 38f9d70c-febd-4892-bc4a-8dc620e30f47
+    portName: Choice 2
+    targetNodeGuid: 1fa37025-7b5b-4520-84d6-2226bdccddc3
   dialogueNodeData:
   - guid: 38f9d70c-febd-4892-bc4a-8dc620e30f47
     dialogueText: Agora vmos para o sistema de combate
@@ -26,4 +32,10 @@ MonoBehaviour:
   - guid: 04dc9af3-fcde-4375-a6db-c327d6e05319
     dialogueText: Isso e um teste do sistema de dialogo
     position: {x: 235, y: 200}
+  - guid: 4cd8b6a5-bbe8-4901-a3d5-910f514f0d9c
+    dialogueText: Dialogue Node
+    position: {x: 1097, y: 127}
+  - guid: 1fa37025-7b5b-4520-84d6-2226bdccddc3
+    dialogueText: Dialogue Node
+    position: {x: 1097, y: 298}
   exposedProperties: []
