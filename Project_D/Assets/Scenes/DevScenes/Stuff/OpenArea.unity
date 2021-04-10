@@ -623,9 +623,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 393735082}
-        m_TargetAssemblyTypeName: ProjectD.Dialogue.LoadSceneByIndexAfterTime, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 3
+        m_TargetAssemblyTypeName: ProjectD.Combat.CombatTrigger, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -655,10 +655,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 393735074}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c636c9806064055802c129a1397cd16, type: 3}
+  m_Script: {fileID: 11500000, guid: 1fa82ab589b449f4955cc3bb3114d606, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeInSeconds: 1
+  combatSceneIndex: 1
+  timeToChangeScene: 2
 --- !u!1 &506643338
 GameObject:
   m_ObjectHideFlags: 3
@@ -831,7 +832,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 573369952}
-  m_LocalRotation: {x: 0.28995898, y: -0.0000000732057, z: 0.000000022179501, w: 0.95703906}
+  m_LocalRotation: {x: 0.28995898, y: -0.00000007155578, z: 0.000000021679618, w: 0.95703906}
   m_LocalPosition: {x: 0.0000007552389, y: 4.377976, z: -6.5602694}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1266,6 +1267,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5700642573914393715, guid: cc821884aafeb0042aac76504c1479a5, type: 3}
   m_PrefabInstance: {fileID: 5700642573239762927}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &967876720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967876719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ef9543d2434be697ddb30abe191601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &967876722 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5700642573914393713, guid: cc821884aafeb0042aac76504c1479a5, type: 3}
@@ -1325,6 +1338,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 967876720}
+        m_TargetAssemblyTypeName: ProjectD.Player.SavePlayerPosition, Assembly-CSharp
+        m_MethodName: SavePlayerLastPosition
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1565,7 +1590,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1411372553}
-  m_LocalRotation: {x: 0.000000059604645, y: 0.000000009043873, z: -0.000000006034023, w: 1}
+  m_LocalRotation: {x: 0.000000029802322, y: -8.526513e-14, z: 5.684342e-14, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
