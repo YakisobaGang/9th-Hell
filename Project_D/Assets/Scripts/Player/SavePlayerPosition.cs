@@ -10,7 +10,7 @@ namespace ProjectD.Player
         private void Awake()
         {
             if (PlayerPrefs.GetFloat(playerX) == 0) return;
-            
+
             var lastPosition = new Vector3
             (
                 PlayerPrefs.GetFloat(playerX),
@@ -24,9 +24,9 @@ namespace ProjectD.Player
         public void SavePlayerLastPosition()
         {
             var position = transform.position;
-            
+
             var (x, y, z) = (position.x, position.y, position.z);
-            
+
             PlayerPrefs.SetFloat(playerX, x);
             PlayerPrefs.SetFloat(playerY, y);
             PlayerPrefs.SetFloat(playerZ, z);

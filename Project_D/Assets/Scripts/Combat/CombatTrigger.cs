@@ -15,14 +15,14 @@ namespace ProjectD.Combat
         {
             StartCoroutine(WaitTimeToChangeScene());
         }
-        
+
         private IEnumerator LoadSceneAsync()
         {
             var asyncLoad = SceneManager.LoadSceneAsync(combatSceneIndex);
 
             while (!asyncLoad.isDone && canLoadScene)
             {
-               yield return null;
+                yield return null;
             }
         }
 
