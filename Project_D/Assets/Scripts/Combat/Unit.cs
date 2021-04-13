@@ -45,15 +45,15 @@ namespace ProjectD.Combat
             }
 
             var target = targets.Dequeue();
-            
+
             if (target is null)
                 return;
-            
+
             try
             {
-                if(!target.TryGetComponent<Unit>(out var targetInfo))
+                if (!target.TryGetComponent<Unit>(out var targetInfo))
                     return;
-                
+
                 abilitys[index].SetTarget(targetInfo);
                 abilitys[index].CastAbility();
             }

@@ -14,7 +14,7 @@ namespace ProjectD.Combat.States
             BattleManager.ResetEnemyTurnIndex();
 
             BattleManager.playerInstance.stateMachine.SetState(new SelectingAbility(BattleManager));
-            
+
             yield break;
         }
     }

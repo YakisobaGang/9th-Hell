@@ -33,16 +33,16 @@ namespace ProjectD.Combat.States
                 BattleManager.currentEnemyIndex = 0;
                 yield break;
             }
-            
-            
+
+
             yield return BattleManager.PassToNextEnemy();
-            
+
             if (enemysInstance[currentEnemyIndex].gameObj == null)
             {
                 BattleManager.combatState.SetState(new PlayerTurn(BattleManager));
                 yield break;
             }
-            
+
             BattleManager.combatState.SetState(new EnemyTurn(BattleManager));
         }
     }

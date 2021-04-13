@@ -48,7 +48,7 @@ namespace ProjectD.Player.Combat_States
 
             yield return new WaitForSeconds(0.2f);
             player.stateMachine.SetState(new SelectingTarget(BattleManager));
-            
+
             BattleManager.OnSelectAbility -= HandleSelectAbility;
             BattleManager.onWon.RemoveListener(HandleEndBattle);
             BattleManager.onLos.RemoveListener(HandleEndBattle);

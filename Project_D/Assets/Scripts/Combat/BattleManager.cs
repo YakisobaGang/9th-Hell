@@ -75,7 +75,7 @@ namespace ProjectD.Combat
 
             combatState.SetState(new PlayerTurn(this));
         }
-        
+
         public IEnumerator PassToNextEnemy()
         {
             yield return new WaitForSeconds(0.5f);
@@ -120,7 +120,7 @@ namespace ProjectD.Combat
             playerInstance.health.TakeDamage(9999999);
             combatState.SetState(new Loss(this));
         }
-        
+
         #region UI fuctions
 
         public void OnSelectedTargetButton(GameObject target)
