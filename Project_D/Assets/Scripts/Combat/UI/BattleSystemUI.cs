@@ -1,4 +1,5 @@
-﻿using ProjectD.Player;
+﻿using System.Collections.Generic;
+using ProjectD.Player;
 using ProjectD.Player.Combat_States;
 using ProjectD.StateMachine;
 using TMPro;
@@ -11,8 +12,8 @@ namespace ProjectD.Combat.UI
     {
         [SerializeField] private BattleManager battleManager;
         [SerializeField] private GameObject chooseEnemyPanel;
-        [SerializeField] private Button[] chooseEnemyButtons;
-        [SerializeField] private Button[] chooseAbilityButtons;
+        [SerializeField] private List<Button> chooseEnemyButtons;
+        [SerializeField] private List<Button> chooseAbilityButtons;
         [SerializeField] private GameObject chooseAbilityPanel;
         [SerializeField] private TMP_Text remainingActionsText;
 
@@ -48,8 +49,13 @@ namespace ProjectD.Combat.UI
             chooseEnemyPanel.SetActive(true);
             chooseAbilityPanel.SetActive(false);
 
-            for (var i = 0; i < battleManager.enemysInstance.Count; i++)
+            for (var i = 0; i < battleManager.enemysInstance.ToArray().Length; i++)
             {
+                if (battleManager.enemysInstance[i].gameObj == null)
+                {
+                    chooseEnemyButtons[i].gameObject.SetActive(false);
+                    continue;
+                }
                 chooseEnemyButtons[i].gameObject.SetActive(true);
                 chooseEnemyButtons[i].gameObject.GetComponentInChildren<TMP_Text>().text =
                     battleManager.enemysInstance[i].unit.GetUnitName;

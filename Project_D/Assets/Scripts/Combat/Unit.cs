@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using ProjectD.Abilitys;
 using UnityEngine;
 
@@ -43,8 +44,24 @@ namespace ProjectD.Combat
                 return;
             }
 
-            abilitys[index].SetTarget(targets.Dequeue().GetComponent<Unit>());
-            abilitys[index].CastAbility();
+            var target = targets.Dequeue();
+            
+            if (target is null)
+                return;
+            
+            try
+            {
+                if(!target.TryGetComponent<Unit>(out var targetInfo))
+                    return;
+                
+                abilitys[index].SetTarget(targetInfo);
+                abilitys[index].CastAbility();
+            }
+            catch (MissingReferenceException err)
+            {
+                print(err);
+                return;
+            }
         }
     }
 }

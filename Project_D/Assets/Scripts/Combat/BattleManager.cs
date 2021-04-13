@@ -6,6 +6,7 @@ using ProjectD.Commands;
 using ProjectD.Player.Combat;
 using ProjectD.StateMachine;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace ProjectD.Combat
 {
@@ -20,6 +21,8 @@ namespace ProjectD.Combat
         [SerializeField] private GameObject[] enemysPrefab;
         [SerializeField] private Transform playerSpawnPoint;
         [SerializeField] private Transform[] enemysSpawnPoint;
+        [SerializeField] public UnityEvent onWon;
+        [SerializeField] public UnityEvent onLos;
 
         internal int currentEnemyIndex;
         private int playerTurnCount = 2;
@@ -40,12 +43,15 @@ namespace ProjectD.Combat
             StartCoroutine(nameof(SetupBattle));
         }
 
-#if UNITY_EDITOR
         private void Update()
         {
             Debug.Log($"<Color=green>{combatState.CurrentState()}</color>");
+
+            if (enemysInstance.TrueForAll(enemy => enemy.gameObj == null))
+            {
+                combatState.SetState(new Won(this));
+            }
         }
-#endif
 
         public event Action<GameObject> OnSelectTarget;
         public event Action<int> OnSelectAbility;
@@ -69,13 +75,17 @@ namespace ProjectD.Combat
 
             combatState.SetState(new PlayerTurn(this));
         }
-
-
+        
         public IEnumerator PassToNextEnemy()
         {
             yield return new WaitForSeconds(0.5f);
 
             currentEnemyIndex++;
+        }
+
+        public void ResetEnemyTurnIndex()
+        {
+            currentEnemyIndex = 0;
         }
 
         public bool HasPlayerTurnEnd()
@@ -94,6 +104,23 @@ namespace ProjectD.Combat
             return false;
         }
 
+        [ContextMenu("Kill all Enemys")]
+        public void KillAllEnemys()
+        {
+            enemysInstance.ForEach(enemy =>
+            {
+                enemy.unit.health.TakeDamage(999999);
+            });
+            combatState.SetState(new Won(this));
+        }
+
+        [ContextMenu("Kill Player")]
+        public void KillPlayer()
+        {
+            playerInstance.health.TakeDamage(9999999);
+            combatState.SetState(new Loss(this));
+        }
+        
         #region UI fuctions
 
         public void OnSelectedTargetButton(GameObject target)

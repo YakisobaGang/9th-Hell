@@ -4,7 +4,7 @@ namespace ProjectD.Combat.States
 {
     public abstract class BattleState : State
     {
-        protected BattleManager BattleManager;
+        protected static BattleManager BattleManager;
 
         public BattleState(BattleManager battleManager)
         {

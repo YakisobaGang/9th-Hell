@@ -11,7 +11,10 @@ namespace ProjectD.Combat.States
 
         public override IEnumerator Start()
         {
+            BattleManager.ResetEnemyTurnIndex();
+
             BattleManager.playerInstance.stateMachine.SetState(new SelectingAbility(BattleManager));
+            
             yield break;
         }
     }

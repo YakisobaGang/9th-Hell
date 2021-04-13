@@ -16,11 +16,18 @@ namespace ProjectD.Player.Combat_States
         {
             player = BattleManager.playerInstance;
             BattleManager.OnSelectAbility += HandleSelectAbility;
+            battleManager.onWon.AddListener(HandleEndBattle);
+            battleManager.onLos.AddListener(HandleEndBattle);
         }
 
         private void HandleSelectAbility(int index)
         {
             abilityIndex = index;
+        }
+
+        private void HandleEndBattle()
+        {
+            player.stateMachine.SetState(new Idle());
         }
 
         public override IEnumerator Start()
@@ -41,7 +48,10 @@ namespace ProjectD.Player.Combat_States
 
             yield return new WaitForSeconds(0.2f);
             player.stateMachine.SetState(new SelectingTarget(BattleManager));
+            
             BattleManager.OnSelectAbility -= HandleSelectAbility;
+            BattleManager.onWon.RemoveListener(HandleEndBattle);
+            BattleManager.onLos.RemoveListener(HandleEndBattle);
         }
     }
 }

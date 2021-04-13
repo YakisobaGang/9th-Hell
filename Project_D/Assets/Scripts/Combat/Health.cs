@@ -16,6 +16,12 @@ namespace ProjectD.Combat
             health = Mathf.Clamp(health, 0, maxHealth);
         }
 
+        private void Update()
+        {
+            if(health <= 0)
+                Destroy(gameObject);
+        }
+
         public void Heal(int healAmount = 1)
         {
             health += healAmount;
