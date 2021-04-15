@@ -1,5 +1,6 @@
 ﻿using System;
 using ProjectD.StateMachine;
+using UnityEngine;
 
 namespace ProjectD.Player
 {
@@ -10,9 +11,20 @@ namespace ProjectD.Player
 
         public override void SetState(State newState)
         {
-            base.SetState(newState);
-            CurrentPlayerState = newState;
-            OnChangeState?.Invoke(_state);
+            if(gameObject.activeInHierarchy == false)
+                return;
+            
+            try
+            {
+                base.SetState(newState);
+                CurrentPlayerState = newState;
+                OnChangeState?.Invoke(_state);
+            }
+            catch (MissingReferenceException err)
+            {
+                print(err);
+                return;
+            }
         }
     }
 }

@@ -19,7 +19,7 @@ namespace ProjectD.Combat
         private void Update()
         {
             if (health <= 0)
-                Destroy(gameObject);
+                gameObject.SetActive(false);
         }
 
         public void Heal(int healAmount = 1)

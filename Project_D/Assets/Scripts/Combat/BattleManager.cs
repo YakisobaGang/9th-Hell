@@ -47,9 +47,14 @@ namespace ProjectD.Combat
         {
             Debug.Log($"<Color=green>{combatState.CurrentState()}</color>");
 
-            if (enemysInstance.TrueForAll(enemy => enemy.gameObj == null))
+            if (enemysInstance.TrueForAll(enemy => enemy.gameObj.activeInHierarchy == false))
             {
                 combatState.SetState(new Won(this));
+            }
+            
+            if(playerInstance.gameObject.activeInHierarchy == false)
+            {
+                combatState.SetState(new Loss(this));
             }
         }
 

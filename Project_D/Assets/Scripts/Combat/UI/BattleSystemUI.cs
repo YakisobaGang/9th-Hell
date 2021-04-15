@@ -51,7 +51,7 @@ namespace ProjectD.Combat.UI
 
             for (var i = 0; i < battleManager.enemysInstance.ToArray().Length; i++)
             {
-                if (battleManager.enemysInstance[i].gameObj == null)
+                if (battleManager.enemysInstance[i].gameObj.activeInHierarchy == false )
                 {
                     chooseEnemyButtons[i].gameObject.SetActive(false);
                     continue;
