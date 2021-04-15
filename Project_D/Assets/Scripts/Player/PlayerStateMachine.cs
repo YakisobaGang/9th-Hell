@@ -11,9 +11,9 @@ namespace ProjectD.Player
 
         public override void SetState(State newState)
         {
-            if(gameObject.activeInHierarchy == false)
+            if (gameObject.activeInHierarchy == false)
                 return;
-            
+
             try
             {
                 base.SetState(newState);

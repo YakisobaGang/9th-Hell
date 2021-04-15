@@ -51,8 +51,8 @@ namespace ProjectD.Combat
             {
                 combatState.SetState(new Won(this));
             }
-            
-            if(playerInstance.gameObject.activeInHierarchy == false)
+
+            if (playerInstance.gameObject.activeInHierarchy == false)
             {
                 combatState.SetState(new Loss(this));
             }
