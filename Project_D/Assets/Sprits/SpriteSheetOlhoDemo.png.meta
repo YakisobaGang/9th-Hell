@@ -1,7 +1,22 @@
 fileFormatVersion: 2
 guid: 235f068ecb358314d8f4fd3df879ec75
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 613551978756557845
+    second: SpriteSheetOlhoDemo_0
+  - first:
+      213: -6914118131916550539
+    second: SpriteSheetOlhoDemo_1
+  - first:
+      213: -2506119989892147048
+    second: SpriteSheetOlhoDemo_2
+  - first:
+      213: 7293159400693364017
+    second: SpriteSheetOlhoDemo_3
+  - first:
+      213: 4323218337820738062
+    second: SpriteSheetOlhoDemo_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +56,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -89,11 +104,116 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SpriteSheetOlhoDemo_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3
+        width: 64
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51cc5012646c38800800000000000000
+      internalID: 613551978756557845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheetOlhoDemo_1
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 2
+        width: 63
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57ec60c013e1c00a0800000000000000
+      internalID: -6914118131916550539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheetOlhoDemo_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 5
+        width: 63
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89819fda529783dd0800000000000000
+      internalID: -2506119989892147048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheetOlhoDemo_3
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 4
+        width: 51
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 135f0a885d1863560800000000000000
+      internalID: 7293159400693364017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheetOlhoDemo_4
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 3
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0282404c282ffb30800000000000000
+      internalID: 4323218337820738062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 394bf8694296eb04c86a8ae59eb69311
     internalID: 0
     vertices: []
     indices: 
