@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2213faa5a4904f2ab27905f5c64b15e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 1000
   maxHealth: 1000
   OnDeath:
     m_PersistentCalls:
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: Demon 1
   abilitys: []
-  baseDamage: 10
+  baseDamage: 30
   health: {fileID: 4166691363436332313}
 --- !u!95 &8574277530093302689
 Animator:

@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace FabriciohodDev.DialogueSystem
+namespace ProjectD.DialogueSystem
 {
     public class DialogueParser : MonoBehaviour
     {
