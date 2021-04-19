@@ -492,13 +492,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1733503339}
-        m_TargetAssemblyTypeName: FabriciohodDev.DialogueSystem.DialogueParser, DialogueSystem
+        m_TargetAssemblyTypeName: ProjectD.DialogueSystem.DialogueParser, Assembly-CSharp
         m_MethodName: DialogueTrigger
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: d2810bf4f5fe0cb45a2ad1aaf612c5e6, type: 2}
           m_ObjectArgumentAssemblyTypeName: FabriciohodDev.DialogueSystem.Runtime.DialogueContainer,
-            Runtime
+            Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -832,7 +832,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 573369952}
-  m_LocalRotation: {x: 0.28995898, y: -0.000000075457294, z: 0.000000022861679, w: 0.95703906}
+  m_LocalRotation: {x: 0.28995895, y: -0.00000008361066, z: 0.000000025331945, w: 0.9570391}
   m_LocalPosition: {x: 0.0000007552389, y: 4.502976, z: -6.5602694}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1494,7 +1494,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1411372553}
-  m_LocalRotation: {x: 0.000000059604645, y: 0.000000007086804, z: -0.0000000047282818, w: 1}
+  m_LocalRotation: {x: -0.000000059604645, y: -0.0000000042135113, z: 0.0000000028112392, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
