@@ -9,7 +9,7 @@ namespace ProjectD.Player
     public class PlayerMovement : MonoBehaviour
     {
         [SerializeField] private float speed = 10f;
-        public event Action<Vector2> OnPlayerMove; 
+        public event Action<Vector2> OnPlayerMove;
 
         private PlayerInputActions inputActions;
         private Rigidbody rb;
