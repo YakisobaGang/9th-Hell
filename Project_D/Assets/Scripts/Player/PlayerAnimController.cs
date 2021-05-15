@@ -10,7 +10,7 @@ namespace ProjectD
         private static readonly int Horizontal = Animator.StringToHash("Horizontal");
         private static readonly int Vertical = Animator.StringToHash("Vertical");
         private static readonly int isWalking = Animator.StringToHash("IsWalking");
-        
+
 
         private void Awake()
         {
