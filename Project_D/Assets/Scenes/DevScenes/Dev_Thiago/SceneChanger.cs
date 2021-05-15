@@ -28,7 +28,7 @@ namespace ProjectD
 
             yield return new WaitForSeconds(transitionDuration);
 
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
         }
 
         IEnumerator TransitionExit(int arg)
