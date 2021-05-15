@@ -29,6 +29,11 @@ namespace ProjectD
 
         private void HandlePlayerMoveDir(Vector2 dir)
         {
+<<<<<<< HEAD
+=======
+            print($"X: {dir.x:N1} | Y: {dir.y:N1}");
+
+>>>>>>> 72b5af848c78577c873d4a7c4c92138ea9a73172
             if ((dir.x, dir.y) == (0, 0))
             {
                 anim.SetBool(isWalking, false);
