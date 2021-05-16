@@ -10,6 +10,7 @@ namespace ProjectD.DialogueSystem
     public class DialogueParser : MonoBehaviour
     {
         [SerializeField] private TMP_Text dialogueText;
+        [SerializeField] private TMP_Text NpcNameText;
         [SerializeField] private Button choicePrefab;
         [SerializeField] private Transform buttonContainer;
         [SerializeField] private UnityEvent onDialogueStart;
@@ -21,6 +22,7 @@ namespace ProjectD.DialogueSystem
             onDialogueStart?.Invoke();
             dialogue = _dialogue;
             var narrativeData = dialogue.nodeLinks[0]; //Entrypoint node
+            NpcNameText.SetText(dialogue.NpcName);
             ProceedToNarrative(narrativeData.targetNodeGuid);
         }
 

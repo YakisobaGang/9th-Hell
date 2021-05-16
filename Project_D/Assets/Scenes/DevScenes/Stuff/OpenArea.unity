@@ -1659,7 +1659,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 573369952}
-  m_LocalRotation: {x: 0.28995895, y: -0.00000008361065, z: 0.000000025331943, w: 0.9570391}
+  m_LocalRotation: {x: 0.28995898, y: -0.000000039076117, z: 0.000000011839087, w: 0.95703906}
   m_LocalPosition: {x: 0.0000007552389, y: 4.646976, z: -6.5602694}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3769,7 +3769,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1411372553}
-  m_LocalRotation: {x: -0.000000059604645, y: -0.000000007086797, z: 0.00000000472828, w: 1}
+  m_LocalRotation: {x: 0.000000059604645, y: 0.00000003870892, z: -0.000000025826381, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4466,6 +4466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 110099160}
+  NpcNameText: {fileID: 1390020263}
   choicePrefab: {fileID: 5266492140022402307, guid: 99aef82b23e84214f8b7c31722fb46e7, type: 3}
   buttonContainer: {fileID: 1848332168}
   onDialogueStart:

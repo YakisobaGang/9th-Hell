@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe917da59551444d9950cacc4fa28984, type: 3}
   m_Name: TestNPC
   m_EditorClassIdentifier: 
+  NpcName: "Jeff The NPC (\u2310\u25A0_\u25A0)"
   nodeLinks:
   - baseNodeGuid: ca78cf13-b189-4b4a-96db-16d089d71e99
     portName: Next
