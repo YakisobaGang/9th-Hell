@@ -19,6 +19,18 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _SampleTexture2D_07b940a64872424c8abcc3cf3543fd0b_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 3fbca84278d21cf42aa19e12d102fdc8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_4affa55dfa1748d6999aff8fc46b021f_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 63ee80a0c2feb1f448d6ae6a648b1a22, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_580c4f5f820c444daf2a94cf40171084_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 7c194f2ec4f6dbc458111d0b2aa8abb7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_90c0dfe208094c61a6a00df6d4e0ca6e_Texture_1:
         m_Texture: {fileID: 2800000, guid: 7b54372e33099284ca30de95fa492c35, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -42,6 +54,7 @@ Material:
     m_Floats:
     - NoiseMultiplyer_: 1.98
     - NoiseScale_: 1.6
+    - NormalMapStrength_: 1
     m_Colors:
     - ReMapIN_: {r: 0.6, g: 0.57, b: 0, a: 0}
     - ReMapOUT_: {r: 1.09, g: 1.17, b: 0, a: 0}
