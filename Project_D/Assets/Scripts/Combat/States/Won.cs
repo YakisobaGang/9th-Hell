@@ -15,7 +15,7 @@ namespace ProjectD.Combat.States
             BattleManager.onWon?.Invoke();
             yield return new WaitForSeconds(1.5f);
 
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
 
     }
