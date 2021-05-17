@@ -14,6 +14,7 @@ namespace ProjectD.Combat
         public Health health;
         private readonly Queue<int> abilityIndex = new Queue<int>();
         private readonly Queue<GameObject> targets = new Queue<GameObject>();
+        public AudioClip hit;
 
         public AbilityBase[] GetAllAbilitys => abilitys;
         public string GetUnitName => unitName;

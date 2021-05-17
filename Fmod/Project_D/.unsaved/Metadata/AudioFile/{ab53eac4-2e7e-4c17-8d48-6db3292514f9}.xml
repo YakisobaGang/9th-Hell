@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{ab53eac4-2e7e-4c17-8d48-6db3292514f9}">
+		<property name="assetPath">
+			<value>Audio/SFX_BATTLE/Magic_FireBall_Only.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>6.6170975056689345</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{d8c9102f-30d9-4a41-b457-d1aefe234452}</destination>
+		</relationship>
+	</object>
+</objects>

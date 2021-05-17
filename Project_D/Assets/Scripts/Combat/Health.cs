@@ -10,6 +10,7 @@ namespace ProjectD.Combat
         [SerializeField] private int health;
         [SerializeField] private int maxHealth;
         public UnityEvent OnDeath;
+        public AudioSource hit;
 
         private void OnValidate()
         {
@@ -34,6 +35,7 @@ namespace ProjectD.Combat
 
         public bool TakeDamage(int damage = 1)
         {
+            hit.Play();
             health -= damage;
 
             OnHealthChange?.Invoke(CurrentHealthPercentage());
