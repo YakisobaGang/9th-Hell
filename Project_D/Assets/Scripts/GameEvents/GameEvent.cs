@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using ProjectD.ScriptableObjects;
 using UnityEngine;
 
 namespace ProjectD.GameEvents

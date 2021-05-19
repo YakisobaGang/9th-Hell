@@ -1,8 +1,7 @@
-﻿using ProjectD.GameEvents;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
-namespace ProjectD.ScriptableObjects
+namespace ProjectD.GameEvents
 {
     public class GameEventListener : MonoBehaviour
     {
@@ -24,6 +23,11 @@ namespace ProjectD.ScriptableObjects
         public void OnEventRaised()
         {
             Response.Invoke();
+        }
+
+        public void Log()
+        {
+            print("OK");
         }
     }
 }
