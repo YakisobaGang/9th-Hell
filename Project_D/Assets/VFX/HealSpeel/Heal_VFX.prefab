@@ -47,21 +47,27 @@ PlayableDirector:
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 8210b308e74f87743bc58ef031895605, type: 2}
-  m_InitialState: 1
+  m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
-  - key: {fileID: 1399679652904475982, guid: 8210b308e74f87743bc58ef031895605, type: 2}
-    value: {fileID: 8273179370926795706}
+  - key: {fileID: -8680932618653482387, guid: 8210b308e74f87743bc58ef031895605, type: 2}
+    value: {fileID: 3451468736717547885}
+  - key: {fileID: -8703291409345535440, guid: 8210b308e74f87743bc58ef031895605, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -5402634542072094720, guid: 8210b308e74f87743bc58ef031895605, type: 2}
+    value: {fileID: 6716600194577654025}
   m_ExposedReferences:
     m_References:
     - 29368bb2461185141a922ed721a7b7a5: {fileID: 3451468737782396592}
+    - 0d5b64629a709474a93d3b1c3e46d2cb: {fileID: 3451468736717547885}
     - fc51b8f014071f14eacf5e04f2f0d855: {fileID: 3451468737812398335}
     - a06b67a60e77a984c8fb7084ed1c704c: {fileID: 3451468738331306447}
     - cb8a09f111bf84747907234e40ca06a6: {fileID: 3451468737084274505}
     - 70d1bf684fcac2b4586d8204bb916706: {fileID: 8273179370926795706}
     - c965f0486c1809f4083dc0b68f70ca5c: {fileID: 3451468738331306447}
+    - 88f484fbef3a9fb4685950f9d021f6cc: {fileID: 3451468738097372311}
     - 29dcc46ddfcbfab4cac9925041954a17: {fileID: 3451468737084274505}
 --- !u!1 &3451468737084274505
 GameObject:
@@ -89,7 +95,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3451468737084274505}
   m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: 0, y: -0.112, z: 0}
+  m_LocalPosition: {x: 0, y: -0.011, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3451468736717547858}
@@ -109,9 +115,9 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 0
+  looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 0
   useRigidbodyForVelocity: 1
@@ -231,7 +237,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.3799815
+      scalar: 7.1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -347,7 +353,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.24
+      scalar: 0.16
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -400,7 +406,7 @@ ParticleSystem:
     startSizeY:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.01
+      scalar: 1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -453,7 +459,7 @@ ParticleSystem:
     startSizeZ:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.03
+      scalar: 0
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -1038,7 +1044,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 30
+        scalar: 10
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -1096,7 +1102,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 20
+        scalar: 5
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -1154,7 +1160,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 30
+        scalar: 5
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -1208,11 +1214,11 @@ ParticleSystem:
       repeatInterval: 0.01
       probability: 1
     - serializedVersion: 2
-      time: 1
+      time: 1.5
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 30
+        scalar: 15
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -1270,7 +1276,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 30
+        scalar: 10
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -1328,7 +1334,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 30
+        scalar: 10
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -1714,7 +1720,7 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.27302432, g: 1, b: 0, a: 0}
+        key0: {r: 0, g: 0.8207547, b: 0.6242139, a: 0}
         key1: {r: 1, g: 1, b: 1, a: 1}
         key2: {r: 1, g: 1, b: 1, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
@@ -2057,8 +2063,8 @@ ParticleSystem:
         m_RotationOrder: 4
     orbitalX:
       serializedVersion: 2
-      minMaxState: 3
-      scalar: -0
+      minMaxState: 0
+      scalar: 0
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -2110,7 +2116,7 @@ ParticleSystem:
         m_RotationOrder: 4
     orbitalY:
       serializedVersion: 2
-      minMaxState: 3
+      minMaxState: 0
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -2163,9 +2169,9 @@ ParticleSystem:
         m_RotationOrder: 4
     orbitalZ:
       serializedVersion: 2
-      minMaxState: 3
-      scalar: 1
-      minScalar: -1
+      minMaxState: 0
+      scalar: 10.84
+      minScalar: -90
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2376,7 +2382,7 @@ ParticleSystem:
     radial:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.2
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -2429,7 +2435,7 @@ ParticleSystem:
     speedModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.14
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -3093,7 +3099,7 @@ ParticleSystem:
     strength:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 3.29
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -3250,12 +3256,12 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     separateAxes: 0
-    frequency: 0.5
+    frequency: 0.98
     damping: 1
     octaves: 1
     octaveMultiplier: 0.5
     octaveScale: 2
-    quality: 2
+    quality: 1
     scrollSpeed:
       serializedVersion: 2
       minMaxState: 0
@@ -4336,9 +4342,9 @@ ParticleSystem:
         m_RotationOrder: 4
     maxLights: 20
   TrailModule:
-    enabled: 0
+    enabled: 1
     mode: 0
-    ratio: 1
+    ratio: 0.7
     lifetime:
       serializedVersion: 2
       minMaxState: 0
@@ -4392,10 +4398,10 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    minVertexDistance: 0.2
-    textureMode: 0
+    minVertexDistance: 0.001
+    textureMode: 1
     ribbonCount: 1
-    shadowBias: 0.5
+    shadowBias: 0.63
     worldSpace: 0
     dieWithParticles: 1
     sizeAffectsWidth: 1
@@ -4470,7 +4476,7 @@ ParticleSystem:
     widthOverTrail:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.36
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5170,6 +5176,7 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: c96711702b44a06418b86889884bedd1, type: 2}
+  - {fileID: 2100000, guid: c96711702b44a06418b86889884bedd1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5263,7 +5270,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 0
   useRigidbodyForVelocity: 1
@@ -10067,7 +10074,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 0
   useRigidbodyForVelocity: 1
@@ -14871,9 +14878,9 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
-  autoRandomSeed: 1
+  autoRandomSeed: 0
   useRigidbodyForVelocity: 1
   startDelay:
     serializedVersion: 2
@@ -14931,7 +14938,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 0
+  randomSeed: 1457
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -20024,7 +20031,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 0
   useRigidbodyForVelocity: 1
@@ -24808,13 +24815,14 @@ GameObject:
   m_Component:
   - component: {fileID: 7533392005835531623}
   - component: {fileID: 1339532394976682475}
+  - component: {fileID: 6716600194577654025}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7533392005835531623
 Transform:
   m_ObjectHideFlags: 0
@@ -24842,7 +24850,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 0, g: 1, b: 0.58040524, a: 1}
   m_Intensity: 0.12
-  m_Range: 0.9
+  m_Range: 2.3
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -24891,3 +24899,22 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!95 &6716600194577654025
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8273179370926795706}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
