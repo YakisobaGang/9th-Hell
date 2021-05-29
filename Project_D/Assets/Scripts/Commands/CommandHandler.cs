@@ -44,10 +44,10 @@ namespace ProjectD.Commands
                 yield return new WaitUntil(() =>
                 {
                     temp.Execute();
-                    
+
                     return vfxEnd.GetSignalAssetAtIndex(0);
                 });
-                
+
                 yield return waitForSeconds;
             }
         }

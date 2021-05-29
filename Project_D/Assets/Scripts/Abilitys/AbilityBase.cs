@@ -16,7 +16,7 @@ namespace ProjectD.Abilitys
         public string abilityName => abilityData.GetName();
 
         public abstract bool CastAbility();
-        
+
 
         public void SetTarget(Unit newTarget)
         {

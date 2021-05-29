@@ -10,7 +10,7 @@ namespace ProjectD.Abilitys
         {
             castingVFX.SpawnVFX(casterTransform.position, Quaternion.identity);
             impactVfx.SpawnVFX(target.transform.position, Quaternion.identity);
-            
+
             castingVFX.PlayVFX();
             var isDead = DoDamage();
             impactVfx.PlayVFX();

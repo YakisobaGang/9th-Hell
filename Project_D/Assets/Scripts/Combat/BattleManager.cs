@@ -61,7 +61,7 @@ namespace ProjectD.Combat
 
         public void VfxCountReduce()
         {
-            if(vfxCount == 0)
+            if (vfxCount == 0)
                 return;
 
             vfxCount--;
