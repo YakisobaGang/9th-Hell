@@ -7,12 +7,6 @@ namespace ProjectD.Abilitys
     {
         [SerializeField] private AbilityTypes type;
         [SerializeField] private string abilityName;
-        [SerializeField] private GameObject onHitAbilityFX;
-        [SerializeField] private GameObject castAbilityFx;
-        [SerializeField] [Range(0.5f, 4f)] private float castTime = 1f;
-        public GameObject GetOnHitFX => onHitAbilityFX;
-        public GameObject GetCastFX => castAbilityFx;
-        public float CastTime => castTime;
 
         public AbilityTypes GetAbilityType()
         {

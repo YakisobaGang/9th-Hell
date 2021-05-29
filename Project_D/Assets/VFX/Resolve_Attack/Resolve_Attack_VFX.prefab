@@ -14589,8 +14589,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4717060856641526049}
   - component: {fileID: 4717060856641526048}
+  - component: {fileID: 4819955215317350333}
+  - component: {fileID: -2937387714425749563}
   m_Layer: 0
-  m_Name: Resolve_Attack
+  m_Name: Resolve_Attack_VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14662,6 +14664,64 @@ PlayableDirector:
     - 8fdaba7f0c205394b8f649dcef62c019: {fileID: 4717060856265810244}
     - 4fdf83bbb303b8c47874365b0dfabbe2: {fileID: 4717060856574826894}
     - f5fc158f97ee27c499afc0c737148e7d: {fileID: 1641997876}
+--- !u!114 &4819955215317350333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4717060856641526050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: a1c8822685f66fb4899e041174673ee5, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: -2937387714425749563}
+          m_TargetAssemblyTypeName: FabriciohodDev.PoolingSystem.Scripts.AddBackToPoolAfterTime,
+            PoollingSystem
+          m_MethodName: AddBackToPool
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: b28180ddc3b5777429b78d60835bb625, type: 2}
+          m_TargetAssemblyTypeName: ProjectD.GameEvents.GameEvent, Assembly-CSharp
+          m_MethodName: Raise
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &-2937387714425749563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4717060856641526050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8251fa698914ecbb061e7a91f66c7e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pool: {fileID: 11400000, guid: ddbef9a3a85f1264aa03e763cdda60be, type: 2}
+  timeInSeconds: 3
+  addBackOnEnable: 0
 --- !u!1 &4784410666537316092
 GameObject:
   m_ObjectHideFlags: 0

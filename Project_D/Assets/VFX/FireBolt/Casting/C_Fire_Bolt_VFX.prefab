@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7741417605055282377}
   - component: {fileID: 7741417605055282378}
-  - component: {fileID: 1109791431}
+  - component: {fileID: -258903736461648447}
+  - component: {fileID: 4946168937240917584}
+  - component: {fileID: -2346315624217531720}
   m_Layer: 0
   m_Name: C_Fire_Bolt_VFX
   m_TagString: Untagged
@@ -64,12 +66,27 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: -2899506130902585527, guid: 6d78c13dffaf82f4bb37b53e2467fcd1, type: 2}
     value: {fileID: 7741417605055282379}
-  - key: {fileID: 6488361445435484066, guid: 6d78c13dffaf82f4bb37b53e2467fcd1, type: 2}
+  - key: {fileID: 0}
     value: {fileID: 0}
   m_ExposedReferences:
     m_References:
     - a550549f0ee7d154fa7ab98a9e4a0967: {fileID: 7741417605779356013}
---- !u!114 &1109791431
+--- !u!114 &-258903736461648447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7741417605055282379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8251fa698914ecbb061e7a91f66c7e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pool: {fileID: 11400000, guid: 4f11183d70d72fd41bfad40b9d42f70d, type: 2}
+  timeInSeconds: 3
+  addBackOnEnable: 0
+--- !u!114 &4946168937240917584
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -83,10 +100,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Events:
     m_Signals:
-    - {fileID: 11400000, guid: 6d2598853d5cba249a0daebfd5a36579, type: 2}
+    - {fileID: 11400000, guid: ed6ab0f1791cc4548b66c4f15ec4522b, type: 2}
     m_Events:
     - m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 11400000, guid: 019a8a4361433cb41ab2b2e36e42db4d, type: 2}
+          m_TargetAssemblyTypeName: ProjectD.GameEvents.GameEvent, Assembly-CSharp
+          m_MethodName: Raise
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &-2346315624217531720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7741417605055282379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81f870c4933e4f27a22cf61d9465233c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: b28180ddc3b5777429b78d60835bb625, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -258903736461648447}
+        m_TargetAssemblyTypeName: FabriciohodDev.PoolingSystem.Scripts.AddBackToPoolAfterTime,
+          PoollingSystem
+        m_MethodName: AddBackToPool
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7741417605329744050
 GameObject:
   m_ObjectHideFlags: 0

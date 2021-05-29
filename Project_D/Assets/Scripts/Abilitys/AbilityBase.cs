@@ -8,30 +8,19 @@ namespace ProjectD.Abilitys
     public abstract class AbilityBase : MonoBehaviour, ICastAbility
     {
         [SerializeField] private AbilityData abilityData;
-        [SerializeField] private Transform casterTransform;
+        [SerializeField] protected Transform casterTransform;
+        [SerializeField] protected AbilityVFXController castingVFX;
+        [SerializeField] protected AbilityVFXController impactVfx;
         protected Unit target;
         public AbilityTypes abilityType => abilityData.GetAbilityType();
         public string abilityName => abilityData.GetName();
 
-        public virtual bool CastAbility()
-        {
-            return false;
-        }
+        public abstract bool CastAbility();
+        
 
         public void SetTarget(Unit newTarget)
         {
             target = newTarget;
-        }
-
-        protected IEnumerator PlayCastFX()
-        {
-            if (abilityData.GetCastFX is null || casterTransform is null) yield break;
-
-            var fx = Instantiate(abilityData.GetCastFX, casterTransform);
-
-            yield return new WaitUntil(() => fx.gameObject.GetComponent<ParticleSystem>().isEmitting == false);
-
-            Destroy(fx, 0.3f);
         }
     }
 }

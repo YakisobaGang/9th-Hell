@@ -44,5 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityData: {fileID: 11400000, guid: bb54720973739cd4383ae54c410a4e5a, type: 2}
-  casterTransform: {fileID: 0}
+  casterTransform: {fileID: 7775097763091562548, guid: fd07f8ab0fdc64942b6bfcbb2943ee0d, type: 3}
+  castingVFX: {fileID: 11400000, guid: 7814520af3aee404e991bf8b13959b44, type: 2}
+  impactVfx: {fileID: 0}
   healAmount: 200

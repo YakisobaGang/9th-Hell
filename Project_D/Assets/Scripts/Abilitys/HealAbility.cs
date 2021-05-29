@@ -8,6 +8,8 @@ namespace ProjectD.Abilitys
 
         public override bool CastAbility()
         {
+            castingVFX.SpawnVFX(target.transform.position, Quaternion.identity);
+            castingVFX.PlayVFX();
             return Heal();
         }
 

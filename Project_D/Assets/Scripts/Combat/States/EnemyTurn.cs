@@ -16,6 +16,7 @@ namespace ProjectD.Combat.States
 
         public override IEnumerator Start()
         {
+            BattleManager.VfxCountReset();
             yield return new WaitForSeconds(0.7f);
 
             var isDead =

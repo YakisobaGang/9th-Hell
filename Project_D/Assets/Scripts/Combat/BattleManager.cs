@@ -26,6 +26,7 @@ namespace ProjectD.Combat
 
         internal int currentEnemyIndex;
         private int playerTurnCount = 2;
+        [HideInInspector] public int vfxCount = 3;
         public PlayerUnit playerInstance { get; private set; }
         public FiniteStateMachine combatState { get; private set; }
         public List<(GameObject gameObj, Unit unit)> enemysInstance { get; private set; }
@@ -56,6 +57,19 @@ namespace ProjectD.Combat
             {
                 combatState.SetState(new Loss(this));
             }
+        }
+
+        public void VfxCountReduce()
+        {
+            if(vfxCount == 0)
+                return;
+
+            vfxCount--;
+        }
+
+        public void VfxCountReset()
+        {
+            vfxCount = 3;
         }
 
         public event Action<GameObject> OnSelectTarget;

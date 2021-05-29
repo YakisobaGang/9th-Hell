@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using ProjectD.Interfaces;
 using UnityEngine;
+using UnityEngine.Timeline;
 
 namespace ProjectD.Commands
 {
@@ -10,6 +11,8 @@ namespace ProjectD.Commands
     {
         private Queue<ICommand> commandsList;
         private WaitForSeconds waitForSeconds;
+        [SerializeField] private SignalReceiver vfxEnd;
+
         public static CommandHandler Instance { get; private set; }
 
         private void Awake()
@@ -19,7 +22,7 @@ namespace ProjectD.Commands
             else
                 Instance = this;
 
-            waitForSeconds = new WaitForSeconds(0.5f);
+            waitForSeconds = new WaitForSeconds(5f);
             commandsList = new Queue<ICommand>();
         }
 
@@ -38,8 +41,14 @@ namespace ProjectD.Commands
             foreach (var command in commandsList.ToArray())
             {
                 var temp = commandsList.Dequeue();
+                yield return new WaitUntil(() =>
+                {
+                    temp.Execute();
+                    
+                    return vfxEnd.GetSignalAssetAtIndex(0);
+                });
+                
                 yield return waitForSeconds;
-                temp.Execute();
             }
         }
     }

@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2084645785496165727
 Transform:
   m_ObjectHideFlags: 0
@@ -4815,6 +4815,7 @@ GameObject:
   - component: {fileID: 7419083375058442161}
   - component: {fileID: -1911326571030772354}
   - component: {fileID: 1868588914}
+  - component: {fileID: -5350399188757991291}
   m_Layer: 0
   m_Name: T_Fire_Bolt_VFX
   m_TagString: Untagged
@@ -4854,7 +4855,7 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: -8137543821880367753, guid: 682b3c608a1644e4d83f7d63c92625ec, type: 2}
     value: {fileID: 0}
-  - key: {fileID: -7717018384285557993, guid: 682b3c608a1644e4d83f7d63c92625ec, type: 2}
+  - key: {fileID: 0}
     value: {fileID: 0}
   m_ExposedReferences:
     m_References:
@@ -4874,6 +4875,7 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: 6d2598853d5cba249a0daebfd5a36579, type: 2}
+    - {fileID: 11400000, guid: a1c8822685f66fb4899e041174673ee5, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -4889,3 +4891,45 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: -5350399188757991291}
+          m_TargetAssemblyTypeName: FabriciohodDev.PoolingSystem.Scripts.AddBackToPoolAfterTime,
+            PoollingSystem
+          m_MethodName: AddBackToPool
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: b28180ddc3b5777429b78d60835bb625, type: 2}
+          m_TargetAssemblyTypeName: ProjectD.GameEvents.GameEvent, Assembly-CSharp
+          m_MethodName: Raise
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &-5350399188757991291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3708956704842063653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8251fa698914ecbb061e7a91f66c7e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pool: {fileID: 11400000, guid: 70b6f4810a9f19442b58cdaac29bc16b, type: 2}
+  timeInSeconds: 3
+  addBackOnEnable: 0

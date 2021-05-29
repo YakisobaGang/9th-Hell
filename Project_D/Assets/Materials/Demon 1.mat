@@ -19,6 +19,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_e51ae76b28dc4dcd8d83e6c9c3813fdc:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -81,13 +85,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Boolean_2518affec16b4669ad23d73f5d9a7506: 0
+    - Boolean_32ed873891364007a62ea8a81b11dfed: 0
+    - Vector1_a9e58cc87bdf4a799ed60acc379ffa39: 0.28
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
-    - _CurrentColumn: 0
+    - _CurrentColumn: 0.01
     - _CurrentRow: 0
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7141569673450651955}
   - component: {fileID: 3111055583897698305}
   m_Layer: 0
-  m_Name: Water Slice
+  m_Name: Sharp Shooter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,5 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityData: {fileID: 11400000, guid: e7d33335c97b07e43953df2edf57ec55, type: 2}
-  casterTransform: {fileID: 0}
+  casterTransform: {fileID: 7775097763091562548, guid: fd07f8ab0fdc64942b6bfcbb2943ee0d, type: 3}
+  castingVFX: {fileID: 11400000, guid: f0cf76ad9bb0f3b4fbe04a26921360bf, type: 2}
+  impactVfx: {fileID: 11400000, guid: f0cf76ad9bb0f3b4fbe04a26921360bf, type: 2}
   damageAmount: 60

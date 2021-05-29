@@ -44,5 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityData: {fileID: 11400000, guid: 67edeba4af616bd46ac0d956b862fbe0, type: 2}
-  casterTransform: {fileID: 0}
+  casterTransform: {fileID: 7775097763091562548, guid: fd07f8ab0fdc64942b6bfcbb2943ee0d, type: 3}
+  castingVFX: {fileID: 11400000, guid: 9f1e9636f83ad9245a44149070bfe504, type: 2}
+  impactVfx: {fileID: 11400000, guid: 8f63c1f4eebff174cb07a76780ebe4c2, type: 2}
   damageAmount: 50
