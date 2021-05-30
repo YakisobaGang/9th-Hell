@@ -9,7 +9,7 @@ namespace ProjectD.Combat
     public abstract class Unit : MonoBehaviour
     {
         [SerializeField] private string unitName;
-        [SerializeField] private AbilityBase[] abilitys;
+        [SerializeField] protected AbilityBase[] abilitys;
         [SerializeField] private int baseDamage = 10;
         public Health health;
         private readonly Queue<int> abilityIndex = new Queue<int>();
@@ -20,6 +20,18 @@ namespace ProjectD.Combat
         public string GetUnitName => unitName;
         public int BaseDamage => baseDamage;
 
+        private void Start()
+        {
+            if(abilitys.Length == 0)
+                return;
+            
+            for (int i = 0; i < abilitys.Length; i++)
+            {
+                if(abilitys[i].GetCasterTransform() is null)
+                    abilitys[i].SetCasterTransform(transform);
+            }
+        }
+        
         public void AddTarget(GameObject newTarget)
         {
             targets.Enqueue(newTarget);
@@ -40,7 +52,7 @@ namespace ProjectD.Combat
 
             if (abilitys[index].abilityType == AbilityTypes.Heal)
             {
-                abilitys[index].SetTarget(gameObject.GetComponent<Unit>());
+                abilitys[index].SetTarget(targets.Dequeue().GetComponent<Unit>());
                 abilitys[index].CastAbility();
                 return;
             }

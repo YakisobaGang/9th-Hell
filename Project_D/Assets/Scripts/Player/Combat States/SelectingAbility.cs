@@ -36,13 +36,13 @@ namespace ProjectD.Player.Combat_States
 
             if (abilityIndex != null && player.GetAllAbilitys[abilityIndex.Value].abilityType is AbilityTypes.Heal)
             {
+                player.AddTarget(player.gameObject);
                 player.SetChooseAbility(abilityIndex.Value);
 
                 player.stateMachine.SetState(new QueueActions(BattleManager));
                 yield break;
             }
 
-            // player.GetAbilityTypeByIndex == heal ? turnCount -= 1
             if (abilityIndex != null)
                 player.SetChooseAbility(abilityIndex.Value);
 

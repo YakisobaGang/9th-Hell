@@ -17,6 +17,7 @@ namespace ProjectD.Player.Combat
             stateMachine.SetState(new Idle());
         }
 
+        
         private void Update()
         {
             Debug.Log($"<Color=green>{stateMachine.CurrentState()}</color>");

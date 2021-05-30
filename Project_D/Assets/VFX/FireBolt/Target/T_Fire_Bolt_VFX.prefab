@@ -4816,6 +4816,7 @@ GameObject:
   - component: {fileID: -1911326571030772354}
   - component: {fileID: 1868588914}
   - component: {fileID: -5350399188757991291}
+  - component: {fileID: -5696519171466937367}
   m_Layer: 0
   m_Name: T_Fire_Bolt_VFX
   m_TagString: Untagged
@@ -4918,6 +4919,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: -1911326571030772354}
+          m_TargetAssemblyTypeName: UnityEngine.Playables.PlayableDirector, UnityEngine
+          m_MethodName: Stop
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &-5350399188757991291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4933,3 +4946,19 @@ MonoBehaviour:
   pool: {fileID: 11400000, guid: 70b6f4810a9f19442b58cdaac29bc16b, type: 2}
   timeInSeconds: 3
   addBackOnEnable: 0
+--- !u!114 &-5696519171466937367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3708956704842063653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81f870c4933e4f27a22cf61d9465233c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: b28180ddc3b5777429b78d60835bb625, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls: []
