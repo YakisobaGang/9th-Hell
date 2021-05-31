@@ -1962,7 +1962,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4075666130538850823, guid: 40107ac33ea42974b802872e6ba2e57a, type: 3}
       propertyPath: objectPools.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4075666130538850823, guid: 40107ac33ea42974b802872e6ba2e57a, type: 3}
       propertyPath: objectPools.Array.data[0]
@@ -1980,6 +1980,10 @@ PrefabInstance:
       propertyPath: objectPools.Array.data[3]
       value: 
       objectReference: {fileID: 11400000, guid: ddbef9a3a85f1264aa03e763cdda60be, type: 2}
+    - target: {fileID: 4075666130538850823, guid: 40107ac33ea42974b802872e6ba2e57a, type: 3}
+      propertyPath: objectPools.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7514ffa02d964b845ac7ba2ec2ba9c19, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40107ac33ea42974b802872e6ba2e57a, type: 3}
 --- !u!1001 &1239462876
