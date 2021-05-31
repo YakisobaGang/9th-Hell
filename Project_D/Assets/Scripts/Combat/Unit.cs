@@ -22,16 +22,16 @@ namespace ProjectD.Combat
 
         private void Start()
         {
-            if(abilitys.Length == 0)
+            if (abilitys.Length == 0)
                 return;
-            
+
             for (int i = 0; i < abilitys.Length; i++)
             {
-                if(abilitys[i].GetCasterTransform() is null)
+                if (abilitys[i].GetCasterTransform() is null)
                     abilitys[i].SetCasterTransform(transform);
             }
         }
-        
+
         public void AddTarget(GameObject newTarget)
         {
             targets.Enqueue(newTarget);
