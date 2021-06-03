@@ -29,7 +29,7 @@ namespace ProjectD.GameEvents
             if (eventListeners.Contains(listener))
                 eventListeners.Remove(listener);
         }
-        
+
         public void LogEnvent()
         {
             Debug.Log($"Event trigger {name}");
