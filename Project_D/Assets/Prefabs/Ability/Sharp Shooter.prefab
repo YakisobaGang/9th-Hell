@@ -45,8 +45,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityData: {fileID: 11400000, guid: e7d33335c97b07e43953df2edf57ec55, type: 2}
   castingVFX: {fileID: 11400000, guid: f0cf76ad9bb0f3b4fbe04a26921360bf, type: 2}
-  impactVfx: {fileID: 11400000, guid: ae6fc86e3f4ac064a97f2e26bf5daeb7, type: 2}
-  casterTransform: {fileID: 7775097763091562548, guid: fd07f8ab0fdc64942b6bfcbb2943ee0d, type: 3}
-  damageAmount: 60
+  impactVfx: {fileID: 11400000, guid: 35ff59f6dee65bd49b94d1ecdd2ae7a0, type: 2}
+  casterTransform: {fileID: 0}
   hasCastingVFX: 1
   hasImpactVFX: 1
+  playImpactThroughScript: 1
+  damageAmount: 60

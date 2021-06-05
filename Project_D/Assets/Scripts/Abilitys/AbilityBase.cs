@@ -13,6 +13,7 @@ namespace ProjectD.Abilitys
         [SerializeField] protected Transform casterTransform = null;
         [SerializeField] protected bool hasCastingVFX = true;
         [SerializeField] protected bool hasImpactVFX = false;
+        [SerializeField] protected bool playImpactThroughScript;
         protected Unit target;
         public AbilityTypes abilityType => abilityData.GetAbilityType();
         public string abilityName => abilityData.GetName();
@@ -28,6 +29,8 @@ namespace ProjectD.Abilitys
         {
             casterTransform = _transform;
         }
+        
+        
 
         public Transform GetCasterTransform() => casterTransform;
     }

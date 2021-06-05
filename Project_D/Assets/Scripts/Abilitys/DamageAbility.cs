@@ -18,7 +18,7 @@ namespace ProjectD.Abilitys
             if (hasCastingVFX)
                 castingVFX.PlayVFX();
 
-            if (hasImpactVFX)
+            if (playImpactThroughScript)
                 impactVfx.PlayVFX();
 
             var isDead = DoDamage();

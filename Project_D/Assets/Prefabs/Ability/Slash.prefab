@@ -49,4 +49,5 @@ MonoBehaviour:
   casterTransform: {fileID: 0}
   hasCastingVFX: 0
   hasImpactVFX: 1
+  playImpactThroughScript: 1
   damageAmount: 50

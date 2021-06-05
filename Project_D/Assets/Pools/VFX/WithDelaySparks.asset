@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13ba6bd7279f4a8ea82fcc74ad78f871, type: 3}
-  m_Name: T_Resolve_VFX
+  m_Name: WithDelaySparks
   m_EditorClassIdentifier: 
   initialCount: 2
-  poolName: T_Resolve_VFX
-  canExpend: 0
-  objectPrefab: {fileID: 2102261373775494162, guid: 05d843f8ed0131643aec73d4378f1476, type: 3}
+  poolName: WithDelaySparks
+  canExpend: 1
+  objectPrefab: {fileID: 2102261373775494162, guid: ebe452c13e9695a4d8f3deb14604f1bf, type: 3}

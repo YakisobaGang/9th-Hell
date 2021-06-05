@@ -12,8 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d684084150304249a805471fc620b85d, type: 3}
   m_Name: God Heal
   m_EditorClassIdentifier: 
-  type: 1
+  type: 2
   abilityName: God Heal
-  onHitAbilityFX: {fileID: 0}
-  castAbilityFx: {fileID: 0}
-  damage: 50

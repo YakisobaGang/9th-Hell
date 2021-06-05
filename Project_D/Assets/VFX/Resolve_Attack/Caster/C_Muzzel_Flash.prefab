@@ -30,6 +30,8 @@ GameObject:
   - component: {fileID: 8185232518591218613}
   - component: {fileID: 5436882390433368164}
   - component: {fileID: 4138148733445135589}
+  - component: {fileID: 9010800605942320822}
+  - component: {fileID: -2444877629652227297}
   m_Layer: 0
   m_Name: C_Muzzel_Flash
   m_TagString: Untagged
@@ -89,21 +91,10 @@ MonoBehaviour:
     m_Signals:
     - {fileID: 11400000, guid: 296b2f0cee69d8e4da64f269c851468c, type: 2}
     - {fileID: 11400000, guid: debc723bcf0e4e5428aaf06d8f95da65, type: 2}
+    - {fileID: 11400000, guid: ed6ab0f1791cc4548b66c4f15ec4522b, type: 2}
     m_Events:
     - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 11400000, guid: b0068c585c5779845bc9466ec34cf252, type: 2}
-          m_TargetAssemblyTypeName: ProjectD.GameEvents.GameEvent, Assembly-CSharp
-          m_MethodName: Raise
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 11400000, guid: 89757a47f982d6d43bd4ac220bf328b9, type: 2}
@@ -118,6 +109,64 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11400000, guid: 019a8a4361433cb41ab2b2e36e42db4d, type: 2}
+          m_TargetAssemblyTypeName: ProjectD.GameEvents.GameEvent, Assembly-CSharp
+          m_MethodName: Raise
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &9010800605942320822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7356328730657848401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81f870c4933e4f27a22cf61d9465233c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: b28180ddc3b5777429b78d60835bb625, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -2444877629652227297}
+        m_TargetAssemblyTypeName: FabriciohodDev.PoolingSystem.Scripts.AddBackToPoolAfterTime,
+          PoollingSystem
+        m_MethodName: AddBackToPool
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &-2444877629652227297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7356328730657848401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8251fa698914ecbb061e7a91f66c7e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pool: {fileID: 11400000, guid: ddbef9a3a85f1264aa03e763cdda60be, type: 2}
+  timeInSeconds: 3
+  addBackOnEnable: 0
 --- !u!1001 &5065692248189014787
 PrefabInstance:
   m_ObjectHideFlags: 0
