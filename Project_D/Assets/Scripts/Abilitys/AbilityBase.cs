@@ -29,8 +29,8 @@ namespace ProjectD.Abilitys
         {
             casterTransform = _transform;
         }
-        
-        
+
+
 
         public Transform GetCasterTransform() => casterTransform;
     }
