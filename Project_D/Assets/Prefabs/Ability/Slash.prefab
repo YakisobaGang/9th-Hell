@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7141569673450651955}
   - component: {fileID: 3111055583897698305}
   m_Layer: 0
-  m_Name: Sharp Shooter
+  m_Name: Slash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,10 +43,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8180a844f024f718df214d2b6b6c326, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilityData: {fileID: 11400000, guid: e7d33335c97b07e43953df2edf57ec55, type: 2}
-  castingVFX: {fileID: 11400000, guid: f0cf76ad9bb0f3b4fbe04a26921360bf, type: 2}
-  impactVfx: {fileID: 11400000, guid: ae6fc86e3f4ac064a97f2e26bf5daeb7, type: 2}
-  casterTransform: {fileID: 7775097763091562548, guid: fd07f8ab0fdc64942b6bfcbb2943ee0d, type: 3}
-  damageAmount: 60
-  hasCastingVFX: 1
+  abilityData: {fileID: 11400000, guid: 67919b917c2c0a640a46dafd35b34ca7, type: 2}
+  castingVFX: {fileID: 0}
+  impactVfx: {fileID: 11400000, guid: eeec6cf750716bf4092209ed3bb96bb8, type: 2}
+  casterTransform: {fileID: 0}
+  hasCastingVFX: 0
   hasImpactVFX: 1
+  damageAmount: 50

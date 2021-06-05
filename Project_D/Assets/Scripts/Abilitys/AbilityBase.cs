@@ -11,6 +11,8 @@ namespace ProjectD.Abilitys
         [SerializeField] protected AbilityVFXController castingVFX;
         [SerializeField] protected AbilityVFXController impactVfx;
         [SerializeField] protected Transform casterTransform = null;
+        [SerializeField] protected bool hasCastingVFX = true;
+        [SerializeField] protected bool hasImpactVFX = false;
         protected Unit target;
         public AbilityTypes abilityType => abilityData.GetAbilityType();
         public string abilityName => abilityData.GetName();

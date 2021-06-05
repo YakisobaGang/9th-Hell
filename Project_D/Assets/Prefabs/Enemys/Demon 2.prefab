@@ -251,8 +251,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78d07b0da64f44d9beba7c4f152050f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: Demon 2
-  abilitys: []
+  unitName: Hiaram
+  abilitys:
+  - {fileID: 3111055583897698305, guid: 4ae04d2f0efc8874f9cfa6978d0a6e08, type: 3}
   baseDamage: 30
   health: {fileID: 7714370599565533988}
   hit: {fileID: 0}

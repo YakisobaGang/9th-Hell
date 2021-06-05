@@ -11,6 +11,7 @@ namespace ProjectD.Combat
         [SerializeField] private string unitName;
         [SerializeField] protected AbilityBase[] abilitys;
         [SerializeField] private int baseDamage = 10;
+        [SerializeField] private Transform firePoint;
         public Health health;
         private readonly Queue<int> abilityIndex = new Queue<int>();
         private readonly Queue<GameObject> targets = new Queue<GameObject>();
@@ -44,28 +45,34 @@ namespace ProjectD.Combat
             abilityIndex.Enqueue(index);
         }
 
-        public void UsingAbility()
+        public bool UsingAbility()
         {
-            if (abilityIndex.Count == 0 || targets.Count == 0) return;
+            if (abilityIndex.Count == 0 || targets.Count == 0) return false;
 
             var index = abilityIndex.Dequeue();
 
             if (abilitys[index].abilityType == AbilityTypes.Heal)
             {
                 abilitys[index].SetTarget(targets.Dequeue().GetComponent<Unit>());
-                abilitys[index].CastAbility();
-                return;
+                return abilitys[index].CastAbility();
+            }
+
+            if (abilitys[index].abilityType == AbilityTypes.Ranged)
+            {
+                abilitys[index].SetCasterTransform(firePoint);
+                abilitys[index].SetTarget(targets.Dequeue().GetComponent<Unit>());
+                return abilitys[index].CastAbility();
             }
 
             var target = targets.Dequeue();
 
             if (target is null)
-                return;
+                return false;
 
             try
             {
                 if (!target.TryGetComponent<Unit>(out var targetInfo))
-                    return;
+                    return false;
 
                 abilitys[index].SetTarget(targetInfo);
                 abilitys[index].CastAbility();
@@ -73,8 +80,10 @@ namespace ProjectD.Combat
             catch (MissingReferenceException err)
             {
                 print(err);
-                return;
+                return false;
             }
+
+            return false;
         }
     }
 }

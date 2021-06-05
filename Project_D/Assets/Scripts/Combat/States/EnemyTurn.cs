@@ -19,8 +19,11 @@ namespace ProjectD.Combat.States
             BattleManager.VfxCountReset();
             yield return new WaitForSeconds(0.7f);
 
-            var isDead =
-                playerInfo.health.TakeDamage(enemysInstance[currentEnemyIndex].unit.BaseDamage);
+            enemysInstance[currentEnemyIndex].unit.SetChooseAbility(0);
+            enemysInstance[currentEnemyIndex].unit.AddTarget(playerInfo.gameObject);
+
+            var isDead = enemysInstance[currentEnemyIndex].unit.UsingAbility();
+                // playerInfo.health.TakeDamage(enemysInstance[currentEnemyIndex].unit.BaseDamage);
 
             if (isDead)
             {

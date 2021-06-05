@@ -15,4 +15,4 @@ MonoBehaviour:
   initialCount: 2
   poolName: T_Resolve_VFX
   canExpend: 0
-  objectPrefab: {fileID: 6611477895470184841, guid: 5e5942922cfd6c24c868676b7446fa37, type: 3}
+  objectPrefab: {fileID: 2102261373775494162, guid: 05d843f8ed0131643aec73d4378f1476, type: 3}
