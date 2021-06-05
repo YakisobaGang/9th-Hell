@@ -23,7 +23,7 @@ namespace ProjectD.Combat.States
             enemysInstance[currentEnemyIndex].unit.AddTarget(playerInfo.gameObject);
 
             var isDead = enemysInstance[currentEnemyIndex].unit.UsingAbility();
-                // playerInfo.health.TakeDamage(enemysInstance[currentEnemyIndex].unit.BaseDamage);
+            // playerInfo.health.TakeDamage(enemysInstance[currentEnemyIndex].unit.BaseDamage);
 
             if (isDead)
             {

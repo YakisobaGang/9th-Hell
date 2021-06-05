@@ -5,7 +5,7 @@ namespace ProjectD.Abilitys
     public class DamageAbility : AbilityBase
     {
         [SerializeField] [Range(1, 9999)] private int damageAmount;
-        
+
 
         public override bool CastAbility()
         {
@@ -14,13 +14,13 @@ namespace ProjectD.Abilitys
 
             if (hasImpactVFX)
                 impactVfx.SpawnVFX(target.transform.position, Quaternion.identity);
-            
-            if(hasCastingVFX)
+
+            if (hasCastingVFX)
                 castingVFX.PlayVFX();
-            
-            if(hasImpactVFX)
+
+            if (hasImpactVFX)
                 impactVfx.PlayVFX();
-            
+
             var isDead = DoDamage();
 
             return isDead;
