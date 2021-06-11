@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 967876725}
   - component: {fileID: 4024705022035277768}
   - component: {fileID: 1118985571}
+  - component: {fileID: 1567176743}
   m_Layer: 0
   m_Name: PlayerOpenArea
   m_TagString: Player
@@ -67,8 +68,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0742275, y: 1.5759301, z: 0.12928538}
-  m_Center: {x: 0.37926668, y: 0.65727663, z: 0.004363768}
+  m_Size: {x: 0.8681698, y: 1.2912946, z: 0.12928538}
+  m_Center: {x: 0.53174376, y: 0.33631197, z: 0.0043657725}
 --- !u!114 &2621423207252200575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,6 +206,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1567176743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5700642573914393715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4250d0ad47bce5d40a5c6773dee8861f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5700642574307056430
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,9 +229,9 @@ GameObject:
   - component: {fileID: 5700642574307056429}
   - component: {fileID: 5700642574307056426}
   - component: {fileID: 5700642574307056427}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlayerVisual
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -231,7 +244,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5700642574307056430}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.7186, y: 1.167, z: 0}
+  m_LocalPosition: {x: 0.549, y: 0.986, z: 0}
   m_LocalScale: {x: 1.9919171, y: 2.750709, z: 1}
   m_Children: []
   m_Father: {fileID: 5700642573914393714}
