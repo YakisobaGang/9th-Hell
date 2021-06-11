@@ -6,12 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/DevScenes/Dev_Thiago.unity
-    guid: a3a5bf579c3aeb4448b87cd1ef34ac33
+    path: Assets/Scenes/MainMenu/MainMenu.unity
+    guid: 80717fe1f8e97aa46b57c6b27cb421b4
   - enabled: 1
     path: Assets/Scenes/OpenArea/OpenArea.unity
     guid: 9b1e079baa0334540bac7b6b893b4ab1
   - enabled: 1
     path: Assets/Scenes/Combat/CombatScenes.unity
     guid: df263cd8b0392594a8080cc546075445
+  - enabled: 1
+    path: Assets/Scenes/DevScenes/Dev_Thiago.unity
+    guid: a3a5bf579c3aeb4448b87cd1ef34ac33
+  - enabled: 1
+    path: Assets/Scenes/DevScenes/Dev_Thiago/New Folder/NewTemp2.unity
+    guid: bde90f1b35a5fc248bcae236e9677cca
   m_configObjects: {}
