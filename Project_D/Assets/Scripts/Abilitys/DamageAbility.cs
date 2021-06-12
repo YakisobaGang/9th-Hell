@@ -6,6 +6,9 @@ namespace ProjectD.Abilitys
     {
         [SerializeField] [Range(1, 9999)] private int damageAmount;
 
+        [SerializeField] private float timeToStartDamageTick = 1f;
+        [SerializeField] private float timeToStopDamageTick = 1f;
+
 
         public override bool CastAbility()
         {
@@ -19,7 +22,10 @@ namespace ProjectD.Abilitys
                 castingVFX.PlayVFX();
 
             if (playImpactThroughScript)
+            {
                 impactVfx.PlayVFX();
+                target.health.DoDamangeTick?.Invoke(timeToStartDamageTick, timeToStopDamageTick);
+            }
 
             var isDead = DoDamage();
 

@@ -49,4 +49,7 @@ MonoBehaviour:
   casterTransform: {fileID: 7775097763091562548, guid: fd07f8ab0fdc64942b6bfcbb2943ee0d, type: 3}
   hasCastingVFX: 1
   hasImpactVFX: 1
+  playImpactThroughScript: 1
   damageAmount: 50
+  timeToStartDamageTick: 0
+  timeToStopDamageTick: 4

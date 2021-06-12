@@ -86,7 +86,8 @@ Material:
     m_Floats:
     - Boolean_2518affec16b4669ad23d73f5d9a7506: 0
     - Boolean_32ed873891364007a62ea8a81b11dfed: 0
-    - Vector1_0738d6dfd427477ab7ba3998c26b5921: 0.2
+    - Boolean_3cfcc273c5594224b5832ab04199e092: 0
+    - Vector1_0738d6dfd427477ab7ba3998c26b5921: 0.008
     - Vector1_a9e58cc87bdf4a799ed60acc379ffa39: 0.28
     - _AlphaClip: 0
     - _Blend: 0
@@ -117,6 +118,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Color_31a1dcb7c8e5417aa82d87cf5f2eac37: {r: 1, g: 0, b: 0, a: 0}
     - Color_b25163dc09e541dbbd1f1e260fa062ef: {r: 11.313708, g: 11.313708, b: 11.313708, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}

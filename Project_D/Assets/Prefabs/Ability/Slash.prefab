@@ -51,3 +51,5 @@ MonoBehaviour:
   hasImpactVFX: 1
   playImpactThroughScript: 1
   damageAmount: 50
+  timeToStartDamageTick: 0
+  timeToStopDamageTick: 1
