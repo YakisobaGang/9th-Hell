@@ -52,12 +52,12 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - NoiseMultiplyer_: 1.98
-    - NoiseScale_: 1.6
+    - NoiseMultiplyer_: 1.57
+    - NoiseScale_: 6.6
     - NormalMapStrength_: 1
     m_Colors:
-    - ReMapIN_: {r: 0.6, g: 0.57, b: 0, a: 0}
-    - ReMapOUT_: {r: 1.09, g: 1.17, b: 0, a: 0}
-    - TilingOffeset_: {r: 5.86, g: 8, b: 1, a: 0}
-    - Tiling_: {r: 16.61, g: 24.5, b: 0, a: 0}
+    - ReMapIN_: {r: 0.6, g: 0.58, b: 1, a: 1}
+    - ReMapOUT_: {r: 1.09, g: 1.17, b: 1, a: 1}
+    - TilingOffeset_: {r: 5.86, g: 4.1, b: 1, a: 1}
+    - Tiling_: {r: 30.67, g: 32.1, b: 1, a: 1}
   m_BuildTextureStacks: []
