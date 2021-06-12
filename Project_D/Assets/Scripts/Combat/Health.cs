@@ -29,7 +29,7 @@ namespace ProjectD.Combat
         private void HandleDamageTick(float timeToStart, float timeToStop)
         {
             Invoke(nameof(StartDamageTick), timeToStart);
-            
+
             Invoke(nameof(StopDamageTick), timeToStop);
         }
 
@@ -60,7 +60,7 @@ namespace ProjectD.Combat
             health -= damage;
 
             OnHealthChange?.Invoke(CurrentHealthPercentage());
-            
+
             if (health >= 0) return false;
 
             OnDeath?.Invoke();
@@ -77,8 +77,8 @@ namespace ProjectD.Combat
         private void StopDamageTick()
         {
             anim.SetBool(IsRecivingDamage, false);
-        
-        } 
+
+        }
         private void StartDamageTick()
         {
             anim.SetBool(IsRecivingDamage, true);
