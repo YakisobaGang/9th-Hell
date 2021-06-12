@@ -255,6 +255,7 @@ MonoBehaviour:
   abilitys:
   - {fileID: 3111055583897698305, guid: 4ae04d2f0efc8874f9cfa6978d0a6e08, type: 3}
   baseDamage: 30
+  firePoint: {fileID: 0}
   health: {fileID: 7714370599565533988}
   hit: {fileID: 0}
 --- !u!95 &8230771443920864973
@@ -343,8 +344,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: EnemyTest 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
+  m_sharedMaterial: {fileID: -6987706003242239998, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
