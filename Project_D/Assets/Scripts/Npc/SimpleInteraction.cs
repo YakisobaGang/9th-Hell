@@ -6,8 +6,10 @@ namespace ProjectD.Npc
 {
     public class SimpleInteraction : MonoBehaviour
     {
-        [SerializeField] private UnityEvent unityEvent;
-        private bool interactionIsPress;
+        [SerializeField] private UnityEvent firstTime;
+        [SerializeField] private UnityEvent secondTime;
+        [SerializeField] private DialogueCounter dialogueCounter;
+        private bool InteractionIsPress;
 
         private void OnEnable()
         {
@@ -21,16 +23,27 @@ namespace ProjectD.Npc
 
         private void OnTriggerStay(Collider other)
         {
-            if (other.CompareTag("Player") && interactionIsPress)
+            if (!other.CompareTag("Player") || !InteractionIsPress) return;
+            
+            InteractionIsPress = false;
+
+            if (dialogueCounter.GetCurrentCount() == 0)
             {
-                interactionIsPress = false;
-                unityEvent?.Invoke();
+                firstTime?.Invoke();
+                dialogueCounter.IncreaseCount();
+                return;
+            }
+
+            if (dialogueCounter.GetCurrentCount() >= 1)
+            {
+                secondTime?.Invoke();
+                dialogueCounter.IncreaseCount();
             }
         }
 
         private void HandleInteractionPress()
         {
-            interactionIsPress = !interactionIsPress;
+            InteractionIsPress = !InteractionIsPress;
         }
     }
 }
