@@ -24,7 +24,7 @@ namespace ProjectD.Npc
         private void OnTriggerStay(Collider other)
         {
             if (!other.CompareTag("Player") || !InteractionIsPress) return;
-            
+
             InteractionIsPress = false;
 
             if (dialogueCounter.GetCurrentCount() == 0)
