@@ -10,17 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe917da59551444d9950cacc4fa28984, type: 3}
-  m_Name: Stranger_Pre
+  m_Name: Leg_pre
   m_EditorClassIdentifier: 
-  NpcName: Condenado Estranho
+  NpcName: Condenado?
   nodeLinks:
-  - baseNodeGuid: a50a3aac-a7ba-4cd1-8ab4-c5288b1ef95e
+  - baseNodeGuid: b91a4f64-7f6f-4deb-9b07-89fb302cfc5b
     portName: Next
-    targetNodeGuid: 98d35a21-6d10-4493-b77d-76fc0617e75a
+    targetNodeGuid: 5e099a84-e93a-46dd-8f3b-76aa25754eae
   dialogueNodeData:
-  - guid: 98d35a21-6d10-4493-b77d-76fc0617e75a
-    dialogueText: "Socorro! Por favor me ajude! eles est\xE3o vindo atr\xE1s do meu
-      p\xE9! N\xE3o deixe eles pegarem no meu p\xE9, proteja ele a todo custo! POR
-      FAVOR!!"
-    position: {x: 272, y: 198}
+  - guid: 5e099a84-e93a-46dd-8f3b-76aa25754eae
+    dialogueText: "\u2026\u2026\u2026\u2026!"
+    position: {x: 251, y: 185}
   exposedProperties: []
