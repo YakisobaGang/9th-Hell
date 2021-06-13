@@ -23,6 +23,8 @@ namespace ProjectD.Combat
         [SerializeField] private Transform[] enemysSpawnPoint;
         [SerializeField] public UnityEvent onWon;
         [SerializeField] public UnityEvent onLos;
+        [SerializeField] public AudioSource audioPlayer;
+        [SerializeField] public AudioClip defeat;
 
         internal int currentEnemyIndex;
         private int playerTurnCount = 2;
@@ -30,6 +32,7 @@ namespace ProjectD.Combat
         public PlayerUnit playerInstance { get; private set; }
         public FiniteStateMachine combatState { get; private set; }
         public List<(GameObject gameObj, Unit unit)> enemysInstance { get; private set; }
+        private int temp = 0;
 
         private void Awake()
         {
@@ -46,7 +49,9 @@ namespace ProjectD.Combat
 
         private void Update()
         {
+            #if UNITY_EDITOR
             Debug.Log($"<Color=green>{combatState.CurrentState()}</color>");
+            #endif
 
             if (enemysInstance.TrueForAll(enemy => enemy.gameObj.activeInHierarchy == false))
             {
@@ -56,6 +61,12 @@ namespace ProjectD.Combat
             if (playerInstance.gameObject.activeInHierarchy == false)
             {
                 combatState.SetState(new Loss(this));
+            }
+
+            if (combatState.CurrentState() is Loss && temp <= 0)
+            {
+                audioPlayer.PlayOneShot(defeat);
+                temp++;
             }
         }
 
