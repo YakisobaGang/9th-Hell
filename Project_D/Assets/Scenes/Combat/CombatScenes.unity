@@ -3272,6 +3272,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 6927c6aa7c96086469e9b75f389b790f, type: 2}
+        m_TargetAssemblyTypeName: ProjectD.Npc.ResetDialogueCounter, Assembly-CSharp
+        m_MethodName: ResetAll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   audioPlayer: {fileID: 1751378694}
   defeat: {fileID: 8300000, guid: b5eb1cac5a4a36342a297b9a588a482a, type: 3}
   vfxCount: 3

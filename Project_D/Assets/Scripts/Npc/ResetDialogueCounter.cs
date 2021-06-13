@@ -10,7 +10,7 @@ namespace ProjectD.Npc
         [SerializeField] private bool resetAll;
         
         [ContextMenu("Reset All")]
-        private void ResetAll()
+        public void ResetAll()
         {
             counters.ForEach(counter => counter.Reset());
         }
