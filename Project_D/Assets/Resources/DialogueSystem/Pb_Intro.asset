@@ -1,0 +1,205 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe917da59551444d9950cacc4fa28984, type: 3}
+  m_Name: Pb_Intro
+  m_EditorClassIdentifier: 
+  NpcName: null
+  nodeLinks:
+  - baseNodeGuid: bd478862-5eff-4f7e-ae69-073c70315a02
+    portName: Next
+    targetNodeGuid: 785eab5f-a35d-4740-bd6a-aba78c55a558
+  - baseNodeGuid: 66a4e4d9-31eb-4469-8283-7f15aa851d49
+    portName: '>>>'
+    targetNodeGuid: a06b3c3c-fa80-49cd-a875-643a6a79af9c
+  - baseNodeGuid: 98ae395c-06ce-4ab4-b329-5f5b203f3e43
+    portName: '>>>'
+    targetNodeGuid: a06b3c3c-fa80-49cd-a875-643a6a79af9c
+  - baseNodeGuid: 785eab5f-a35d-4740-bd6a-aba78c55a558
+    portName: Um esqueleto?!!
+    targetNodeGuid: 66a4e4d9-31eb-4469-8283-7f15aa851d49
+  - baseNodeGuid: 785eab5f-a35d-4740-bd6a-aba78c55a558
+    portName: "O que voc\xEA quer?"
+    targetNodeGuid: 98ae395c-06ce-4ab4-b329-5f5b203f3e43
+  - baseNodeGuid: a06b3c3c-fa80-49cd-a875-643a6a79af9c
+    portName: Foi... Sem querer
+    targetNodeGuid: 5db619ca-0388-4d55-98c3-79dfab730f10
+  - baseNodeGuid: a06b3c3c-fa80-49cd-a875-643a6a79af9c
+    portName: Vim passear
+    targetNodeGuid: 5db619ca-0388-4d55-98c3-79dfab730f10
+  - baseNodeGuid: 5db619ca-0388-4d55-98c3-79dfab730f10
+    portName: '>>>'
+    targetNodeGuid: 118cc2e1-3656-4bda-817b-c1c2c111dd1a
+  - baseNodeGuid: 118cc2e1-3656-4bda-817b-c1c2c111dd1a
+    portName: "N\xE3o"
+    targetNodeGuid: 30235703-4529-4110-a076-8797b8fc8822
+  - baseNodeGuid: 118cc2e1-3656-4bda-817b-c1c2c111dd1a
+    portName: Talvez
+    targetNodeGuid: 30235703-4529-4110-a076-8797b8fc8822
+  - baseNodeGuid: 30235703-4529-4110-a076-8797b8fc8822
+    portName: '>>>'
+    targetNodeGuid: 6994f1f0-03b0-4dd4-bc6a-3b2ab0676197
+  - baseNodeGuid: 6994f1f0-03b0-4dd4-bc6a-3b2ab0676197
+    portName: Eu morro.
+    targetNodeGuid: cdc5c29f-ea50-46a4-9e5f-833d5d51751f
+  - baseNodeGuid: 6994f1f0-03b0-4dd4-bc6a-3b2ab0676197
+    portName: Eu ganho um presente.
+    targetNodeGuid: abdb9b04-ceb5-4472-b0e7-1fe527c32c4f
+  - baseNodeGuid: cdc5c29f-ea50-46a4-9e5f-833d5d51751f
+    portName: '>>>'
+    targetNodeGuid: cee8afb7-081b-4bac-a8bd-b68675c14360
+  - baseNodeGuid: abdb9b04-ceb5-4472-b0e7-1fe527c32c4f
+    portName: '>>>'
+    targetNodeGuid: cee8afb7-081b-4bac-a8bd-b68675c14360
+  - baseNodeGuid: cee8afb7-081b-4bac-a8bd-b68675c14360
+    portName: Sorte?
+    targetNodeGuid: db4ec241-022e-452a-bef1-b99e68776094
+  - baseNodeGuid: cee8afb7-081b-4bac-a8bd-b68675c14360
+    portName: "Como morrer \xE9 sorte?"
+    targetNodeGuid: db4ec241-022e-452a-bef1-b99e68776094
+  - baseNodeGuid: db4ec241-022e-452a-bef1-b99e68776094
+    portName: "Essas s\xE3o..."
+    targetNodeGuid: 29a449a5-2dc5-4bb2-a94a-5b85c4ea1740
+  - baseNodeGuid: db4ec241-022e-452a-bef1-b99e68776094
+    portName: "Eu conhe\xE7o isso!"
+    targetNodeGuid: 29a449a5-2dc5-4bb2-a94a-5b85c4ea1740
+  - baseNodeGuid: 29a449a5-2dc5-4bb2-a94a-5b85c4ea1740
+    portName: '>>>'
+    targetNodeGuid: cce65613-9d81-4c66-a81b-ccffca7d335d
+  - baseNodeGuid: cce65613-9d81-4c66-a81b-ccffca7d335d
+    portName: "Onde voc\xEA achou isso?"
+    targetNodeGuid: 3aee94c2-84fe-4cef-9cfc-36c3af7d190e
+  - baseNodeGuid: cce65613-9d81-4c66-a81b-ccffca7d335d
+    portName: Como conseguiu isso?
+    targetNodeGuid: 3aee94c2-84fe-4cef-9cfc-36c3af7d190e
+  - baseNodeGuid: 3aee94c2-84fe-4cef-9cfc-36c3af7d190e
+    portName: '>>>'
+    targetNodeGuid: ab64ad7a-54a1-43c3-b594-27b1442f9e60
+  - baseNodeGuid: ab64ad7a-54a1-43c3-b594-27b1442f9e60
+    portName: Oportunidade?
+    targetNodeGuid: d551e4dd-a3fa-4f13-92d3-642cfa3d6183
+  - baseNodeGuid: d551e4dd-a3fa-4f13-92d3-642cfa3d6183
+    portName: '>>>'
+    targetNodeGuid: 196a3b80-759e-43cc-bd1c-493bccd0908f
+  - baseNodeGuid: 196a3b80-759e-43cc-bd1c-493bccd0908f
+    portName: "Voc\xEA tem certeza?"
+    targetNodeGuid: c7c151b7-2319-49bd-b4aa-974e29633bd0
+  - baseNodeGuid: 196a3b80-759e-43cc-bd1c-493bccd0908f
+    portName: "Como ainda n\xE3o fugiu?"
+    targetNodeGuid: c7c151b7-2319-49bd-b4aa-974e29633bd0
+  - baseNodeGuid: c7c151b7-2319-49bd-b4aa-974e29633bd0
+    portName: '>>>'
+    targetNodeGuid: accfb0de-27ea-46d7-8250-d4c04f53f602
+  - baseNodeGuid: accfb0de-27ea-46d7-8250-d4c04f53f602
+    portName: '>>>'
+    targetNodeGuid: 4ca2c00a-389a-4627-b378-b94ba26e7ff3
+  - baseNodeGuid: 4ca2c00a-389a-4627-b378-b94ba26e7ff3
+    portName: E se der errado??
+    targetNodeGuid: 9d0399e4-5d8d-4a86-8e87-bd93066621ea
+  - baseNodeGuid: 4ca2c00a-389a-4627-b378-b94ba26e7ff3
+    portName: Certo
+    targetNodeGuid: a2cc6cfe-23ba-4962-8daf-d5bc6cfe9ad6
+  - baseNodeGuid: 9d0399e4-5d8d-4a86-8e87-bd93066621ea
+    portName: '>>>'
+    targetNodeGuid: a2cc6cfe-23ba-4962-8daf-d5bc6cfe9ad6
+  dialogueNodeData:
+  - guid: 66a4e4d9-31eb-4469-8283-7f15aa851d49
+    dialogueText: "Meio rude pra algu\xE9m que acabou de conhecer, n\xE3o acha? Saiba
+      que eu sou o Condenado mais do balacobaco desse sal\xE3o. (Ele \xE9 o \xFAnico
+      nesse sal\xE3o)"
+    position: {x: 892, y: 87}
+  - guid: 785eab5f-a35d-4740-bd6a-aba78c55a558
+    dialogueText: "Ora, voc\xEA \xE9 o primeiro Mortal que vejo aqui desacompanhado."
+    position: {x: 268, y: 205}
+  - guid: 5db619ca-0388-4d55-98c3-79dfab730f10
+    dialogueText: ...
+    position: {x: 2616, y: 249}
+  - guid: a06b3c3c-fa80-49cd-a875-643a6a79af9c
+    dialogueText: Mas agora me diga, o que um pobre mortal vem fazer aqui sozinho?
+    position: {x: 1928, y: 237}
+  - guid: 118cc2e1-3656-4bda-817b-c1c2c111dd1a
+    dialogueText: "Tem no\xE7\xE3o de onde est\xE1 agora?"
+    position: {x: 2936, y: 248}
+  - guid: 30235703-4529-4110-a076-8797b8fc8822
+    dialogueText: "Voc\xEA est\xE1 dentro do Inferno, onde todos s\xE3o julgados
+      e punidos ao castigo eterno, como se j\xE1 n\xE3o bastasse, essa \xE9 a nona
+      camada, a mais profunda de todas, onde reside L\xFAcifer, o imperador daqui."
+    position: {x: 3374, y: 263}
+  - guid: abdb9b04-ceb5-4472-b0e7-1fe527c32c4f
+    dialogueText: "Sim, claro, um machado cortando seu corpo ao meio \xE9 sem d\xFAvidas
+      um presente."
+    position: {x: 1179, y: 683}
+  - guid: cdc5c29f-ea50-46a4-9e5f-833d5d51751f
+    dialogueText: "Bom saber que voc\xEA consegue racionalizar ainda."
+    position: {x: 1174, y: 555}
+  - guid: cee8afb7-081b-4bac-a8bd-b68675c14360
+    dialogueText: "Mas ainda sim, voc\xEA est\xE1 com sorte."
+    position: {x: 1862, y: 625}
+  - guid: 98ae395c-06ce-4ab4-b329-5f5b203f3e43
+    dialogueText: "Achei que poderia tirar alguma rea\xE7\xE3o de voc\xEA, \xE9 uma
+      pena. Voc\xEA n\xE3o est\xE1 acostumado a conversar com esqueletos, est\xE1?"
+    position: {x: 899, y: 286}
+  - guid: db4ec241-022e-452a-bef1-b99e68776094
+    dialogueText: "Escute, eu n\xE3o fa\xE7o muita coisa por muito tempo, ent\xE3o
+      coleciono tudo que vejo de diferente e, recentemente, adquiri esses artefatos,
+      que parecem vir do seu mundo."
+    position: {x: 2309, y: 667}
+  - guid: 29a449a5-2dc5-4bb2-a94a-5b85c4ea1740
+    dialogueText: "(Essas coisas s\xE3o Equipamentos usados para lutar contra dem\xF4nios!
+      Um Rev\xF3lver EXOR404 e a Manopla HX2000!! Mas como eles vieram parar aqui?)"
+    position: {x: 3473, y: 676}
+  - guid: cce65613-9d81-4c66-a81b-ccffca7d335d
+    dialogueText: "Como pode ver, eu n\xE3o tenho muita utilidade para essas coisas,
+      pedras s\xE3o uma companhia bem melhor."
+    position: {x: 4549, y: 676}
+  - guid: 6994f1f0-03b0-4dd4-bc6a-3b2ab0676197
+    dialogueText: "Faz ideia do que pode acontecer com voc\xEA se descobrirem um
+      mortal andando livremente por aqui?"
+    position: {x: 272, y: 631}
+  - guid: 3aee94c2-84fe-4cef-9cfc-36c3af7d190e
+    dialogueText: "N\xE3o faz muito tempo, dem\xF4nios passaram aqui com alguns mortais,
+      um deles estava resistindo bastante e como resposta o dem\xF4nio maior o \u201Cgentilmente\u201D
+      desarmou, por sorte foi bem na minha frente."
+    position: {x: 282, y: 971}
+  - guid: ab64ad7a-54a1-43c3-b594-27b1442f9e60
+    dialogueText: ...Acho que essa pode ser uma boa oportunidade
+    position: {x: 1612, y: 968}
+  - guid: d551e4dd-a3fa-4f13-92d3-642cfa3d6183
+    dialogueText: "Eu sou um Condenado, mas n\xE3o qualquer um. Sou um dos primeiros
+      Condenados, um dos primeiros Pecadores, como alguns dem\xF4nios dizem aqui."
+    position: {x: 2098, y: 979}
+  - guid: 196a3b80-759e-43cc-bd1c-493bccd0908f
+    dialogueText: "Com tanto tempo vivendo aqui, eu aprendi algumas coisas sobre
+      como os dem\xF4nios utilizam a energia desse lugar. \xC9 poss\xEDvel que eu
+      consiga criar um portal para nos tirar daqui"
+    position: {x: 3143, y: 979}
+  - guid: c7c151b7-2319-49bd-b4aa-974e29633bd0
+    dialogueText: "Bom, eu nunca pude testar minha teoria por conta que os dem\xF4nios
+      seguem uma rotina de tortura, nunca tive um grande intervalo de tempo para
+      tentar fugir."
+    position: {x: 4339, y: 991}
+  - guid: accfb0de-27ea-46d7-8250-d4c04f53f602
+    dialogueText: "Eu preciso que voc\xEA elimine os dem\xF4nios que est\xE3o vindo
+      torturar os outros Condenados desse sal\xE3o, se voc\xEA conseguir eu devo
+      ter tempo o suficiente de criar o Portal."
+    position: {x: 5477, y: 994}
+  - guid: 4ca2c00a-389a-4627-b378-b94ba26e7ff3
+    dialogueText: "A sess\xE3o deve come\xE7ar em instantes, se apresse."
+    position: {x: 295, y: 1221}
+  - guid: a2cc6cfe-23ba-4962-8daf-d5bc6cfe9ad6
+    dialogueText: "Se tiver alguma d\xFAvida fale comigo, boa sorte."
+    position: {x: 1861, y: 1258}
+  - guid: 9d0399e4-5d8d-4a86-8e87-bd93066621ea
+    dialogueText: "Se der errado espero estar preparado para virar meu vizinho, \xE9
+      sempre bom ter mais gente por aqui. De qualquer forma, se tem chance de funcionar,
+      vale a pena."
+    position: {x: 747, y: 1208}
+  exposedProperties: []
