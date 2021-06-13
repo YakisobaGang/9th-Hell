@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe917da59551444d9950cacc4fa28984, type: 3}
+  m_Name: Thinker_Pre
+  m_EditorClassIdentifier: 
+  NpcName: Condenado Pensante
+  nodeLinks:
+  - baseNodeGuid: 6d8eaf57-6d7a-4f2a-9e3d-4fce20a7d888
+    portName: Next
+    targetNodeGuid: e87809c8-f441-403a-8a96-28f05d19c4c2
+  dialogueNodeData:
+  - guid: e87809c8-f441-403a-8a96-28f05d19c4c2
+    dialogueText: "Ai n\xE3o! a sess\xE3o de tortura j\xE1 vai come\xE7ar, eu n\xE3o
+      aguento mais isso, eu n\xE3o quero isso, por favor! Me ajuda!!"
+    position: {x: 276, y: 200}
+  exposedProperties: []
