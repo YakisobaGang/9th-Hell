@@ -49,9 +49,9 @@ namespace ProjectD.Combat
 
         private void Update()
         {
-            #if UNITY_EDITOR
+#if UNITY_EDITOR
             Debug.Log($"<Color=green>{combatState.CurrentState()}</color>");
-            #endif
+#endif
 
             if (enemysInstance.TrueForAll(enemy => enemy.gameObj.activeInHierarchy == false))
             {

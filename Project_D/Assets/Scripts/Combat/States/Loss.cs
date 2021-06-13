@@ -15,7 +15,7 @@ namespace ProjectD.Combat.States
             BattleManager.onLos?.Invoke();
 
             yield return new WaitForSeconds(6f);
-            
+
             PlayerPrefs.DeleteAll();
             SceneManager.LoadScene(0);
         }
