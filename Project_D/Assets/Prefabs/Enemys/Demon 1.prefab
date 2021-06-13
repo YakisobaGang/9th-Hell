@@ -266,7 +266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: Demon 1
   abilitys:
-  - {fileID: 3111055583897698305, guid: 4ae04d2f0efc8874f9cfa6978d0a6e08, type: 3}
+  - {fileID: 3111055583897698305, guid: 65c421665a1dc4b42a2b9158843871b0, type: 3}
   baseDamage: 30
   firePoint: {fileID: 0}
   health: {fileID: 4166691363436332313}

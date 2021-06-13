@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7141569673450651955}
   - component: {fileID: 3111055583897698305}
   m_Layer: 0
-  m_Name: Sharp Shooter
+  m_Name: Psy Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,13 +43,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8180a844f024f718df214d2b6b6c326, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilityData: {fileID: 11400000, guid: e7d33335c97b07e43953df2edf57ec55, type: 2}
-  castingVFX: {fileID: 11400000, guid: f0cf76ad9bb0f3b4fbe04a26921360bf, type: 2}
-  impactVfx: {fileID: 11400000, guid: 35ff59f6dee65bd49b94d1ecdd2ae7a0, type: 2}
+  abilityData: {fileID: 11400000, guid: e8ed72753da554b4a9e3901c95c3726a, type: 2}
+  castingVFX: {fileID: 0}
+  impactVfx: {fileID: 11400000, guid: 86b41c83f81993a40809a0911dbdeabc, type: 2}
   casterTransform: {fileID: 0}
-  hasCastingVFX: 1
+  hasCastingVFX: 0
   hasImpactVFX: 1
   playImpactThroughScript: 1
-  damageAmount: 80
+  damageAmount: 60
   timeToStartDamageTick: 0
   timeToStopDamageTick: 1

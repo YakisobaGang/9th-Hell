@@ -3268,18 +3268,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1751378694}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: b5eb1cac5a4a36342a297b9a588a482a, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+  audioPlayer: {fileID: 1751378694}
+  defeat: {fileID: 8300000, guid: b5eb1cac5a4a36342a297b9a588a482a, type: 3}
   vfxCount: 3
 --- !u!4 &1751378692
 Transform:
