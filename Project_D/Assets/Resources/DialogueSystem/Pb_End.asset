@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe917da59551444d9950cacc4fa28984, type: 3}
+  m_Name: Pb_End
+  m_EditorClassIdentifier: 
+  NpcName: Condenado
+  nodeLinks:
+  - baseNodeGuid: 9580f5e7-86b5-4087-ada4-1c2d0d8b556b
+    portName: Next
+    targetNodeGuid: 843474ad-a3eb-429f-86f8-8433772ae02c
+  - baseNodeGuid: 843474ad-a3eb-429f-86f8-8433772ae02c
+    portName: "Mas \xE9 claro."
+    targetNodeGuid: 2e6d66fb-8cb7-4961-88b7-c7d3392f1feb
+  - baseNodeGuid: 843474ad-a3eb-429f-86f8-8433772ae02c
+    portName: Sim
+    targetNodeGuid: 2e6d66fb-8cb7-4961-88b7-c7d3392f1feb
+  - baseNodeGuid: 2e6d66fb-8cb7-4961-88b7-c7d3392f1feb
+    portName: Ok
+    targetNodeGuid: 4c3ea8d4-d47e-4e5b-9c96-4d290c9b34e2
+  dialogueNodeData:
+  - guid: 843474ad-a3eb-429f-86f8-8433772ae02c
+    dialogueText: "\xD3tima hora, cuidou dos dem\xF4nios?"
+    position: {x: 276, y: 195}
+  - guid: 4c3ea8d4-d47e-4e5b-9c96-4d290c9b34e2
+    dialogueText: "Aqui vamos n\xF3s."
+    position: {x: 1593, y: 190}
+  - guid: 2e6d66fb-8cb7-4961-88b7-c7d3392f1feb
+    dialogueText: "Perfeito, meus preparativos est\xE3o prontos, assim que voc\xEA
+      ver o portal se formando entre nele, n\xE3o consigo abrir por muito tempo."
+    position: {x: 658, y: 201}
+  exposedProperties: []
