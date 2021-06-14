@@ -251,6 +251,18 @@ MonoBehaviour:
           m_StringArgument: OnDeath
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7375001351923443220}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   hit: {fileID: 6901392247370707154}
 --- !u!114 &5088109645618088690
 MonoBehaviour:

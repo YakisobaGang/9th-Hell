@@ -50,4 +50,4 @@ MonoBehaviour:
   hasCastingVFX: 1
   hasImpactVFX: 0
   playImpactThroughScript: 0
-  healAmount: 50
+  healAmount: 200

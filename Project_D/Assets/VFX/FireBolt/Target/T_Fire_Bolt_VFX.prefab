@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2084645785496165727}
   - component: {fileID: 2084645785496165724}
   - component: {fileID: 2084645785496165725}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Missel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4818,7 +4818,7 @@ GameObject:
   - component: {fileID: -5350399188757991291}
   - component: {fileID: -5696519171466937367}
   - component: {fileID: 9013151184975856722}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: T_Fire_Bolt_VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
