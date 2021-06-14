@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe917da59551444d9950cacc4fa28984, type: 3}
   m_Name: Thinker_Pos
   m_EditorClassIdentifier: 
-  NpcName: null
+  NpcName: Condenado Pensante
   nodeLinks:
   - baseNodeGuid: b65cf2c4-39ac-4793-85ab-caeb53132209
     portName: Next

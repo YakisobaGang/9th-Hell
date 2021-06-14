@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe917da59551444d9950cacc4fa28984, type: 3}
   m_Name: Pb_Pos
   m_EditorClassIdentifier: 
-  NpcName: null
+  NpcName: Condenado
   nodeLinks:
   - baseNodeGuid: d529ad3e-43e6-4e08-827d-396c73aed1b8
     portName: Next
