@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe917da59551444d9950cacc4fa28984, type: 3}
   m_Name: Thinker_Pos
   m_EditorClassIdentifier: 
-  NpcName: Condenado Pensante
+  NpcName: null
   nodeLinks:
   - baseNodeGuid: b65cf2c4-39ac-4793-85ab-caeb53132209
     portName: Next
@@ -20,21 +20,27 @@ MonoBehaviour:
   - baseNodeGuid: 04d02fe7-c502-4cc0-91f5-43ff112fe085
     portName: "Como \xE9 torturar um esqueleto?"
     targetNodeGuid: bf0adf09-0439-49b4-b525-2f99df27faae
-  - baseNodeGuid: bf0adf09-0439-49b4-b525-2f99df27faae
-    portName: '>>>'
-    targetNodeGuid: 3688a498-81a1-44f9-aca3-44367babe1c5
-  - baseNodeGuid: 3688a498-81a1-44f9-aca3-44367babe1c5
-    portName: '>>>'
-    targetNodeGuid: f2b435c6-a0b5-43be-a701-49d2c1ccfbc6
   - baseNodeGuid: 04d02fe7-c502-4cc0-91f5-43ff112fe085
     portName: "Como \xE9 viver aqui?"
     targetNodeGuid: e5c46e56-e908-4735-b739-0ad09b6c4bb7
+  - baseNodeGuid: 3688a498-81a1-44f9-aca3-44367babe1c5
+    portName: '>>>'
+    targetNodeGuid: f2b435c6-a0b5-43be-a701-49d2c1ccfbc6
+  - baseNodeGuid: bf0adf09-0439-49b4-b525-2f99df27faae
+    portName: '>>>'
+    targetNodeGuid: 3688a498-81a1-44f9-aca3-44367babe1c5
   - baseNodeGuid: e5c46e56-e908-4735-b739-0ad09b6c4bb7
     portName: '>>>'
     targetNodeGuid: f89b6d15-989f-4d2e-b55d-4f410ef84b99
   - baseNodeGuid: f89b6d15-989f-4d2e-b55d-4f410ef84b99
     portName: '>>>'
     targetNodeGuid: 408750bc-f2ff-4991-8602-9b026d0a98f2
+  - baseNodeGuid: f2b435c6-a0b5-43be-a701-49d2c1ccfbc6
+    portName: '>>>'
+    targetNodeGuid: babc5db9-0a80-43c4-9809-5a7bb4bc7612
+  - baseNodeGuid: 408750bc-f2ff-4991-8602-9b026d0a98f2
+    portName: '>>>'
+    targetNodeGuid: babc5db9-0a80-43c4-9809-5a7bb4bc7612
   dialogueNodeData:
   - guid: 04d02fe7-c502-4cc0-91f5-43ff112fe085
     dialogueText: Obrigado, mortal, salvou minha vida, serei eternamente grato.
@@ -48,10 +54,6 @@ MonoBehaviour:
     dialogueText: "Eu n\xE3o tenho m\xFAsculos nem carne, ent\xE3o n\xE3o sinto dor
       f\xEDsica. Mas os dem\xF4nios sabem as piores formas de se torturar."
     position: {x: 811, y: 144}
-  - guid: f2b435c6-a0b5-43be-a701-49d2c1ccfbc6
-    dialogueText: "Ah, eles tamb\xE9m tiram sarro que eu sou muito \u201Cmagrelo\u201D,
-      s\xF3 coisa pesada. Um mortal como voc\xEA jamais entenderia minha dor."
-    position: {x: 2908, y: 148}
   - guid: e5c46e56-e908-4735-b739-0ad09b6c4bb7
     dialogueText: "Solit\xE1rio, eu diria? "
     position: {x: 816, y: 295}
@@ -63,4 +65,11 @@ MonoBehaviour:
     dialogueText: "Talvez seja parte da tal \u201CPuni\xE7\xE3o\u201D que os dem\xF4nios
       dizem tanto."
     position: {x: 1978, y: 298}
+  - guid: f2b435c6-a0b5-43be-a701-49d2c1ccfbc6
+    dialogueText: "Ah, eles tamb\xE9m tiram sarro que eu sou muito \u201Cmagrelo\u201D,
+      s\xF3 coisa pesada. Um mortal como voc\xEA jamais entenderia minha dor."
+    position: {x: 2908, y: 148}
+  - guid: babc5db9-0a80-43c4-9809-5a7bb4bc7612
+    dialogueText: 
+    position: {x: 3743, y: 355}
   exposedProperties: []

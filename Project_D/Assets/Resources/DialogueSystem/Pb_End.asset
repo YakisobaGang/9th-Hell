@@ -23,6 +23,9 @@ MonoBehaviour:
   - baseNodeGuid: 843474ad-a3eb-429f-86f8-8433772ae02c
     portName: Sim
     targetNodeGuid: 2e6d66fb-8cb7-4961-88b7-c7d3392f1feb
+  - baseNodeGuid: 4c3ea8d4-d47e-4e5b-9c96-4d290c9b34e2
+    portName: '>>>'
+    targetNodeGuid: 6ed9a27b-4293-4b64-ad7f-c0322768bcc1
   - baseNodeGuid: 2e6d66fb-8cb7-4961-88b7-c7d3392f1feb
     portName: Ok
     targetNodeGuid: 4c3ea8d4-d47e-4e5b-9c96-4d290c9b34e2
@@ -37,4 +40,7 @@ MonoBehaviour:
     dialogueText: "Perfeito, meus preparativos est\xE3o prontos, assim que voc\xEA
       ver o portal se formando entre nele, n\xE3o consigo abrir por muito tempo."
     position: {x: 658, y: 201}
+  - guid: 6ed9a27b-4293-4b64-ad7f-c0322768bcc1
+    dialogueText: 
+    position: {x: 1891, y: 196}
   exposedProperties: []

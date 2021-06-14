@@ -12,14 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe917da59551444d9950cacc4fa28984, type: 3}
   m_Name: Thinker_Pre
   m_EditorClassIdentifier: 
-  NpcName: Condenado Pensante
+  NpcName: null
   nodeLinks:
   - baseNodeGuid: 6d8eaf57-6d7a-4f2a-9e3d-4fce20a7d888
     portName: Next
     targetNodeGuid: e87809c8-f441-403a-8a96-28f05d19c4c2
+  - baseNodeGuid: e87809c8-f441-403a-8a96-28f05d19c4c2
+    portName: '>>>'
+    targetNodeGuid: 7ebd7306-fc35-4b29-8ca4-5bd9a6ade3a9
   dialogueNodeData:
   - guid: e87809c8-f441-403a-8a96-28f05d19c4c2
     dialogueText: "Ai n\xE3o! a sess\xE3o de tortura j\xE1 vai come\xE7ar, eu n\xE3o
       aguento mais isso, eu n\xE3o quero isso, por favor! Me ajuda!!"
     position: {x: 276, y: 200}
+  - guid: 7ebd7306-fc35-4b29-8ca4-5bd9a6ade3a9
+    dialogueText: 
+    position: {x: 1090, y: 203}
   exposedProperties: []

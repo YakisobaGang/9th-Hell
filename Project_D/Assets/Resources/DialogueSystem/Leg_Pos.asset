@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe917da59551444d9950cacc4fa28984, type: 3}
   m_Name: Leg_Pos
   m_EditorClassIdentifier: 
-  NpcName: Condenado?
+  NpcName: null
   nodeLinks:
   - baseNodeGuid: ff5ebfc8-7da4-45cd-8f33-cf68d9939af9
     portName: Next
@@ -20,6 +20,9 @@ MonoBehaviour:
   - baseNodeGuid: 13062f78-a626-4124-a3e5-62001baeff51
     portName: "Voc\xEA t\xE1 bem?"
     targetNodeGuid: 2b54ffd6-c21a-42ea-acf5-cb48d7679a00
+  - baseNodeGuid: 2b54ffd6-c21a-42ea-acf5-cb48d7679a00
+    portName: '>>>'
+    targetNodeGuid: 97d7505e-4959-4058-9ab4-431f8a388419
   dialogueNodeData:
   - guid: 13062f78-a626-4124-a3e5-62001baeff51
     dialogueText: ....?
@@ -27,4 +30,7 @@ MonoBehaviour:
   - guid: 2b54ffd6-c21a-42ea-acf5-cb48d7679a00
     dialogueText: ....!.......?.............................?!!!
     position: {x: 625, y: 183}
+  - guid: 97d7505e-4959-4058-9ab4-431f8a388419
+    dialogueText: 
+    position: {x: 958, y: 180}
   exposedProperties: []

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe917da59551444d9950cacc4fa28984, type: 3}
   m_Name: Pb_Pos
   m_EditorClassIdentifier: 
-  NpcName: Condenado
+  NpcName: null
   nodeLinks:
   - baseNodeGuid: d529ad3e-43e6-4e08-827d-396c73aed1b8
     portName: Next
@@ -29,30 +29,18 @@ MonoBehaviour:
   - baseNodeGuid: 2f499cd0-2136-4108-9431-5522700d45b8
     portName: '>>>'
     targetNodeGuid: 5a4d728a-11a5-40db-a186-47b3069ae379
-  - baseNodeGuid: a5cd9f62-1da3-4312-89e5-bb710d8e2002
-    portName: Como uso meu Equipamento?
-    targetNodeGuid: 8647f229-50b5-4e6f-a5c7-98bb532405b7
-  - baseNodeGuid: 5a4d728a-11a5-40db-a186-47b3069ae379
-    portName: Como uso meu Equipamento?
-    targetNodeGuid: 8647f229-50b5-4e6f-a5c7-98bb532405b7
-  - baseNodeGuid: a5cd9f62-1da3-4312-89e5-bb710d8e2002
-    portName: Como anda o Portal?
-    targetNodeGuid: 59472bb5-f98f-4f1d-97b6-ced4bb41874e
   - baseNodeGuid: 59472bb5-f98f-4f1d-97b6-ced4bb41874e
     portName: '>>>'
     targetNodeGuid: 5a4d728a-11a5-40db-a186-47b3069ae379
-  - baseNodeGuid: 5a4d728a-11a5-40db-a186-47b3069ae379
-    portName: Como anda o Portal?
-    targetNodeGuid: 59472bb5-f98f-4f1d-97b6-ced4bb41874e
-  - baseNodeGuid: 5a4d728a-11a5-40db-a186-47b3069ae379
-    portName: "Quem \xE9 voc\xEA?"
-    targetNodeGuid: 6df4aca6-1a63-4cf6-8454-f4531084f34b
+  - baseNodeGuid: a5cd9f62-1da3-4312-89e5-bb710d8e2002
+    portName: Como uso meu Equipamento?
+    targetNodeGuid: 8647f229-50b5-4e6f-a5c7-98bb532405b7
   - baseNodeGuid: a5cd9f62-1da3-4312-89e5-bb710d8e2002
     portName: "Quem \xE9 voc\xEA?"
     targetNodeGuid: 6df4aca6-1a63-4cf6-8454-f4531084f34b
-  - baseNodeGuid: 6df4aca6-1a63-4cf6-8454-f4531084f34b
-    portName: '>>>'
-    targetNodeGuid: 2ecc6df3-a70a-4e0c-b6e3-26d0f3c5d3e5
+  - baseNodeGuid: a5cd9f62-1da3-4312-89e5-bb710d8e2002
+    portName: "N\xE3o era nada."
+    targetNodeGuid: 999f8f60-c472-4864-9cb0-f4b43308d7cf
   - baseNodeGuid: 2ecc6df3-a70a-4e0c-b6e3-26d0f3c5d3e5
     portName: '>>>'
     targetNodeGuid: e531a7e7-a934-4ffc-b188-aa4cbc791f2b
@@ -60,11 +48,23 @@ MonoBehaviour:
     portName: '>>>'
     targetNodeGuid: 5a4d728a-11a5-40db-a186-47b3069ae379
   - baseNodeGuid: 5a4d728a-11a5-40db-a186-47b3069ae379
+    portName: Como uso meu Equipamento?
+    targetNodeGuid: 8647f229-50b5-4e6f-a5c7-98bb532405b7
+  - baseNodeGuid: 5a4d728a-11a5-40db-a186-47b3069ae379
+    portName: "Quem \xE9 voc\xEA?"
+    targetNodeGuid: 6df4aca6-1a63-4cf6-8454-f4531084f34b
+  - baseNodeGuid: 5a4d728a-11a5-40db-a186-47b3069ae379
     portName: "N\xE3o era nada."
     targetNodeGuid: 999f8f60-c472-4864-9cb0-f4b43308d7cf
-  - baseNodeGuid: a5cd9f62-1da3-4312-89e5-bb710d8e2002
-    portName: "N\xE3o era nada."
-    targetNodeGuid: 999f8f60-c472-4864-9cb0-f4b43308d7cf
+  - baseNodeGuid: 999f8f60-c472-4864-9cb0-f4b43308d7cf
+    portName: '>>>'
+    targetNodeGuid: 7ef8d2fd-7e4b-4d7e-aba9-2e7e270bbda5
+  - baseNodeGuid: 6df4aca6-1a63-4cf6-8454-f4531084f34b
+    portName: '>>>'
+    targetNodeGuid: 18297beb-9d86-4444-8e33-f3e2db796c2b
+  - baseNodeGuid: 18297beb-9d86-4444-8e33-f3e2db796c2b
+    portName: '>>>'
+    targetNodeGuid: 2ecc6df3-a70a-4e0c-b6e3-26d0f3c5d3e5
   dialogueNodeData:
   - guid: 8647f229-50b5-4e6f-a5c7-98bb532405b7
     dialogueText: "E como eu, um condenado que viu isso pela primeira vez recentemente,
@@ -75,27 +75,14 @@ MonoBehaviour:
       dos Equipamentos)"
     position: {x: -260, y: 756}
   - guid: 7c1badaf-8607-449e-aa77-30e27fa00ddc
-    dialogueText: "(No Rev\xF3lver est\xE1 escrito \u201CO Rev\xF3lver EXOR404 utiliza
-      energia demon\xEDaca pr\xF3xima para canalizar um ataque de proj\xE9til, efetivo
-      em grandes dist\xE2ncias. \xC9 necess\xE1rio a presen\xE7a de dem\xF4nios para
-      funcionar\u201D)."
+    dialogueText: "(No Rev\xF3lver est\xE1 escrito \u201CO Rev\xF3lver utiliza energia
+      demon\xEDaca pr\xF3xima para canalizar um ataque de proj\xE9til, efetivo em
+      grandes dist\xE2ncias.\u201D)."
     position: {x: -681, y: 901}
-  - guid: 2f499cd0-2136-4108-9431-5522700d45b8
-    dialogueText: "(Na Manopla est\xE1 escrito \u201CA Manopla HX2000 utiliza energia
-      demon\xEDaca pr\xF3xima para canalizar uma ou energia vitalizadora, com capacidades
-      de cura, ou energia destrutiva, que se manifesta como fogo.\xC9 necess\xE1rio
-      a presen\xE7a de dem\xF4nios para funcionar\")."
-    position: {x: -970, y: 1074}
   - guid: 59472bb5-f98f-4f1d-97b6-ced4bb41874e
     dialogueText: "Preciso de mais tempo para me concentrar, cuidado para n\xE3o
       chamar aten\xE7\xE3o desnecess\xE1ria."
     position: {x: 667, y: 578}
-  - guid: 6df4aca6-1a63-4cf6-8454-f4531084f34b
-    dialogueText: "Eu sou um condenado e, como aqui \xE9 o Inferno, eu devo ter feito
-      algo muito errado. N\xF3s, condenados, n\xE3o temos mem\xF3rias de quando fomos
-      vivos, sofrer eternamente aqui sem saber a raz\xE3o, pra mim, \xE9 muito pior
-      que nunca mais poder me mover e ter que conversar com as paredes."
-    position: {x: 1400, y: 583}
   - guid: a5cd9f62-1da3-4312-89e5-bb710d8e2002
     dialogueText: "Ol\xE1, mortal"
     position: {x: 290, y: 193}
@@ -112,4 +99,21 @@ MonoBehaviour:
   - guid: 999f8f60-c472-4864-9cb0-f4b43308d7cf
     dialogueText: Boa sorte com o plano.
     position: {x: 1281, y: 236}
+  - guid: 7ef8d2fd-7e4b-4d7e-aba9-2e7e270bbda5
+    dialogueText: 
+    position: {x: 1643, y: 232}
+  - guid: 2f499cd0-2136-4108-9431-5522700d45b8
+    dialogueText: "(Na Manopla est\xE1 escrito \u201CA Manopla HX2000 utiliza energia
+      demon\xEDaca pr\xF3xima para canalizar uma ou energia vitalizadora, com capacidades
+      de cura, ou energia destrutiva\")."
+    position: {x: -834, y: 1076}
+  - guid: 6df4aca6-1a63-4cf6-8454-f4531084f34b
+    dialogueText: "Eu sou um condenado e, como aqui \xE9 o Inferno, eu devo ter feito
+      algo muito errado. "
+    position: {x: 1417, y: 524}
+  - guid: 18297beb-9d86-4444-8e33-f3e2db796c2b
+    dialogueText: "N\xF3s n\xE3o temos mem\xF3rias de quando fomos vivos, sofrer
+      eternamente aqui sem saber a raz\xE3o \xE9 muito pior que nunca mais poder
+      me mover e ter que conversar com as paredes."
+    position: {x: 1536, y: 635}
   exposedProperties: []

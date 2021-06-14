@@ -12,15 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe917da59551444d9950cacc4fa28984, type: 3}
   m_Name: Pb_Intro
   m_EditorClassIdentifier: 
-  NpcName: Condenado
+  NpcName: null
   nodeLinks:
   - baseNodeGuid: bd478862-5eff-4f7e-ae69-073c70315a02
     portName: Next
     targetNodeGuid: 785eab5f-a35d-4740-bd6a-aba78c55a558
   - baseNodeGuid: 66a4e4d9-31eb-4469-8283-7f15aa851d49
-    portName: '>>>'
-    targetNodeGuid: a06b3c3c-fa80-49cd-a875-643a6a79af9c
-  - baseNodeGuid: 98ae395c-06ce-4ab4-b329-5f5b203f3e43
     portName: '>>>'
     targetNodeGuid: a06b3c3c-fa80-49cd-a875-643a6a79af9c
   - baseNodeGuid: 785eab5f-a35d-4740-bd6a-aba78c55a558
@@ -29,15 +26,15 @@ MonoBehaviour:
   - baseNodeGuid: 785eab5f-a35d-4740-bd6a-aba78c55a558
     portName: "O que voc\xEA quer?"
     targetNodeGuid: 98ae395c-06ce-4ab4-b329-5f5b203f3e43
+  - baseNodeGuid: 5db619ca-0388-4d55-98c3-79dfab730f10
+    portName: '>>>'
+    targetNodeGuid: 118cc2e1-3656-4bda-817b-c1c2c111dd1a
   - baseNodeGuid: a06b3c3c-fa80-49cd-a875-643a6a79af9c
     portName: Foi... Sem querer
     targetNodeGuid: 5db619ca-0388-4d55-98c3-79dfab730f10
   - baseNodeGuid: a06b3c3c-fa80-49cd-a875-643a6a79af9c
     portName: Vim passear
     targetNodeGuid: 5db619ca-0388-4d55-98c3-79dfab730f10
-  - baseNodeGuid: 5db619ca-0388-4d55-98c3-79dfab730f10
-    portName: '>>>'
-    targetNodeGuid: 118cc2e1-3656-4bda-817b-c1c2c111dd1a
   - baseNodeGuid: 118cc2e1-3656-4bda-817b-c1c2c111dd1a
     portName: "N\xE3o"
     targetNodeGuid: 30235703-4529-4110-a076-8797b8fc8822
@@ -47,16 +44,10 @@ MonoBehaviour:
   - baseNodeGuid: 30235703-4529-4110-a076-8797b8fc8822
     portName: '>>>'
     targetNodeGuid: 6994f1f0-03b0-4dd4-bc6a-3b2ab0676197
-  - baseNodeGuid: 6994f1f0-03b0-4dd4-bc6a-3b2ab0676197
-    portName: Eu morro.
-    targetNodeGuid: cdc5c29f-ea50-46a4-9e5f-833d5d51751f
-  - baseNodeGuid: 6994f1f0-03b0-4dd4-bc6a-3b2ab0676197
-    portName: Eu ganho um presente.
-    targetNodeGuid: abdb9b04-ceb5-4472-b0e7-1fe527c32c4f
-  - baseNodeGuid: cdc5c29f-ea50-46a4-9e5f-833d5d51751f
+  - baseNodeGuid: abdb9b04-ceb5-4472-b0e7-1fe527c32c4f
     portName: '>>>'
     targetNodeGuid: cee8afb7-081b-4bac-a8bd-b68675c14360
-  - baseNodeGuid: abdb9b04-ceb5-4472-b0e7-1fe527c32c4f
+  - baseNodeGuid: cdc5c29f-ea50-46a4-9e5f-833d5d51751f
     portName: '>>>'
     targetNodeGuid: cee8afb7-081b-4bac-a8bd-b68675c14360
   - baseNodeGuid: cee8afb7-081b-4bac-a8bd-b68675c14360
@@ -65,6 +56,9 @@ MonoBehaviour:
   - baseNodeGuid: cee8afb7-081b-4bac-a8bd-b68675c14360
     portName: "Como morrer \xE9 sorte?"
     targetNodeGuid: db4ec241-022e-452a-bef1-b99e68776094
+  - baseNodeGuid: 98ae395c-06ce-4ab4-b329-5f5b203f3e43
+    portName: '>>>'
+    targetNodeGuid: a06b3c3c-fa80-49cd-a875-643a6a79af9c
   - baseNodeGuid: db4ec241-022e-452a-bef1-b99e68776094
     portName: "Essas s\xE3o..."
     targetNodeGuid: 29a449a5-2dc5-4bb2-a94a-5b85c4ea1740
@@ -80,6 +74,12 @@ MonoBehaviour:
   - baseNodeGuid: cce65613-9d81-4c66-a81b-ccffca7d335d
     portName: Como conseguiu isso?
     targetNodeGuid: 3aee94c2-84fe-4cef-9cfc-36c3af7d190e
+  - baseNodeGuid: 6994f1f0-03b0-4dd4-bc6a-3b2ab0676197
+    portName: Eu morro.
+    targetNodeGuid: cdc5c29f-ea50-46a4-9e5f-833d5d51751f
+  - baseNodeGuid: 6994f1f0-03b0-4dd4-bc6a-3b2ab0676197
+    portName: Eu ganho um presente.
+    targetNodeGuid: abdb9b04-ceb5-4472-b0e7-1fe527c32c4f
   - baseNodeGuid: 3aee94c2-84fe-4cef-9cfc-36c3af7d190e
     portName: '>>>'
     targetNodeGuid: ab64ad7a-54a1-43c3-b594-27b1442f9e60
@@ -110,6 +110,9 @@ MonoBehaviour:
   - baseNodeGuid: 9d0399e4-5d8d-4a86-8e87-bd93066621ea
     portName: '>>>'
     targetNodeGuid: a2cc6cfe-23ba-4962-8daf-d5bc6cfe9ad6
+  - baseNodeGuid: a2cc6cfe-23ba-4962-8daf-d5bc6cfe9ad6
+    portName: '>>>'
+    targetNodeGuid: 791c0471-3190-48e1-a8cf-52d209fda40d
   dialogueNodeData:
   - guid: 66a4e4d9-31eb-4469-8283-7f15aa851d49
     dialogueText: "Meio rude pra algu\xE9m que acabou de conhecer, n\xE3o acha? Saiba
@@ -202,4 +205,7 @@ MonoBehaviour:
       sempre bom ter mais gente por aqui. De qualquer forma, se tem chance de funcionar,
       vale a pena."
     position: {x: 747, y: 1208}
+  - guid: 791c0471-3190-48e1-a8cf-52d209fda40d
+    dialogueText: 
+    position: {x: 2325, y: 1260}
   exposedProperties: []

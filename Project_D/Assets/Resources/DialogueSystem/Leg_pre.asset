@@ -12,13 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe917da59551444d9950cacc4fa28984, type: 3}
   m_Name: Leg_pre
   m_EditorClassIdentifier: 
-  NpcName: Condenado?
+  NpcName: null
   nodeLinks:
   - baseNodeGuid: b91a4f64-7f6f-4deb-9b07-89fb302cfc5b
     portName: Next
     targetNodeGuid: 5e099a84-e93a-46dd-8f3b-76aa25754eae
+  - baseNodeGuid: 5e099a84-e93a-46dd-8f3b-76aa25754eae
+    portName: '>>>'
+    targetNodeGuid: b0acbbab-f30a-42c0-a14c-2ce9aaa33dea
   dialogueNodeData:
   - guid: 5e099a84-e93a-46dd-8f3b-76aa25754eae
     dialogueText: "\u2026\u2026\u2026\u2026!"
-    position: {x: 251, y: 185}
+    position: {x: 255, y: 185}
+  - guid: b0acbbab-f30a-42c0-a14c-2ce9aaa33dea
+    dialogueText: 
+    position: {x: 492, y: 185}
   exposedProperties: []

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe917da59551444d9950cacc4fa28984, type: 3}
   m_Name: Stranger_Pos
   m_EditorClassIdentifier: 
-  NpcName: Condenado Estranho
+  NpcName: null
   nodeLinks:
   - baseNodeGuid: bc9367b1-240b-4e6c-ab20-434b3b3999b0
     portName: Next
@@ -20,6 +20,9 @@ MonoBehaviour:
   - baseNodeGuid: a4cbf5ba-8fe9-4285-9287-0a6eb8cb5fab
     portName: "Seus p\xE9s?"
     targetNodeGuid: 6b8053ed-e8bc-422f-abf7-6b54de351f47
+  - baseNodeGuid: a4cbf5ba-8fe9-4285-9287-0a6eb8cb5fab
+    portName: "Voc\xEA \xE9 bem... Diferente"
+    targetNodeGuid: d3dfb214-3d3a-4ae9-bf58-80b7ac45ff25
   - baseNodeGuid: 6b8053ed-e8bc-422f-abf7-6b54de351f47
     portName: '>>>'
     targetNodeGuid: 4e0f79aa-cc21-4be0-8a38-6ba49a4eefc1
@@ -29,9 +32,9 @@ MonoBehaviour:
   - baseNodeGuid: e77422d5-e7f6-441a-a037-99f06d3ffb48
     portName: '>>>'
     targetNodeGuid: dd98840e-1c93-4428-8fc2-dd2a5bae1e0b
-  - baseNodeGuid: a4cbf5ba-8fe9-4285-9287-0a6eb8cb5fab
-    portName: "Voc\xEA \xE9 bem... Diferente"
-    targetNodeGuid: d3dfb214-3d3a-4ae9-bf58-80b7ac45ff25
+  - baseNodeGuid: dd98840e-1c93-4428-8fc2-dd2a5bae1e0b
+    portName: '>>>'
+    targetNodeGuid: 664dcef7-c86d-49ad-a857-f2e4eefd4b1f
   - baseNodeGuid: d3dfb214-3d3a-4ae9-bf58-80b7ac45ff25
     portName: '>>>'
     targetNodeGuid: 62f64ead-3208-447e-9e77-9ff9c1feffa6
@@ -44,6 +47,9 @@ MonoBehaviour:
   - baseNodeGuid: cf9774c4-38c7-42e4-8951-4f6fe463262d
     portName: '>>>'
     targetNodeGuid: aa8ad5cf-0416-4873-a910-ffd1157b30e2
+  - baseNodeGuid: aa8ad5cf-0416-4873-a910-ffd1157b30e2
+    portName: '>>>'
+    targetNodeGuid: 664dcef7-c86d-49ad-a857-f2e4eefd4b1f
   dialogueNodeData:
   - guid: a4cbf5ba-8fe9-4285-9287-0a6eb8cb5fab
     dialogueText: "Ufa! Obrigado por proteger meus queridos p\xE9s"
@@ -79,4 +85,7 @@ MonoBehaviour:
   - guid: aa8ad5cf-0416-4873-a910-ffd1157b30e2
     dialogueText: Saber disso me ajuda a viver.
     position: {x: 3226, y: 332}
+  - guid: 664dcef7-c86d-49ad-a857-f2e4eefd4b1f
+    dialogueText: 
+    position: {x: 3600, y: 258}
   exposedProperties: []
