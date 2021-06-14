@@ -30,7 +30,7 @@ namespace ProjectD.Npc
 
         private void OnTriggerStay(Collider other)
         {
-            if (!Input.GetKeyDown(KeyCode.E) && interactionIsPress == false) 
+            if (!Input.GetKeyDown(KeyCode.E) && interactionIsPress == false)
                 return;
 
             interactionIsPress = false;

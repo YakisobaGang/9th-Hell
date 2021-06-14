@@ -12,10 +12,10 @@ namespace ProjectD.Player
             if (UnityEngine.Input.GetKeyDown(KeyCode.E))
             {
                 OnPlayerPressInteraction?.Invoke();
-                
+
             }
         }
-        
+
         public static event Action OnPlayerPressInteraction;
     }
 }
