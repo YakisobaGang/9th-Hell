@@ -7,30 +7,15 @@ namespace ProjectD.Player
 {
     public class PlayerInteraction : MonoBehaviour
     {
-        private PlayerInputActions inputActions;
-
-        private void Awake()
+        private void Update()
         {
-            inputActions = new PlayerInputActions();
+            if (UnityEngine.Input.GetKeyDown(KeyCode.E))
+            {
+                OnPlayerPressInteraction?.Invoke();
+                
+            }
         }
-
-        private void OnEnable()
-        {
-            inputActions.Enable();
-            inputActions.OpenArea.Interact.performed += HandleInteractPress;
-        }
-
-        private void OnDisable()
-        {
-            inputActions.Disable();
-            inputActions.OpenArea.Interact.performed -= HandleInteractPress;
-        }
-
+        
         public static event Action OnPlayerPressInteraction;
-
-        private void HandleInteractPress(InputAction.CallbackContext obj)
-        {
-            OnPlayerPressInteraction?.Invoke();
-        }
     }
 }

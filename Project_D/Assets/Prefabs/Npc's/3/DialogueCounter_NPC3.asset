@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ff4639aab884e7889f1c89e99f9905b, type: 3}
   m_Name: DialogueCounter_NPC3
   m_EditorClassIdentifier: 
-  count: 0
+  count: 2

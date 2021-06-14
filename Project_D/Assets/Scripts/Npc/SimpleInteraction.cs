@@ -1,4 +1,5 @@
-﻿using ProjectD.Player;
+﻿using System;
+using ProjectD.Player;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -8,8 +9,9 @@ namespace ProjectD.Npc
     {
         [SerializeField] private UnityEvent firstTime;
         [SerializeField] private UnityEvent secondTime;
+        [SerializeField] private UnityEvent thirdTime;
         [SerializeField] private DialogueCounter dialogueCounter;
-        private bool InteractionIsPress;
+        private bool interactionIsPress;
 
         private void OnEnable()
         {
@@ -21,29 +23,44 @@ namespace ProjectD.Npc
             PlayerInteraction.OnPlayerPressInteraction -= HandleInteractionPress;
         }
 
+        private void Update()
+        {
+            //print(interactionIsPress);
+        }
+
         private void OnTriggerStay(Collider other)
         {
-            if (!other.CompareTag("Player") || !InteractionIsPress) return;
+            if (!Input.GetKeyDown(KeyCode.E) && interactionIsPress == false) 
+                return;
 
-            InteractionIsPress = false;
-
+            interactionIsPress = false;
             if (dialogueCounter.GetCurrentCount() == 0)
             {
+                print("1");
                 firstTime?.Invoke();
                 dialogueCounter.IncreaseCount();
                 return;
             }
 
-            if (dialogueCounter.GetCurrentCount() >= 1)
+            if (dialogueCounter.GetCurrentCount() == 1)
             {
+                print("2");
                 secondTime?.Invoke();
+                dialogueCounter.IncreaseCount();
+                return;
+            }
+
+            if (dialogueCounter.GetCurrentCount() == 2)
+            {
+                print("3");
+                thirdTime?.Invoke();
                 dialogueCounter.IncreaseCount();
             }
         }
 
         private void HandleInteractionPress()
         {
-            InteractionIsPress = !InteractionIsPress;
+            interactionIsPress = true;
         }
     }
 }

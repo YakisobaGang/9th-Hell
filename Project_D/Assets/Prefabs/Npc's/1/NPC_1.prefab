@@ -351,7 +351,6 @@ GameObject:
   - component: {fileID: 2146181616789183823}
   - component: {fileID: 8296786818730257060}
   - component: {fileID: 4764411596132734832}
-  - component: {fileID: 9081198999460645568}
   - component: {fileID: 5098801630920948995}
   m_Layer: 6
   m_Name: NPC_1
@@ -454,21 +453,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  thirdTime:
+    m_PersistentCalls:
+      m_Calls: []
   dialogueCounter: {fileID: 11400000, guid: 7d142721c7bcbcc4bb62ff9352ea0d21, type: 2}
---- !u!114 &9081198999460645568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 939977076042463032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fa82ab589b449f4955cc3bb3114d606, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  combatSceneIndex: 2
-  timeToChangeScene: 2
 --- !u!114 &5098801630920948995
 MonoBehaviour:
   m_ObjectHideFlags: 0
