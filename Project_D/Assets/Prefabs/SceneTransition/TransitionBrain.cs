@@ -15,6 +15,11 @@ namespace ProjectD
             StartCoroutine(LoadingLevel((SceneManager.GetActiveScene().buildIndex + 1)));
         }
 
+        public void LoadMainMenu()
+        {
+            StartCoroutine(LoadingMainMenu(0));
+        }
+
         public void QuitGame()
         {
             Application.Quit();
@@ -25,6 +30,13 @@ namespace ProjectD
             anim.SetTrigger("Start");
             yield return new WaitForSeconds(transitionTime);
             SceneManager.LoadScene(levelIndex);
+        }
+
+        IEnumerator LoadingMainMenu(int levelIndex)
+        {
+            anim.SetTrigger("Start");
+            yield return new WaitForSeconds(transitionTime);
+            SceneManager.LoadScene(0);
         }
     }
 }
