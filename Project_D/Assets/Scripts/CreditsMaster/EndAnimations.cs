@@ -20,7 +20,7 @@ namespace ProjectD
         // Update is called once per frame
         void Update()
         {
-            if(secondPart == true)
+            if (secondPart == true)
             {
                 StartCoroutine(Fabricio(1));
                 secondPart = false;
