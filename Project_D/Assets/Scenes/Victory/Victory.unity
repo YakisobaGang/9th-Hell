@@ -540,7 +540,7 @@ MonoBehaviour:
   m_text: Silvano
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
-  m_sharedMaterial: {fileID: -6987706003242239998, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
+  m_sharedMaterial: {fileID: -4811548153756350813, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1010,7 +1010,7 @@ MonoBehaviour:
   m_text: Luana
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
-  m_sharedMaterial: {fileID: -6987706003242239998, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
+  m_sharedMaterial: {fileID: -4811548153756350813, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1587,7 +1587,7 @@ MonoBehaviour:
   m_text: Gerente de projeto Roteirista  Artista SFX
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
-  m_sharedMaterial: {fileID: -6987706003242239998, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
+  m_sharedMaterial: {fileID: -4811548153756350813, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1854,7 +1854,7 @@ MonoBehaviour:
   m_text: '!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
-  m_sharedMaterial: {fileID: -6987706003242239998, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
+  m_sharedMaterial: {fileID: -4811548153756350813, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2256,7 +2256,7 @@ MonoBehaviour:
   m_text: Artista 2D
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
-  m_sharedMaterial: {fileID: -6987706003242239998, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
+  m_sharedMaterial: {fileID: -4811548153756350813, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2390,7 +2390,7 @@ MonoBehaviour:
   m_text: Programador UI
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
-  m_sharedMaterial: {fileID: -6987706003242239998, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
+  m_sharedMaterial: {fileID: -4811548153756350813, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2673,7 +2673,7 @@ MonoBehaviour:
   m_text: Programador Artista VFX  Artista 3D
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
-  m_sharedMaterial: {fileID: -6987706003242239998, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
+  m_sharedMaterial: {fileID: -4811548153756350813, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2807,7 +2807,7 @@ MonoBehaviour:
   m_text: Fabricio
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
-  m_sharedMaterial: {fileID: -6987706003242239998, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
+  m_sharedMaterial: {fileID: -4811548153756350813, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3011,7 +3011,7 @@ MonoBehaviour:
   m_text: Thiago
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
-  m_sharedMaterial: {fileID: -6987706003242239998, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
+  m_sharedMaterial: {fileID: -4811548153756350813, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3240,7 +3240,7 @@ MonoBehaviour:
   m_text: Obrigado por jogar 9th Hell!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
-  m_sharedMaterial: {fileID: -6987706003242239998, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
+  m_sharedMaterial: {fileID: -4811548153756350813, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3374,7 +3374,7 @@ MonoBehaviour:
   m_text: ^
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
-  m_sharedMaterial: {fileID: -6987706003242239998, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
+  m_sharedMaterial: {fileID: -4811548153756350813, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3579,7 +3579,7 @@ MonoBehaviour:
   m_text: 'Feito por:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
-  m_sharedMaterial: {fileID: -6987706003242239998, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
+  m_sharedMaterial: {fileID: -4811548153756350813, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
