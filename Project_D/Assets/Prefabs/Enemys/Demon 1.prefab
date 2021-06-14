@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78d07b0da64f44d9beba7c4f152050f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: Demon 1
+  unitName: "Morceg\xF4nio"
   abilitys:
   - {fileID: 3111055583897698305, guid: 65c421665a1dc4b42a2b9158843871b0, type: 3}
   baseDamage: 30
@@ -357,8 +357,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: EnemyTest 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
-  m_sharedMaterial: {fileID: -6987706003242239998, guid: a6a0b2ce39bbaa245950e471f3158ba5, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
