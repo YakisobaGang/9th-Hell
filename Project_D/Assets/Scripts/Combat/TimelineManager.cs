@@ -9,19 +9,19 @@ namespace ProjectD.Combat
     public class TimelineManager : MonoBehaviour
     {
         private PlayableDirector[] timelines;
-        public static  TimelineManager Instance { get; private set; }
+        public static TimelineManager Instance { get; private set; }
         private void Awake()
         {
             if (!(Instance is null) && Instance != this)
                 Destroy(gameObject);
             else
                 Instance = this;
-            
+
         }
 
         private void Start()
         {
-            timelines = GameObject.FindObjectsOfType<PlayableDirector>(includeInactive:true);
+            timelines = GameObject.FindObjectsOfType<PlayableDirector>(includeInactive: true);
         }
 
         public bool HasAnyTimelinesPlaying()

@@ -43,7 +43,7 @@ namespace ProjectD.Commands
             {
                 var temp = commandsList.Dequeue();
                 yield return new WaitUntil(() => !TimelineManager.Instance.HasAnyTimelinesPlaying());
-                
+
                 yield return new WaitUntil(() =>
                 {
                     temp.Execute();
@@ -51,7 +51,7 @@ namespace ProjectD.Commands
                     return vfxEnd.GetSignalAssetAtIndex(0);
                 });
 
-            
+
                 yield return waitForSeconds;
             }
         }

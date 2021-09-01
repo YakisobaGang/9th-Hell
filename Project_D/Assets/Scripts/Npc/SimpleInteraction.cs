@@ -34,7 +34,7 @@ namespace ProjectD.Npc
 
         private void Update()
         {
-            
+
             result = Physics.OverlapSphere(transform.position, range, playerLayerMask);
         }
 
@@ -48,7 +48,7 @@ namespace ProjectD.Npc
 
             if (result.Length == 0)
                 return;
-            
+
             switch (dialogueCounter.GetCurrentCount())
             {
                 case 0:
@@ -60,7 +60,7 @@ namespace ProjectD.Npc
                     dialogueCounter.IncreaseCount();
                     break;
                 case 2:
-                    if(finalDialogueTrigger is null)
+                    if (finalDialogueTrigger is null)
                         break;
                     thirdTime?.Invoke();
                     dialogueCounter.IncreaseCount();
