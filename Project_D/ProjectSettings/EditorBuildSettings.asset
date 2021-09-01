@@ -21,9 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Combat 3/CombatScene3.unity
     guid: 5dae9d683db0daf4e94232d0d5f8c5fd
   - enabled: 1
-    path: Assets/Scenes/DevScenes/Dev_Thiago.unity
-    guid: a3a5bf579c3aeb4448b87cd1ef34ac33
-  - enabled: 1
     path: Assets/Scenes/Victory/Victory.unity
     guid: 2227f95b41cc51147b3326afb156baeb
   m_configObjects: {}
