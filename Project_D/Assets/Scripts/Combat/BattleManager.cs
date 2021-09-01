@@ -51,6 +51,7 @@ namespace ProjectD.Combat
         {
 #if UNITY_EDITOR
             Debug.Log($"<Color=green>{combatState.CurrentState()}</color>");
+            Debug.Log($"<Color=red>{TimelineManager.Instance.HasAnyTimelinesPlaying()}</Color>");
 #endif
 
             if (enemysInstance.TrueForAll(enemy => enemy.gameObj.activeInHierarchy == false))

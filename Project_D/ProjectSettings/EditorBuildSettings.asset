@@ -15,6 +15,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Combat/CombatScenes.unity
     guid: df263cd8b0392594a8080cc546075445
   - enabled: 1
+    path: Assets/Scenes/Combat 2/CombatScene2.unity
+    guid: ba35d45e3979c414288ae65911f749d4
+  - enabled: 1
+    path: Assets/Scenes/Combat 3/CombatScene3.unity
+    guid: 5dae9d683db0daf4e94232d0d5f8c5fd
+  - enabled: 1
     path: Assets/Scenes/DevScenes/Dev_Thiago.unity
     guid: a3a5bf579c3aeb4448b87cd1ef34ac33
   - enabled: 1

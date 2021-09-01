@@ -12,14 +12,17 @@ namespace ProjectD.Dialogue
 
         private int total;
 
-        public void CheckCondition()
+        public bool CheckCondition()
         {
             counters.ForEach(counters => total += counters.GetCurrentCount());
 
             if (total >= 3)
             {
                 finalDialogue?.Invoke();
+                return true;
             }
+            
+            return false;
         }
     }
 }

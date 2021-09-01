@@ -1,4 +1,5 @@
 ﻿using System;
+using ProjectD.Dialogue;
 using ProjectD.Player;
 using UnityEngine;
 using UnityEngine.Events;
@@ -11,7 +12,15 @@ namespace ProjectD.Npc
         [SerializeField] private UnityEvent secondTime;
         [SerializeField] private UnityEvent thirdTime;
         [SerializeField] private DialogueCounter dialogueCounter;
-        private bool interactionIsPress;
+        [SerializeField] private float range = 3f;
+        [SerializeField] private LayerMask playerLayerMask;
+        public Collider[] result;
+        private FinalDialogueTrigger finalDialogueTrigger;
+
+        private void Start()
+        {
+            TryGetComponent<FinalDialogueTrigger>(out finalDialogueTrigger);
+        }
 
         private void OnEnable()
         {
@@ -25,42 +34,40 @@ namespace ProjectD.Npc
 
         private void Update()
         {
-            //print(interactionIsPress);
+            
+            result = Physics.OverlapSphere(transform.position, range, playerLayerMask);
         }
 
-        private void OnTriggerStay(Collider other)
+        private void OnDrawGizmosSelected()
         {
-            if (!Input.GetKeyDown(KeyCode.E) && interactionIsPress == false)
-                return;
-
-            interactionIsPress = false;
-            if (dialogueCounter.GetCurrentCount() == 0)
-            {
-                print("1");
-                firstTime?.Invoke();
-                dialogueCounter.IncreaseCount();
-                return;
-            }
-
-            if (dialogueCounter.GetCurrentCount() == 1)
-            {
-                print("2");
-                secondTime?.Invoke();
-                dialogueCounter.IncreaseCount();
-                return;
-            }
-
-            if (dialogueCounter.GetCurrentCount() == 2)
-            {
-                print("3");
-                thirdTime?.Invoke();
-                dialogueCounter.IncreaseCount();
-            }
+            Gizmos.DrawWireSphere(transform.position, range);
         }
 
         private void HandleInteractionPress()
         {
-            interactionIsPress = true;
+
+            if (result.Length == 0)
+                return;
+            
+            switch (dialogueCounter.GetCurrentCount())
+            {
+                case 0:
+                    firstTime?.Invoke();
+                    dialogueCounter.IncreaseCount();
+                    break;
+                case 1:
+                    secondTime?.Invoke();
+                    dialogueCounter.IncreaseCount();
+                    break;
+                case 2:
+                    if(finalDialogueTrigger is null)
+                        break;
+                    thirdTime?.Invoke();
+                    dialogueCounter.IncreaseCount();
+                    break;
+                default:
+                    return;
+            }
         }
     }
 }

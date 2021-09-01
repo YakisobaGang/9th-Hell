@@ -1,8 +1,6 @@
-using System;
-using ProjectD.Player;
 using UnityEngine;
 
-namespace ProjectD
+namespace ProjectD.Player
 {
     public class PlayerAnimController : MonoBehaviour
     {

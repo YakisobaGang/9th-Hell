@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using ProjectD.Combat;
 using ProjectD.Interfaces;
 using UnityEngine;
 using UnityEngine.Timeline;
@@ -41,6 +42,8 @@ namespace ProjectD.Commands
             foreach (var command in commandsList.ToArray())
             {
                 var temp = commandsList.Dequeue();
+                yield return new WaitUntil(() => !TimelineManager.Instance.HasAnyTimelinesPlaying());
+                
                 yield return new WaitUntil(() =>
                 {
                     temp.Execute();
@@ -48,6 +51,7 @@ namespace ProjectD.Commands
                     return vfxEnd.GetSignalAssetAtIndex(0);
                 });
 
+            
                 yield return waitForSeconds;
             }
         }

@@ -3214,7 +3214,6 @@ GameObject:
   - component: {fileID: 1751378691}
   - component: {fileID: 1751378693}
   - component: {fileID: 1751378694}
-  - component: {fileID: 1751378695}
   m_Layer: 0
   m_Name: CombatManeger
   m_TagString: Untagged
@@ -3237,7 +3236,7 @@ MonoBehaviour:
   commandHandler: {fileID: 774617842}
   playerPrefab: {fileID: 7775097763091562549, guid: fd07f8ab0fdc64942b6bfcbb2943ee0d, type: 3}
   enemysPrefab:
-  - {fileID: 7375001351923443220, guid: 0df6aa7b74ebeb74094d26d386de6462, type: 3}
+  - {fileID: 7375001351923443220, guid: 5d75c5420927b3741b0660d8a9d300a2, type: 3}
   - {fileID: 7375001351923443220, guid: 5d75c5420927b3741b0660d8a9d300a2, type: 3}
   playerSpawnPoint: {fileID: 2010910754}
   enemysSpawnPoint:
@@ -3429,18 +3428,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1751378695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1751378690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98e730eb9101423c82bff0a9ed3f46b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1772582851
 GameObject:
   m_ObjectHideFlags: 0

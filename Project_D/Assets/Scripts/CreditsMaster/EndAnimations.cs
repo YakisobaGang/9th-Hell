@@ -1,8 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace ProjectD
+namespace ProjectD.CreditsMaster
 {
     public class EndAnimations : MonoBehaviour
     {

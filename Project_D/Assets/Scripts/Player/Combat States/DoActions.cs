@@ -18,6 +18,7 @@ namespace ProjectD.Player.Combat_States
             CommandHandler.Instance.DoCommands();
             BattleManager.playerInstance.stateMachine.SetState(new Idle());
 
+
             yield return new WaitUntil(() => BattleManager.vfxCount == 0);
             BattleManager.combatState.SetState(new EnemyTurn(BattleManager));
 

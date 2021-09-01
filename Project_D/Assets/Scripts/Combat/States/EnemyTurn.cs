@@ -23,7 +23,6 @@ namespace ProjectD.Combat.States
             enemysInstance[currentEnemyIndex].unit.AddTarget(playerInfo.gameObject);
 
             var isDead = enemysInstance[currentEnemyIndex].unit.UsingAbility();
-            // playerInfo.health.TakeDamage(enemysInstance[currentEnemyIndex].unit.BaseDamage);
 
             if (isDead)
             {
@@ -37,8 +36,9 @@ namespace ProjectD.Combat.States
                 BattleManager.currentEnemyIndex = 0;
                 yield break;
             }
-
-
+            
+            yield return new WaitUntil(() => !TimelineManager.Instance.HasAnyTimelinesPlaying());
+            
             yield return BattleManager.PassToNextEnemy();
 
             if (enemysInstance[currentEnemyIndex].gameObj == null)
@@ -46,7 +46,7 @@ namespace ProjectD.Combat.States
                 BattleManager.combatState.SetState(new PlayerTurn(BattleManager));
                 yield break;
             }
-
+            
             BattleManager.combatState.SetState(new EnemyTurn(BattleManager));
         }
     }

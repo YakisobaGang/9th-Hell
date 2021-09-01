@@ -1,14 +1,19 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace ProjectD.Npc
 {
-#if UNITY_EDITOR
     public class ResetDialogueCounter : ScriptableObject
     {
         [SerializeField] private List<DialogueCounter> counters = new List<DialogueCounter>();
         [SerializeField] private bool resetAll;
-        
+
+        private void Awake()
+        {
+            ResetAll();
+        }
+
         [ContextMenu("Reset All")]
         public void ResetAll()
         {
@@ -25,5 +30,4 @@ namespace ProjectD.Npc
             }
         }
     }
-#endif
 }
