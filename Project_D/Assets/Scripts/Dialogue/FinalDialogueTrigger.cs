@@ -21,7 +21,7 @@ namespace ProjectD.Dialogue
                 finalDialogue?.Invoke();
                 return true;
             }
-            
+
             return false;
         }
     }
